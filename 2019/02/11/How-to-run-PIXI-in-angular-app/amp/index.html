@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="canonical" href="https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/" >
-    <title>How to run PIXI in Angular application - Studio La cosa nostra blog</title>
+    <title>How to run PIXI in Angular application - Studio La cosa nostra blog, game dev</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     
     <meta property="og:title" content="How to run PIXI in Angular application">
@@ -12,12 +12,16 @@
 	
 		<meta property="og:image" content="https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/title-image.png">
 	
-	<meta property="og:site_name" content="Studio La cosa nostra blog">
+	<meta property="og:site_name" content="Studio La cosa nostra blog, game dev">
+	
+		<meta property="og:description" content="&lt;p&gt;Run PIXI without performance problems.&lt;br&gt;&lt;/p&gt;">
 	
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="Studio La cosa nostra blog">
+	<meta name="twitter:site" content="Studio La cosa nostra blog, game dev">
 	<meta name="twitter:url" content="https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/">
-	<meta name="twitter:title" content="How to run PIXI in Angular application - Studio La cosa nostra blog">
+	<meta name="twitter:title" content="How to run PIXI in Angular application - Studio La cosa nostra blog, game dev">
+	
+		<meta name="twitter:description" content="&lt;p&gt;Run PIXI without performance problems.&lt;br&gt;&lt;/p&gt;">
 	
     
     	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/title-image.png">
@@ -47,12 +51,14 @@
 			"@type": "BlogPosting",
 			"headline": "How to run PIXI in Angular application",
 			
+			"description": "&lt;p&gt;Run PIXI without performance problems.&lt;br&gt;&lt;/p&gt;",
+			
 			"mainEntityOfPage":{
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/"
 			},
 			"datePublished": "2019-02-11T16:39:00.000Z",
-			"dateModified": "2019-02-13T12:45:49.738Z",
+			"dateModified": "2019-02-18T19:46:10.940Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -67,7 +73,7 @@
 			},
 			"publisher": {
 			    "@type": "Organization",
-			    "name": "Studio La cosa nostra blog"
+			    "name": "Studio La cosa nostra blog, game dev"
 			}
 		}
 	</script>
@@ -1763,7 +1769,7 @@ h6.categories {
   		<div class="nav-container">
 	  		<div class="left-nav">
 	  			<div class="header-title">
-	  				<a href="/">Studio La cosa nostra blog</a>
+	  				<a href="/">Studio La cosa nostra blog, game dev</a>
 	  			</div>
 	  		</div>
 	  		
@@ -1833,7 +1839,7 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<div class="amp-img-wrapper"><amp-img src="/2019/02/11/How-to-run-PIXI-in-angular-app/title-image.png" width="696" height="379" layout="responsive"></amp-img></div><p>Angular detects any change due to Zone.js. If within the new component we add <code>setTimeout</code>,<code>setInterval</code> or <code>requestAnimationFrame</code> then Angular will detect the function&#x2019;s body call and trigger the change detection mechanism, which is the basis for the framework.</p><p>PIXI has its own Ticker inside which is responsible for canvas updates. It is based of course on the <code>requestAnimationFrame</code>.</p><p>If we normally start PIXI in a component, we will have a problem because the ticker will trigger the change detection mechanism every moment, which will cause problems for weaker devices or larger projects.</p><h4 id="Wrong"><a href="#Wrong" class="headerlink" title="Wrong:"></a>Wrong:</h4><pre class="line-numbers language-typescript"><code class="language-typescript">
+			  		<p>Run PIXI without performance problems.<br><a id="more"></a></p><div class="amp-img-wrapper"><amp-img src="/2019/02/11/How-to-run-PIXI-in-angular-app/title-image.png" width="696" height="379" layout="responsive"></amp-img></div><p>Angular detects any change due to Zone.js. If within the new component we add <code>setTimeout</code>,<code>setInterval</code> or <code>requestAnimationFrame</code> then Angular will detect the function&#x2019;s body call and trigger the change detection mechanism, which is the basis for the framework.</p><p>PIXI has its own Ticker inside which is responsible for canvas updates. It is based of course on the <code>requestAnimationFrame</code>.</p><p>If we normally start PIXI in a component, we will have a problem because the ticker will trigger the change detection mechanism every moment, which will cause problems for weaker devices or larger projects.</p><h4 id="Wrong"><a href="#Wrong" class="headerlink" title="Wrong:"></a>Wrong:</h4><pre class="line-numbers language-typescript"><code class="language-typescript">
 <span class="token keyword">import</span> <span class="token punctuation">{</span> OnInit<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> ElementRef <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Application <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;pixi.js&apos;</span><span class="token punctuation">;</span>
 
@@ -2014,7 +2020,7 @@ h6.categories {
 				
 				<div class="copyright-title">
 					<span>
-					&copy; 2019&nbsp;Studio La cosa nostra blog
+					&copy; 2019&nbsp;Studio La cosa nostra blog, game dev
 					</span>
 				</div>
 				
