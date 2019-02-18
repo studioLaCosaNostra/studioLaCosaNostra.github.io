@@ -1,0 +1,529 @@
+{
+  "objects": [
+    {
+      "block": "brick1",
+      "width": 16,
+      "height": 16
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16
+    },
+    {
+      "block": "steel",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "block": "tree",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "block": "delete",
+      "width": 16,
+      "height": 16
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "block": "tank",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "block": "tank3",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "block": "bullet",
+      "width": 22,
+      "height": 10
+    },
+    {
+      "block": "explosion",
+      "width": 0,
+      "height": 0
+    }
+  ],
+  "map": [
+    {
+      "block": "tank",
+      "width": 64,
+      "height": 64,
+      "position": {
+        "x": 386.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 482.5,
+        "y": 327
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 482.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 482.5,
+        "y": 391
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 482.5,
+        "y": 423
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 514.5,
+        "y": 327
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 546.5,
+        "y": 327
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 578.5,
+        "y": 327
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 610.5,
+        "y": 327
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 514.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 546.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 578.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 610.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 610.5,
+        "y": 391
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 514.5,
+        "y": 391
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 546.5,
+        "y": 391
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 578.5,
+        "y": 391
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 514.5,
+        "y": 423
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 546.5,
+        "y": 423
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 578.5,
+        "y": 423
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "water",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 610.5,
+        "y": 423
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "steel",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 674.5,
+        "y": 327
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "steel",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 674.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "steel",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 674.5,
+        "y": 391
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 642.5,
+        "y": 327
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 658.5,
+        "y": 327
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick1",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 658.5,
+        "y": 343
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 642.5,
+        "y": 343
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 642.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 642.5,
+        "y": 375
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 642.5,
+        "y": 391
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 642.5,
+        "y": 407
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 642.5,
+        "y": 423
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 642.5,
+        "y": 439
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 658.5,
+        "y": 359
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 658.5,
+        "y": 391
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick2",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 658.5,
+        "y": 423
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick1",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 658.5,
+        "y": 375
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick1",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 658.5,
+        "y": 407
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "brick1",
+      "width": 16,
+      "height": 16,
+      "position": {
+        "x": 658.5,
+        "y": 439
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "steel",
+      "width": 32,
+      "height": 32,
+      "position": {
+        "x": 674.5,
+        "y": 423
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "tank3",
+      "width": 64,
+      "height": 64,
+      "position": {
+        "x": 383.5,
+        "y": 256
+      },
+      "angle": 0,
+      "visible": true
+    },
+    {
+      "block": "tank3",
+      "width": 64,
+      "height": 64,
+      "position": {
+        "x": 383.5,
+        "y": 192
+      },
+      "angle": 0,
+      "visible": true
+    }
+  ]
+}

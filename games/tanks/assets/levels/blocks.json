@@ -1,0 +1,11 @@
+[
+  {
+    "block": "brick1",
+    "width": 16,
+    "height": 16,
+    "position": {
+      "x": 272,
+      "y": 224
+    }
+  }
+]
