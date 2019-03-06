@@ -58,7 +58,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/"
 			},
 			"datePublished": "2019-02-11T16:39:00.000Z",
-			"dateModified": "2019-02-28T22:01:55.069Z",
+			"dateModified": "2019-03-06T09:54:30.360Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1839,7 +1839,12 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Run PIXI without performance problems.<br><a id="more"></a></p><div class="amp-img-wrapper"><amp-img src="/2019/02/11/How-to-run-PIXI-in-angular-app/title-image.png" width="696" height="379" layout="responsive"></amp-img></div><p>Angular detects any change due to Zone.js. If within the new component we add <code>setTimeout</code>,<code>setInterval</code> or <code>requestAnimationFrame</code> then Angular will detect the function&#x2019;s body call and trigger the change detection mechanism, which is the basis for the framework.</p><p>PIXI has its own Ticker inside which is responsible for canvas updates. It is based of course on the <code>requestAnimationFrame</code>.</p><p>If we normally start PIXI in a component, we will have a problem because the ticker will trigger the change detection mechanism every moment, which will cause problems for weaker devices or larger projects.</p><h4 id="Wrong"><a href="#Wrong" class="headerlink" title="Wrong:"></a>Wrong:</h4><pre class="line-numbers language-typescript"><code class="language-typescript">
+			  		<p>Run PIXI without performance problems.<br><a id="more"></a></p>
+<div class="amp-img-wrapper"><amp-img src="/2019/02/11/How-to-run-PIXI-in-angular-app/title-image.png" width="696" height="379" layout="responsive"></amp-img></div>
+<p>Angular detects any change due to Zone.js. If within the new component we add <code>setTimeout</code>,<code>setInterval</code> or <code>requestAnimationFrame</code> then Angular will detect the function&#x2019;s body call and trigger the change detection mechanism, which is the basis for the framework.</p>
+<p>PIXI has its own Ticker inside which is responsible for canvas updates. It is based of course on the <code>requestAnimationFrame</code>.</p>
+<p>If we normally start PIXI in a component, we will have a problem because the ticker will trigger the change detection mechanism every moment, which will cause problems for weaker devices or larger projects.</p>
+<h4 id="Wrong"><a href="#Wrong" class="headerlink" title="Wrong:"></a>Wrong:</h4><pre class="line-numbers language-typescript"><code class="language-typescript">
 <span class="token keyword">import</span> <span class="token punctuation">{</span> OnInit<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> ElementRef <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Application <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;pixi.js&apos;</span><span class="token punctuation">;</span>
 
@@ -1857,7 +1862,9 @@ h6.categories {
     <span class="token keyword">this</span><span class="token punctuation">.</span>elementRef<span class="token punctuation">.</span>nativeElement<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>view<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The best solution to this problem is to run PIXI outside of Angular&#x2019;s zone.<br>Angular has a special service for these purposes <code>NgZone</code> and the<code>runOutsideAngular</code> method.</p><h4 id="Good"><a href="#Good" class="headerlink" title="Good:"></a>Good:</h4><pre class="line-numbers language-typescript"><code class="language-typescript">
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>The best solution to this problem is to run PIXI outside of Angular&#x2019;s zone.<br>Angular has a special service for these purposes <code>NgZone</code> and the<code>runOutsideAngular</code> method.</p>
+<h4 id="Good"><a href="#Good" class="headerlink" title="Good:"></a>Good:</h4><pre class="line-numbers language-typescript"><code class="language-typescript">
 <span class="token keyword">import</span> <span class="token punctuation">{</span> OnInit<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> ElementRef<span class="token punctuation">,</span> NgZone <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Application <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;pixi.js&apos;</span><span class="token punctuation">;</span>
 
@@ -1877,7 +1884,10 @@ h6.categories {
     <span class="token keyword">this</span><span class="token punctuation">.</span>elementRef<span class="token punctuation">.</span>nativeElement<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>view<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now the internal <code>requestAnimationFrame</code> will not be noticed by angular when the application is running.</p><p>Component example with change in canvas resolution and PIXI destruction:</p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> OnInit<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> ElementRef<span class="token punctuation">,</span> Input<span class="token punctuation">,</span> HostListener<span class="token punctuation">,</span> NgZone<span class="token punctuation">,</span> OnDestroy <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now the internal <code>requestAnimationFrame</code> will not be noticed by angular when the application is running.</p>
+<p>Component example with change in canvas resolution and PIXI destruction:</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> OnInit<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> ElementRef<span class="token punctuation">,</span> Input<span class="token punctuation">,</span> HostListener<span class="token punctuation">,</span> NgZone<span class="token punctuation">,</span> OnDestroy <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Application<span class="token punctuation">,</span> ApplicationOptions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;pixi.js&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -1927,6 +1937,7 @@ h6.categories {
 
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 					
 					
 			    	<div class="social-share">
@@ -1964,6 +1975,12 @@ h6.categories {
 						<ul class="article-tag-list">
 							
 					    		<li class="article-tag-list-item">
+					    			<a class="article-tag-list-link" href="/tags/angular/">
+					    				angular
+					    			</a>
+					    		</li>
+							
+					    		<li class="article-tag-list-item">
 					    			<a class="article-tag-list-link" href="/tags/typescript/">
 					    				typescript
 					    			</a>
@@ -1972,12 +1989,6 @@ h6.categories {
 					    		<li class="article-tag-list-item">
 					    			<a class="article-tag-list-link" href="/tags/PIXI/">
 					    				PIXI
-					    			</a>
-					    		</li>
-							
-					    		<li class="article-tag-list-item">
-					    			<a class="article-tag-list-link" href="/tags/angular/">
-					    				angular
 					    			</a>
 					    		</li>
 							
