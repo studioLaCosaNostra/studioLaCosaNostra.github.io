@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/</loc>
+    
+    <lastmod>2019-03-13T15:31:09.083Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/</loc>
     
     <lastmod>2019-03-13T14:25:30.004Z</lastmod>
