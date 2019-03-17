@@ -1,0 +1,2 @@
+body{margin:0;overflow:hidden;background-color:#FAF8EF}.container{height:100vh;display:flex;flex-direction:column}.canvas{max-height:100%;flex-grow:1}.canvas canvas{position:absolute}.footer{z-index:1;width:100vw;text-align:center;padding:10px;box-sizing:border-box;font-family:Arial}.footer a{font-size:10px;color:black;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}
+
