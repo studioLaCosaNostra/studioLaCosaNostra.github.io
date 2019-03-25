@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://studiolacosanostra.github.io/projects/512/index.html</loc>
+    
+    <lastmod>2019-03-25T11:01:02.937Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://studiolacosanostra.github.io/projects/qr-code-generator/index.html</loc>
     
-    <lastmod>2019-03-24T22:00:15.852Z</lastmod>
+    <lastmod>2019-03-25T11:00:25.184Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>https://studiolacosanostra.github.io/projects/simon/index.html</loc>
     
     <lastmod>2019-03-18T13:46:53.474Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://studiolacosanostra.github.io/projects/512/index.html</loc>
-    
-    <lastmod>2019-03-18T13:24:46.638Z</lastmod>
     
   </url>
   
