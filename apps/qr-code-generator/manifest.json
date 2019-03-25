@@ -3,10 +3,10 @@
   "short_name": "QR Code Generator",
   "description": "Create custom QR Codes. You can save them as PNG image. You can change the size of the image.",
   "display": "standalone",
-  "background_color": "#ffff00",
+  "background_color": "#ffffff",
   "theme_color": "#3f51b5",
   "scope": "/apps/qr-code-generator/",
-  "start_url": "/apps/qr-code-generator/index.html",
+  "start_url": "/apps/qr-code-generator/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
