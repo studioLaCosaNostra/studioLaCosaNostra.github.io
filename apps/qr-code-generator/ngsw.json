@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1553532467430,
+  "timestamp": 1553533003370,
   "index": "/apps/qr-code-generator/index.html",
   "assetGroups": [
     {
@@ -11,6 +11,7 @@
         "/apps/qr-code-generator/es2015-polyfills.1e04665e16f944715fd2.js",
         "/apps/qr-code-generator/index.html",
         "/apps/qr-code-generator/main.ebd8a8320de2347907a0.js",
+        "/apps/qr-code-generator/manifest.json",
         "/apps/qr-code-generator/polyfills.8bbb231b43165d65d357.js",
         "/apps/qr-code-generator/runtime.4052a235b1d163319229.js",
         "/apps/qr-code-generator/styles.7b9b3a6310ae0abc3a92.css"
@@ -94,6 +95,7 @@
     "/apps/qr-code-generator/es2015-polyfills.1e04665e16f944715fd2.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
     "/apps/qr-code-generator/index.html": "a699a4636394ad75b40d0bde71157779976db3b0",
     "/apps/qr-code-generator/main.ebd8a8320de2347907a0.js": "824b6c9bc89c41eefe814df6189c64e2dd45c7ce",
+    "/apps/qr-code-generator/manifest.json": "cd72e66bd864ff20dd307781b68935b9d241ef64",
     "/apps/qr-code-generator/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/apps/qr-code-generator/roboto-v18-latin-regular.372d0cc3288fe8e97df4.ttf": "754d9eaa4a009c42e8d6d40c632a1dad6d44ec21",
     "/apps/qr-code-generator/roboto-v18-latin-regular.5d4aeb4e5f5ef754e307.woff2": "06db651cdf354c64a7383ea9c77024ef4fb4cef8",
