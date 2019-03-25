@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1553534359144,
+  "timestamp": 1553542494939,
   "index": "/apps/qr-code-generator/index.html",
   "assetGroups": [
     {
@@ -52,6 +52,8 @@
         "/apps/qr-code-generator/assets/icons/icon-72x72.png",
         "/apps/qr-code-generator/assets/icons/icon-96x96.png",
         "/apps/qr-code-generator/assets/ms-icon-144x144.png",
+        "/apps/qr-code-generator/assets/og-image.png",
+        "/apps/qr-code-generator/assets/twitter-image.png",
         "/apps/qr-code-generator/roboto-v18-latin-regular.372d0cc3288fe8e97df4.ttf",
         "/apps/qr-code-generator/roboto-v18-latin-regular.5d4aeb4e5f5ef754e307.woff2",
         "/apps/qr-code-generator/roboto-v18-latin-regular.68889c246da2739681c1.eot",
@@ -92,8 +94,10 @@
     "/apps/qr-code-generator/assets/icons/icon-72x72.png": "d787e339ed288ed37395fbc2216d46f387f48eb8",
     "/apps/qr-code-generator/assets/icons/icon-96x96.png": "d787e339ed288ed37395fbc2216d46f387f48eb8",
     "/apps/qr-code-generator/assets/ms-icon-144x144.png": "46e05ce0d5a0b845f0d10da805ce8da7dce70038",
+    "/apps/qr-code-generator/assets/og-image.png": "602499eb51601f079a6a629028aaa8f6afaf3970",
+    "/apps/qr-code-generator/assets/twitter-image.png": "612c55966b7ebc9688d84004b892f61bc970706f",
     "/apps/qr-code-generator/es2015-polyfills.1e04665e16f944715fd2.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
-    "/apps/qr-code-generator/index.html": "a699a4636394ad75b40d0bde71157779976db3b0",
+    "/apps/qr-code-generator/index.html": "f238b0a2bafecef44871177ab7a7e7e149718c72",
     "/apps/qr-code-generator/main.ebd8a8320de2347907a0.js": "824b6c9bc89c41eefe814df6189c64e2dd45c7ce",
     "/apps/qr-code-generator/manifest.json": "744b465ae6a02fc8acaecd5ffd589b8331c5f15f",
     "/apps/qr-code-generator/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
