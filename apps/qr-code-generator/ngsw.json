@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1553553588811,
+  "timestamp": 1553600769093,
   "index": "/apps/qr-code-generator/index.html",
   "assetGroups": [
     {
@@ -97,7 +97,7 @@
     "/apps/qr-code-generator/assets/og-image-2.png": "ced931133db770396b08312da4726da8fdc09f0e",
     "/apps/qr-code-generator/assets/twitter-image-2.png": "21798e63c0b21e5afec754e37bf518447173883d",
     "/apps/qr-code-generator/es2015-polyfills.1e04665e16f944715fd2.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
-    "/apps/qr-code-generator/index.html": "2f9f292d41e9e42c06766e6f78853fe6f4cf3cee",
+    "/apps/qr-code-generator/index.html": "cb4e24bb0c5b10db644a30837cd5eb3a35241881",
     "/apps/qr-code-generator/main.5652c2f43a97638709aa.js": "7fbfa5ac0c271d7a158cadd0c2e23500fb35185b",
     "/apps/qr-code-generator/manifest.json": "744b465ae6a02fc8acaecd5ffd589b8331c5f15f",
     "/apps/qr-code-generator/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
