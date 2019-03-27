@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://studiolacosanostra.github.io/.well-know/assetlinks.json</loc>
+    
+    <lastmod>2019-03-27T21:25:57.661Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://studiolacosanostra.github.io/2019/03/21/Working-snapcraft-yaml-for-Electron-apps-build-with-Github/</loc>
     
     <lastmod>2019-03-26T21:05:48.617Z</lastmod>
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</loc>
+    <loc>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</loc>
     
     <lastmod>2019-03-12T08:22:34.049Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</loc>
+    <loc>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</loc>
     
     <lastmod>2019-03-12T08:22:34.049Z</lastmod>
     
