@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</loc>
+    
+    <lastmod>2019-04-03T15:05:28.383Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</loc>
     
     <lastmod>2019-04-02T14:05:08.433Z</lastmod>
@@ -100,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</loc>
+    <loc>https://studiolacosanostra.github.io/projects/512/privacy_policy.html</loc>
     
     <lastmod>2019-03-12T08:22:34.049Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/projects/512/privacy_policy.html</loc>
+    <loc>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</loc>
     
     <lastmod>2019-03-12T08:22:34.049Z</lastmod>
     
