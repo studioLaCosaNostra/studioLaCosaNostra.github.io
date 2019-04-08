@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Studio La cosa nostra dev blog</title>
+    <link>https://studiolacosanostra.github.io/</link>
+    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
+    <pubDate>Wed, 03 Apr 2019 15:05:28 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Deploy angular application to now.sh</title>
+      <link>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</link>
+      <guid>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</guid>
+      <pubDate>Wed, 03 Apr 2019 15:05:28 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Angular is a platform for building applications across all platforms; web, mobile web, native mobile, and
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Angular async pipe does not work in the electron</title>
+      <link>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</link>
+      <guid>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</guid>
+      <pubDate>Tue, 02 Apr 2019 14:05:08 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Yesterday, creating a document scanning program I was very surprised why angular does not update the
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Automate electron app release build on github with Travis CI</title>
+      <link>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/</link>
+      <guid>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/</guid>
+      <pubDate>Tue, 26 Mar 2019 21:04:50 GMT</pubDate>
+      <description>
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Working snapcraft.yaml for Electron apps (build with Github)</title>
+      <link>https://studiolacosanostra.github.io/2019/03/21/Working-snapcraft-yaml-for-Electron-apps-build-with-Github/</link>
+      <guid>https://studiolacosanostra.github.io/2019/03/21/Working-snapcraft-yaml-for-Electron-apps-build-with-Github/</guid>
+      <pubDate>Wed, 20 Mar 2019 23:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;A friend asked me for a simple application to &lt;a href=&quot;/projects/qr-code-generator&quot;&gt;generate QR Codes&lt;/a&gt;. It
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/03/21/Working-snapcraft-yaml-for-Electron-apps-build-with-Github/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Hexo: Publish posts automatically on twitter.</title>
+      <link>https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/</link>
+      <guid>https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/</guid>
+      <pubDate>Tue, 12 Mar 2019 23:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;You will never forget to publish post on twitter.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>VSCode: NVM /bin/bash: npm: command not found</title>
+      <link>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/</link>
+      <guid>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/</guid>
+      <pubDate>Sun, 10 Mar 2019 23:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Angular: Custom class decorator. Force OnInit, OnDestroy implementation.</title>
+      <link>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/</link>
+      <guid>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/</guid>
+      <pubDate>Mon, 18 Feb 2019 14:59:24 GMT</pubDate>
+      <description>
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;How to create a good decorator in angular.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to run PIXI in Angular application</title>
+      <link>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/</link>
+      <guid>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/</guid>
+      <pubDate>Mon, 11 Feb 2019 16:39:00 GMT</pubDate>
+      <description>
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Run PIXI without performance problems.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Hexo - How to determine production mode in theme</title>
+      <link>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</link>
+      <guid>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</guid>
+      <pubDate>Fri, 25 Jan 2019 01:00:28 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;To determine whether we are in production or development mode, we have an available variable in the template
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to retrieve information from Adsense about the current account balance.</title>
+      <link>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/</link>
+      <guid>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/</guid>
+      <pubDate>Wed, 23 Jan 2019 11:58:31 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Unfortunately, Adsense requires you to log in to the real user of your Adsense account. For this purpose, we
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to simulate location in android applications</title>
+      <link>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</link>
+      <guid>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</guid>
+      <pubDate>Wed, 23 Jan 2019 11:58:31 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;/2019/01/23/how-to-simulate-location-in-android-applications/map.png&quot; alt=&quot;Article map
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
