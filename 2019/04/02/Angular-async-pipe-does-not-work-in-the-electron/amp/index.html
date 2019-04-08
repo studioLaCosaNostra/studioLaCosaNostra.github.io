@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="canonical" href="https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/" >
-    <title>Angular async pipe does not work in the electron - Studio La cosa nostra blog, game dev</title>
+    <title>Angular async pipe does not work in the electron - Studio La cosa nostra dev blog</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     
     <meta property="og:title" content="Angular async pipe does not work in the electron">
@@ -12,12 +12,12 @@
 	
 		<meta property="og:image" content="https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/title-image.png">
 	
-	<meta property="og:site_name" content="Studio La cosa nostra blog, game dev">
+	<meta property="og:site_name" content="Studio La cosa nostra dev blog">
 	
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="Studio La cosa nostra blog, game dev">
+	<meta name="twitter:site" content="Studio La cosa nostra dev blog">
 	<meta name="twitter:url" content="https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/">
-	<meta name="twitter:title" content="Angular async pipe does not work in the electron - Studio La cosa nostra blog, game dev">
+	<meta name="twitter:title" content="Angular async pipe does not work in the electron - Studio La cosa nostra dev blog">
 	
     
     	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/title-image.png">
@@ -67,7 +67,7 @@
 			},
 			"publisher": {
 			    "@type": "Organization",
-			    "name": "Studio La cosa nostra blog, game dev"
+			    "name": "Studio La cosa nostra dev blog"
 			    
 			    ,
 			    "logo": {
@@ -1772,7 +1772,7 @@ h6.categories {
   		<div class="nav-container">
 	  		<div class="left-nav">
 	  			<div class="header-title">
-	  				<a href="/">Studio La cosa nostra blog, game dev</a>
+	  				<a href="/">Studio La cosa nostra dev blog</a>
 	  			</div>
 	  		</div>
 	  		
@@ -1842,7 +1842,8 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Yesterday, creating a document scanning program I was very surprised why angular does not update the view.</p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+			  		<p>Yesterday, creating a document scanning program I was very surprised why angular does not update the view.</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Observable<span class="token punctuation">,</span> BehaviorSubject <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;rxjs&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
 
@@ -1873,7 +1874,11 @@ h6.categories {
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>devicesBehaviorSubject</code> is updated correctly but unfortunately nothing appeared on the screen. :(</p><p>After several unsuccessful attempts, it turned out that angular does not see events from node.js <code>EventEmitter</code>. The simplest solution to this problem is to add ngZone.run inside <code>on</code> handler <code>this.scanner.on(&apos;scannerDevices&apos;, (devices) =&gt; {...})</code></p><p>Working example:</p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> NgZone <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>devicesBehaviorSubject</code> is updated correctly but unfortunately nothing appeared on the screen. :(</p>
+<p>After several unsuccessful attempts, it turned out that angular does not see events from node.js <code>EventEmitter</code>. The simplest solution to this problem is to add ngZone.run inside <code>on</code> handler <code>this.scanner.on(&apos;scannerDevices&apos;, (devices) =&gt; {...})</code></p>
+<p>Working example:</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> NgZone <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Observable<span class="token punctuation">,</span> BehaviorSubject <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;rxjs&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
 
@@ -1906,7 +1911,9 @@ h6.categories {
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now angular gets information about the new <code>scannerDevices</code> event.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now angular gets information about the new <code>scannerDevices</code> event.</p>
+
 					
 					
 			    	<div class="social-share">
@@ -1988,7 +1995,7 @@ h6.categories {
 				
 				<div class="copyright-title">
 					<span>
-					&copy; 2019&nbsp;Studio La cosa nostra blog, game dev
+					&copy; 2019&nbsp;Studio La cosa nostra dev blog
 					</span>
 				</div>
 				
