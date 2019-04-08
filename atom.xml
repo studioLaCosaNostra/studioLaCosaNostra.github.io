@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Studio La cosa nostra dev blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://studiolacosanostra.github.io/"/>
+  <updated>2019-04-03T15:05:28.383Z</updated>
+  <id>https://studiolacosanostra.github.io/</id>
+  
+  <author>
+    <name>Studio La Cosa Nostra</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Deploy angular application to now.sh</title>
+    <link href="https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/"/>
+    <id>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</id>
+    <published>2019-04-03T15:05:28.382Z</published>
+    <updated>2019-04-03T15:05:28.383Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Angular is a platform for building applications across all platforms; web, mobile web, native mobile, and
+        
+      
+    
+    </summary>
+    
+    
+      <category term="angular" scheme="https://studiolacosanostra.github.io/tags/angular/"/>
+    
+      <category term="now.sh" scheme="https://studiolacosanostra.github.io/tags/now-sh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Angular async pipe does not work in the electron</title>
+    <link href="https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/"/>
+    <id>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</id>
+    <published>2019-04-02T14:05:08.433Z</published>
+    <updated>2019-04-02T14:05:08.433Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Yesterday, creating a document scanning program I was very surprised why angular does not update the
+        
+      
+    
+    </summary>
+    
+    
+      <category term="angular" scheme="https://studiolacosanostra.github.io/tags/angular/"/>
+    
+      <category term="electron" scheme="https://studiolacosanostra.github.io/tags/electron/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Automate electron app release build on github with Travis CI</title>
+    <link href="https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/"/>
+    <id>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/</id>
+    <published>2019-03-26T21:04:50.620Z</published>
+    <updated>2019-03-26T21:04:50.625Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="electron" scheme="https://studiolacosanostra.github.io/tags/electron/"/>
+    
+      <category term="Travis CI" scheme="https://studiolacosanostra.github.io/tags/Travis-CI/"/>
+    
+      <category term="nodejs" scheme="https://studiolacosanostra.github.io/tags/nodejs/"/>
+    
+      <category term="automation" scheme="https://studiolacosanostra.github.io/tags/automation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Working snapcraft.yaml for Electron apps (build with Github)</title>
+    <link href="https://studiolacosanostra.github.io/2019/03/21/Working-snapcraft-yaml-for-Electron-apps-build-with-Github/"/>
+    <id>https://studiolacosanostra.github.io/2019/03/21/Working-snapcraft-yaml-for-Electron-apps-build-with-Github/</id>
+    <published>2019-03-20T23:00:00.000Z</published>
+    <updated>2019-03-26T21:05:48.617Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;A friend asked me for a simple application to &lt;a href=&quot;/projects/qr-code-generator&quot;&gt;generate QR Codes&lt;/a&gt;. It
+        
+      
+    
+    </summary>
+    
+    
+      <category term="electron" scheme="https://studiolacosanostra.github.io/tags/electron/"/>
+    
+      <category term="nodejs" scheme="https://studiolacosanostra.github.io/tags/nodejs/"/>
+    
+      <category term="automation" scheme="https://studiolacosanostra.github.io/tags/automation/"/>
+    
+      <category term="snapcraft" scheme="https://studiolacosanostra.github.io/tags/snapcraft/"/>
+    
+      <category term="qr code" scheme="https://studiolacosanostra.github.io/tags/qr-code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo: Publish posts automatically on twitter.</title>
+    <link href="https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/"/>
+    <id>https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/</id>
+    <published>2019-03-12T23:00:00.000Z</published>
+    <updated>2019-03-13T15:31:09.083Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;You will never forget to publish post on twitter.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="https://studiolacosanostra.github.io/tags/nodejs/"/>
+    
+      <category term="hexo" scheme="https://studiolacosanostra.github.io/tags/hexo/"/>
+    
+      <category term="twitter" scheme="https://studiolacosanostra.github.io/tags/twitter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode: NVM /bin/bash: npm: command not found</title>
+    <link href="https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/"/>
+    <id>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/</id>
+    <published>2019-03-10T23:00:00.000Z</published>
+    <updated>2019-03-12T16:02:55.971Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="https://studiolacosanostra.github.io/tags/nodejs/"/>
+    
+      <category term="vscode" scheme="https://studiolacosanostra.github.io/tags/vscode/"/>
+    
+      <category term="bash" scheme="https://studiolacosanostra.github.io/tags/bash/"/>
+    
+      <category term="nvm" scheme="https://studiolacosanostra.github.io/tags/nvm/"/>
+    
+      <category term="npm" scheme="https://studiolacosanostra.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Angular: Custom class decorator. Force OnInit, OnDestroy implementation.</title>
+    <link href="https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/"/>
+    <id>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/</id>
+    <published>2019-02-18T14:59:24.000Z</published>
+    <updated>2019-03-01T16:31:53.577Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;How to create a good decorator in angular.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="angular" scheme="https://studiolacosanostra.github.io/tags/angular/"/>
+    
+      <category term="decorators" scheme="https://studiolacosanostra.github.io/tags/decorators/"/>
+    
+      <category term="typescript" scheme="https://studiolacosanostra.github.io/tags/typescript/"/>
+    
+      <category term="CSS" scheme="https://studiolacosanostra.github.io/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to run PIXI in Angular application</title>
+    <link href="https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/"/>
+    <id>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/</id>
+    <published>2019-02-11T16:39:00.000Z</published>
+    <updated>2019-03-13T14:25:30.004Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Run PIXI without performance problems.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="angular" scheme="https://studiolacosanostra.github.io/tags/angular/"/>
+    
+      <category term="typescript" scheme="https://studiolacosanostra.github.io/tags/typescript/"/>
+    
+      <category term="PIXI" scheme="https://studiolacosanostra.github.io/tags/PIXI/"/>
+    
+      <category term="ngZone" scheme="https://studiolacosanostra.github.io/tags/ngZone/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo - How to determine production mode in theme</title>
+    <link href="https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/"/>
+    <id>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</id>
+    <published>2019-01-25T01:00:28.000Z</published>
+    <updated>2019-03-12T08:22:34.049Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;To determine whether we are in production or development mode, we have an available variable in the template
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://studiolacosanostra.github.io/tags/hexo/"/>
+    
+      <category term="javascript" scheme="https://studiolacosanostra.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to retrieve information from Adsense about the current account balance.</title>
+    <link href="https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/"/>
+    <id>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/</id>
+    <published>2019-01-23T11:58:31.000Z</published>
+    <updated>2019-02-28T21:58:29.112Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Unfortunately, Adsense requires you to log in to the real user of your Adsense account. For this purpose, we
+        
+      
+    
+    </summary>
+    
+    
+      <category term="typescript" scheme="https://studiolacosanostra.github.io/tags/typescript/"/>
+    
+      <category term="node.js" scheme="https://studiolacosanostra.github.io/tags/node-js/"/>
+    
+      <category term="adsense" scheme="https://studiolacosanostra.github.io/tags/adsense/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to simulate location in android applications</title>
+    <link href="https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/"/>
+    <id>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</id>
+    <published>2019-01-23T11:58:31.000Z</published>
+    <updated>2019-03-12T08:22:34.049Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;/2019/01/23/how-to-simulate-location-in-android-applications/map.png&quot; alt=&quot;Article map
+        
+      
+    
+    </summary>
+    
+    
+      <category term="android" scheme="https://studiolacosanostra.github.io/tags/android/"/>
+    
+      <category term="developer tools" scheme="https://studiolacosanostra.github.io/tags/developer-tools/"/>
+    
+      <category term="fake gps" scheme="https://studiolacosanostra.github.io/tags/fake-gps/"/>
+    
+  </entry>
+  
+</feed>
