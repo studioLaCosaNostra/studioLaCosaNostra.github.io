@@ -8,14 +8,14 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Mon, 22 Apr 2019 19:24:06 GMT</pubDate>
+    <pubDate>Tue, 23 Apr 2019 20:54:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>Deploy angular application to now.sh</title>
-      <link>https://studiolacosanostra.github.io/2019/04/22/Deploy-angular-application-to-now-sh/</link>
-      <guid>https://studiolacosanostra.github.io/2019/04/22/Deploy-angular-application-to-now-sh/</guid>
-      <pubDate>Mon, 22 Apr 2019 19:24:06 GMT</pubDate>
+      <link>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</link>
+      <guid>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</guid>
+      <pubDate>Tue, 02 Apr 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -28,28 +28,14 @@
       
       </description>
       
-      <comments>https://studiolacosanostra.github.io/2019/04/22/Deploy-angular-application-to-now-sh/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Automate electron app release build on github with Travis CI</title>
-      <link>https://studiolacosanostra.github.io/2019/04/22/Automate-electron-app-release-build-on-github-with-Travis-CI/</link>
-      <guid>https://studiolacosanostra.github.io/2019/04/22/Automate-electron-app-release-build-on-github-with-Travis-CI/</guid>
-      <pubDate>Mon, 22 Apr 2019 19:24:06 GMT</pubDate>
-      <description>
-      
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/04/22/Automate-electron-app-release-build-on-github-with-Travis-CI/#disqus_thread</comments>
+      <comments>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/#disqus_thread</comments>
     </item>
     
     <item>
       <title>Angular async pipe does not work in the electron</title>
-      <link>https://studiolacosanostra.github.io/2019/04/22/Angular-async-pipe-does-not-work-in-the-electron/</link>
-      <guid>https://studiolacosanostra.github.io/2019/04/22/Angular-async-pipe-does-not-work-in-the-electron/</guid>
-      <pubDate>Mon, 22 Apr 2019 19:24:06 GMT</pubDate>
+      <link>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</link>
+      <guid>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</guid>
+      <pubDate>Mon, 01 Apr 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -62,7 +48,21 @@
       
       </description>
       
-      <comments>https://studiolacosanostra.github.io/2019/04/22/Angular-async-pipe-does-not-work-in-the-electron/#disqus_thread</comments>
+      <comments>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Automate electron app release build on github with Travis CI</title>
+      <link>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/</link>
+      <guid>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/</guid>
+      <pubDate>Mon, 25 Mar 2019 23:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/#disqus_thread</comments>
     </item>
     
     <item>
