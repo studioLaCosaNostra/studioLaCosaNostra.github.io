@@ -58,7 +58,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/"
 			},
 			"datePublished": "2019-03-10T23:00:00.000Z",
-			"dateModified": "2019-03-12T16:02:55.971Z",
+			"dateModified": "2019-04-22T19:24:06.520Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1848,17 +1848,27 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p><em>When you want to run a task but you get an adventure with <code>bash</code></em><br><a id="more"></a></p><p>Putting the ubuntu system back together, I met a new problem I did not know. When I wanted to run the task in VSCode, but there was such a message in the console:</p><div class="amp-img-wrapper"><amp-img src="/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/screenshot-npm-command-not-found.png" width="496" height="88" layout="responsive"></amp-img></div><p>This should not happen because I had the <a href="https://github.com/creationix/nvm" rel="external nofollow noopener noreferrer" target="_blank">node version manager</a> already installed and downloaded the latest <code>node</code> with <code>npm</code>.<br>At the beginning I found out that this may be some error in the task, so I tried to run the script with <code>node</code> without <code>npm</code>, but unfortunately another error appeared:</p><div class="amp-img-wrapper"><amp-img src="/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/screenshot-node-no-such-file-or-directory.png" width="506" height="91" layout="responsive"></amp-img></div><p>I started to guess that <code>bash</code> which is run on the task does not load the <code>.bashrc</code> startup file. I made a simple check by creating a task that displays the variable set in <code>.bashrc</code>. Nothing appeared so now it was sure that this is the reason why <code>node</code> and <code>npm</code> not running. When looking for a solution, I found the code in the <code>.bashrc</code>:</p><pre class="line-numbers language-bash"><code class="language-bash"># If not running interactively, don&apos;t do anything
+			  		<p><em>When you want to run a task but you get an adventure with <code>bash</code></em><br><a id="more"></a></p>
+<p>Putting the ubuntu system back together, I met a new problem I did not know. When I wanted to run the task in VSCode, but there was such a message in the console:</p>
+<div class="amp-img-wrapper"><amp-img src="/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/screenshot-npm-command-not-found.png" width="496" height="88" layout="responsive"></amp-img></div>
+<p>This should not happen because I had the <a href="https://github.com/creationix/nvm" rel="external nofollow noopener noreferrer" target="_blank">node version manager</a> already installed and downloaded the latest <code>node</code> with <code>npm</code>.<br>At the beginning I found out that this may be some error in the task, so I tried to run the script with <code>node</code> without <code>npm</code>, but unfortunately another error appeared:</p>
+<div class="amp-img-wrapper"><amp-img src="/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/screenshot-node-no-such-file-or-directory.png" width="506" height="91" layout="responsive"></amp-img></div>
+<p>I started to guess that <code>bash</code> which is run on the task does not load the <code>.bashrc</code> startup file. I made a simple check by creating a task that displays the variable set in <code>.bashrc</code>. Nothing appeared so now it was sure that this is the reason why <code>node</code> and <code>npm</code> not running. When looking for a solution, I found the code in the <code>.bashrc</code>:</p>
+<pre class="line-numbers language-bash"><code class="language-bash"># If not running interactively, don&apos;t do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The code above stops executing the rest of the code if bash does not start in <strong>interactive</strong> mode, so the <em>node version manager</em> has not been initialized. (It was added at the end of this file.)<br>The fastest solution is to <em>force</em> vscode to run tasks in this mode. After a few minutes of searching I found a field in the settings:</p><pre class="line-numbers language-json"><code class="language-json">{
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>The code above stops executing the rest of the code if bash does not start in <strong>interactive</strong> mode, so the <em>node version manager</em> has not been initialized. (It was added at the end of this file.)<br>The fastest solution is to <em>force</em> vscode to run tasks in this mode. After a few minutes of searching I found a field in the settings:</p>
+<pre class="line-numbers language-json"><code class="language-json">{
   &quot;terminal.integrated.shellArgs.linux&quot;: [
       &quot;-i&quot;
   ]
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now the tasks start correctly and everything works again without any complaints. :)</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now the tasks start correctly and everything works again without any complaints. :)</p>
+
 					
 					
 			    	<div class="social-share">
