@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Tue, 23 Apr 2019 20:54:44 GMT</pubDate>
+    <pubDate>Thu, 25 Apr 2019 20:41:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>How to deploy a new application written in angular to firebase hosting</title>
+      <link>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/</link>
+      <guid>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/</guid>
+      <pubDate>Wed, 24 Apr 2019 22:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;In this article, I describe how easy and simple you can share your angular application on firebase hosting
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Deploy angular application to now.sh</title>
