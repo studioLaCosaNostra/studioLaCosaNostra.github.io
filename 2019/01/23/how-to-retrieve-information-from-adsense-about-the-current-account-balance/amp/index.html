@@ -10,7 +10,7 @@
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/">
 	
-		<meta property="og:image" content="https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/adsense-logo.jpg">
+		<meta property="og:image" content="https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/title-image.png">
 	
 	<meta property="og:site_name" content="Studio La cosa nostra dev blog">
 	
@@ -20,7 +20,7 @@
 	<meta name="twitter:title" content="How to retrieve information from Adsense about the current account balance. - Studio La cosa nostra dev blog">
 	
     
-    	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/adsense-logo.jpg">
+    	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/title-image.png">
 	
 	
 	
@@ -52,13 +52,13 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/"
 			},
 			"datePublished": "2019-01-23T11:58:31.000Z",
-			"dateModified": "2019-03-06T14:18:16.580Z",
+			"dateModified": "2019-05-03T06:06:18.934Z",
 			
 			"image": {
 				"@type": "ImageObject",
-				"url": "https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/adsense-logo.jpg",
+				"url": "https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/title-image.png",
 				"width" : "696",
-				"height" : "355"
+				"height" : "379"
 			},
 			
 			"author": {
@@ -1842,8 +1842,24 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Unfortunately, Adsense requires you to log in to the real user of your Adsense account. For this purpose, we will use the key generated from the <a href="https://developers.google.com/adsense/management/getting_started" rel="external nofollow noopener noreferrer" target="_blank">Google Adsense Management API site</a> and <strong>click</strong><br></p><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/register-your-app-button.png" width="208" height="92" layout="responsive"></amp-img></div>
-<p>Program code in typescript: <code>adsense.ts</code></p>
+			  		<p>Unfortunately, Adsense requires you to log via OAuth to get Adsense account informations. For this purpose, we will use the keys generated on <a href="https://developers.google.com/adsense/management/getting_started" rel="external nofollow noopener noreferrer" target="_blank">Google Adsense Management API site</a>. On this site just <strong>click</strong> that button.<br></p><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/register-your-app-button.png" width="208" height="92" layout="responsive"></amp-img></div>
+<p>Google OAuth2 keys should look like this</p>
+<p><code>google-oauth-keys.json</code></p>
+<pre><code>{
+  &quot;web&quot;: {
+    &quot;client_id&quot;: &quot;434543536-niwen3293vubu2643nu73.apps.googleusercontent.com&quot;,
+    &quot;project_id&quot;: &quot;adsense-54357734&quot;,
+    &quot;auth_uri&quot;: &quot;https://accounts.google.com/o/oauth2/auth&quot;,
+    &quot;token_uri&quot;: &quot;https://oauth2.googleapis.com/token&quot;,
+    &quot;auth_provider_x509_cert_url&quot;: &quot;https://www.googleapis.com/oauth2/v1/certs&quot;,
+    &quot;client_secret&quot;: &quot;99h-wf8ewf8wvrrwd&quot;,
+    &quot;redirect_uris&quot;: [
+      &quot;http://localhost:3000/oauth2callback&quot;
+    ]
+  }
+}
+</code></pre><p>Code from a working program to extract information about your monthly earnings from Google Adsense.</p>
+<p><code>adsense.ts</code></p>
 <pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> adsense_v1_4 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;googleapis&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> readFile <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;fs&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> promisify <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;util&apos;</span><span class="token punctuation">;</span>
@@ -1852,13 +1868,27 @@ h6.categories {
 <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> url <span class="token keyword">from</span> <span class="token string">&apos;url&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> opn <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">&apos;opn&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> moment <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">&apos;moment&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> transporter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./email-transporter&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> GetTokenResponse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;google-auth-library/build/src/auth/oauth2client&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> low <span class="token keyword">from</span> <span class="token string">&apos;lowdb&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> FileAsync <span class="token keyword">from</span> <span class="token string">&apos;lowdb/adapters/FileAsync&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Socket <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;net&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getDb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Promise<span class="token operator">&lt;</span>low<span class="token punctuation">.</span>LowdbAsync<span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> adapter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileAsync</span><span class="token punctuation">(</span><span class="token string">&apos;db.json&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> db <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">low</span><span class="token punctuation">(</span>adapter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">await</span> db<span class="token punctuation">.</span><span class="token function">defaults</span><span class="token punctuation">(</span><span class="token punctuation">{</span> googleOAuth2<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> db<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token keyword">const</span> readFileAsync <span class="token operator">=</span> <span class="token function">promisify</span><span class="token punctuation">(</span>readFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/**
  * Start by acquiring a pre-authenticated oAuth2 client.
  */</span>
 <span class="token keyword">let</span> oAuth2Client<span class="token punctuation">:</span> OAuth2Client<span class="token punctuation">;</span>
-<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getAdsense</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getAdsense</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>oAuth2Client<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     oAuth2Client <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getAuthenticatedClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
@@ -1890,23 +1920,31 @@ h6.categories {
  * Create a new OAuth2Client, and go through the OAuth2 content
  * workflow.  Return the full client to the callback.
  */</span>
-<span class="token keyword">function</span> <span class="token function">getAuthenticatedClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token operator">&lt;</span>OAuth2Client<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getAuthenticatedClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> db <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getDb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> oauth2Client <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token operator">&lt;</span>OAuth2Client<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token comment">// create an oAuth client to authorize the API call.  Secrets are kept in a `keys.json` file,</span>
     <span class="token comment">// which should be downloaded from the Google Developers Console.</span>
-    <span class="token keyword">const</span> credentialsBuffer <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">readFileAsync</span><span class="token punctuation">(</span><span class="token string">&apos;./configs/credentials.json&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> credentials <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>credentialsBuffer<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> keysBuffer <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">readFileAsync</span><span class="token punctuation">(</span><span class="token string">&apos;./configs/google-oauth-keys.json&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> keys <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>keysBuffer<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token keyword">const</span> oAuth2Client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OAuth2Client</span><span class="token punctuation">(</span>
-      credentials<span class="token punctuation">.</span>web<span class="token punctuation">.</span>client_id<span class="token punctuation">,</span>
-      credentials<span class="token punctuation">.</span>web<span class="token punctuation">.</span>client_secret<span class="token punctuation">,</span>
-      credentials<span class="token punctuation">.</span>web<span class="token punctuation">.</span>redirect_uris<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      keys<span class="token punctuation">.</span>web<span class="token punctuation">.</span>client_id<span class="token punctuation">,</span>
+      keys<span class="token punctuation">.</span>web<span class="token punctuation">.</span>client_secret<span class="token punctuation">,</span>
+      keys<span class="token punctuation">.</span>web<span class="token punctuation">.</span>redirect_uris<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// check credentials in db.json</span>
+    <span class="token keyword">const</span> credentials <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;googleOAuth2.credentials&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>credentials<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      oAuth2Client<span class="token punctuation">.</span><span class="token function">setCredentials</span><span class="token punctuation">(</span>credentials<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token function">resolve</span><span class="token punctuation">(</span>oAuth2Client<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token comment">// Generate the url that will be used for the consent dialog.</span>
     <span class="token keyword">const</span> authorizeUrl <span class="token operator">=</span> oAuth2Client<span class="token punctuation">.</span><span class="token function">generateAuthUrl</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       access_type<span class="token punctuation">:</span> <span class="token string">&apos;offline&apos;</span><span class="token punctuation">,</span>
       prompt<span class="token punctuation">:</span> <span class="token string">&apos;consent&apos;</span><span class="token punctuation">,</span>
       scope<span class="token punctuation">:</span> <span class="token string">&apos;https://www.googleapis.com/auth/adsense.readonly&apos;</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> socket<span class="token punctuation">:</span> Socket<span class="token punctuation">;</span>
     <span class="token comment">// Open an http server to accept the oauth callback. In this simple example, the</span>
     <span class="token comment">// only request to our webserver is to /oauth2callback?code=&lt;code&gt;</span>
     <span class="token keyword">const</span> server <span class="token operator">=</span> http
@@ -1926,15 +1964,18 @@ h6.categories {
             &lt;/html&gt;
             `</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             server<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
+            <span class="token comment">// Destroy one connection</span>
+            socket<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token comment">// Now that we have the code, use that to acquire tokens.</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              <span class="token keyword">const</span> <span class="token punctuation">{</span> tokens <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> oAuth2Client<span class="token punctuation">.</span><span class="token function">getToken</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">const</span> <span class="token punctuation">{</span> tokens <span class="token punctuation">}</span><span class="token punctuation">:</span> GetTokenResponse <span class="token operator">=</span> <span class="token keyword">await</span> oAuth2Client<span class="token punctuation">.</span><span class="token function">getToken</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">;</span>
               oAuth2Client<span class="token punctuation">.</span><span class="token function">setCredentials</span><span class="token punctuation">(</span>tokens<span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&apos;Tokens acquired.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&apos;Tokens acquired.&apos;</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>oAuth2Client<span class="token punctuation">.</span>credentials<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token comment">// save credentials to db.json</span>
+              <span class="token keyword">await</span> db<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">&apos;googleOAuth2.credentials&apos;</span><span class="token punctuation">,</span> tokens<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
               <span class="token function">resolve</span><span class="token punctuation">(</span>oAuth2Client<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-              <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;missing code&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Missing code in oauth2callback&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
           <span class="token punctuation">}</span>
         <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1946,15 +1987,33 @@ h6.categories {
         <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;server created&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">opn</span><span class="token punctuation">(</span>authorizeUrl<span class="token punctuation">,</span> <span class="token punctuation">{</span> wait<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>childProcess <span class="token operator">=&gt;</span> childProcess<span class="token punctuation">.</span><span class="token function">unref</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    server<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;connection&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>newSocket<span class="token punctuation">:</span> Socket<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      socket <span class="token operator">=</span> newSocket<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> oauth2Client<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+
 <span class="token function">initAdsense</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>to run code</p>
 <pre class="line-numbers language-bash"><code class="language-bash">ts-node adsense.ts
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>the program will open the google page for you to authorize the adsense account.<br>After authorization, the program already stores an authentication token, so every next call to the <code>getAdsense</code> function will not open the browser window any more.</p>
+<p>The program will open the google page for you to authorize the adsense account.</p>
+<div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/authorization-access-grant.png" width="458" height="615" layout="responsive"></amp-img></div>
+<p>After authorization, the program already stores an authentication token, so every next call to the <code>getAdsense</code> function will not open the browser window any more.</p>
+<div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Auth-success-callback.png" width="952" height="83" layout="responsive"></amp-img></div>
+<p>At the first authorization, OAuth2 sends us a credentials <strong>refresh_token</strong>. </p>
+<pre><code>Tokens acquired. {
+  &quot;access_token&quot;: &quot;ya29.Glv9Y8SJ-4OTp5HVy8cSqCO&quot;,
+  &quot;refresh_token&quot;: &quot;1/oe_PDv4g45gbAquNmCeTc99AkhDp3Aca090BE&quot;,
+  &quot;scope&quot;: &quot;https://www.googleapis.com/auth/adsense.readonly&quot;,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expiry_date&quot;: 1556827859753
+}
+{ thisMonthSum: 0, otherMonthsSum: 200.64, sum: 200.64 }
+</code></pre><p>Thanks to him, we no longer have to ask for access for our program. We need to store credentials (with refresh_token) in the database, in this article we used the <strong>lowdb</strong> library to hold data in <code>db.json</code></p>
 
 					
 					
