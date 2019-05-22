@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</loc>
+    
+    <lastmod>2019-05-22T16:21:56.662Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/</loc>
     
     <lastmod>2019-05-03T17:19:51.334Z</lastmod>
@@ -37,7 +44,7 @@
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/projects/simon/index.html</loc>
+    <loc>https://studiolacosanostra.github.io/projects/512/index.html</loc>
     
     <lastmod>2019-04-22T19:24:06.544Z</lastmod>
     
@@ -51,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/projects/512/index.html</loc>
+    <loc>https://studiolacosanostra.github.io/projects/simon/index.html</loc>
     
     <lastmod>2019-04-22T19:24:06.544Z</lastmod>
     
