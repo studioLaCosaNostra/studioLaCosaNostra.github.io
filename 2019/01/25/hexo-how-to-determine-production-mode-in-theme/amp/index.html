@@ -1842,22 +1842,13 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>To determine whether we are in production or development mode, we have an available variable in the template called <code>env</code>.<br>Unfortunately, the hexo documentation does not give us details of what may be there.</p>
-<div class="amp-img-wrapper"><amp-img src="/2019/01/25/hexo-how-to-determine-production-mode-in-theme/hexo-global-variables-list.png" width="744" height="491" layout="responsive"></amp-img></div>
-<p>However, to see what is sitting there, you only need to print the contents of this variable in the template<br>Example <code>themes/some-theme/layout/layout.ejs</code></p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+			  		<p>To determine whether we are in production or development mode, we have an available variable in the template called <code>env</code>.<br>Unfortunately, the hexo documentation does not give us details of what may be there.</p><div class="amp-img-wrapper"><amp-img src="/2019/01/25/hexo-how-to-determine-production-mode-in-theme/hexo-global-variables-list.png" width="744" height="491" layout="responsive"></amp-img></div><p>However, to see what is sitting there, you only need to print the contents of this variable in the template<br>Example <code>themes/some-theme/layout/layout.ejs</code></p><pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>
 &lt;%= JSON.stringify(env, null, 2) %&gt;
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">&gt;</span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Then opening <a href="http://localhost:4000" rel="external nofollow noopener noreferrer" target="_blank">localhost:4000</a> you will see this result.</p>
-<div class="amp-img-wrapper"><amp-img src="/2019/01/25/hexo-how-to-determine-production-mode-in-theme/env-return.png" width="740" height="423" layout="responsive"></amp-img></div>
-<p>As we can see, hexo <code>env</code> contains an <code>env</code> property which represents the application mode in which it started.<br>In <code>hexo server</code> mode will be <code>development</code>, and when generating a static page to change the value of <code>env.env</code> just add <code>NODE_ENV=production</code> before <code>hexo generate</code><br><code>NODE_ENV=production hexo generate</code></p>
-<div class="amp-img-wrapper"><amp-img src="/2019/01/25/hexo-how-to-determine-production-mode-in-theme/env-return-production.png" width="745" height="367" layout="responsive"></amp-img></div>
-<p>Now we can use the acquired variable, for example, to add analytics only in production mode.</p>
-<pre class="line-numbers language-html"><code class="language-html">&lt;% if (env.env === &apos;production&apos;) { %&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Then opening <a href="http://localhost:4000" rel="external nofollow noopener noreferrer" target="_blank">localhost:4000</a> you will see this result.</p><div class="amp-img-wrapper"><amp-img src="/2019/01/25/hexo-how-to-determine-production-mode-in-theme/env-return.png" width="740" height="423" layout="responsive"></amp-img></div><p>As we can see, hexo <code>env</code> contains an <code>env</code> property which represents the application mode in which it started.<br>In <code>hexo server</code> mode will be <code>development</code>, and when generating a static page to change the value of <code>env.env</code> just add <code>NODE_ENV=production</code> before <code>hexo generate</code><br><code>NODE_ENV=production hexo generate</code></p><div class="amp-img-wrapper"><amp-img src="/2019/01/25/hexo-how-to-determine-production-mode-in-theme/env-return-production.png" width="745" height="367" layout="responsive"></amp-img></div><p>Now we can use the acquired variable, for example, to add analytics only in production mode.</p><pre class="line-numbers language-html"><code class="language-html">&lt;% if (env.env === &apos;production&apos;) { %&gt;
   <span class="token comment">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">async</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
@@ -1868,9 +1859,7 @@ h6.categories {
     <span class="token function">gtag</span><span class="token punctuation">(</span><span class="token string">&apos;config&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;GA_TRACKING_ID&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 &lt;% } %&gt;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>That&#x2019;s all, goodbye.</p>
-
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>That&#x2019;s all, goodbye.</p>
 					
 					
 			    	<div class="social-share">
