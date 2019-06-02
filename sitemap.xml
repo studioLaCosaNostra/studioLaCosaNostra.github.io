@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://studiolacosanostra.github.io/2019/06/02/How-to-automate-iOS-application-submission-process-with-puppeteer/</loc>
+    
+    <lastmod>2019-06-02T14:57:04.776Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</loc>
     
     <lastmod>2019-05-22T16:21:56.662Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/projects/512/index.html</loc>
+    <loc>https://studiolacosanostra.github.io/projects/index.html</loc>
     
     <lastmod>2019-04-22T19:24:06.544Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/projects/qr-code-generator/index.html</loc>
+    <loc>https://studiolacosanostra.github.io/projects/512/index.html</loc>
     
     <lastmod>2019-04-22T19:24:06.544Z</lastmod>
     
@@ -65,7 +72,7 @@
   </url>
   
   <url>
-    <loc>https://studiolacosanostra.github.io/projects/index.html</loc>
+    <loc>https://studiolacosanostra.github.io/projects/qr-code-generator/index.html</loc>
     
     <lastmod>2019-04-22T19:24:06.544Z</lastmod>
     
