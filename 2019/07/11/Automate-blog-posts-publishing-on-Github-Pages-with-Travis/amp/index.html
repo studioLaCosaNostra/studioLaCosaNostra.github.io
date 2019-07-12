@@ -52,7 +52,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/"
 			},
 			"datePublished": "2019-07-11T00:00:00.000Z",
-			"dateModified": "2019-07-12T09:17:06.087Z",
+			"dateModified": "2019-07-12T09:18:48.249Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1881,6 +1881,12 @@ setup_git() {
   git config --global user.name &quot;Travis CI&quot;
 }
 
+change_to_master_branch() {
+  git stash
+  git checkout master
+  git stash pop
+}
+
 commit_changes() {
   git add -A
   # Create a new commit with a custom message
@@ -1891,10 +1897,12 @@ commit_changes() {
 
 push_changes() {
   # Add new &quot;origin&quot; with access token in the git URL for authentication
-  git push https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG master &gt; /dev/null 2&gt;&amp;1
+  git push https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG master
 }
 
 setup_git
+
+change_to_master_branch
 
 commit_changes
 
@@ -1905,7 +1913,7 @@ if [ $? -eq 0 ]; then
 else
   echo &quot;Cannot commit new version&quot;
 fi
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="How-to-add-GH-TOKEN-to-Travis"><a href="#How-to-add-GH-TOKEN-to-Travis" class="headerlink" title="How to add GH_TOKEN to Travis"></a>How to add GH_TOKEN to Travis</h2><ol><li>Go to Travis website with the project (for me it is <a href="https://travis-ci.org/studioLaCosaNostra/blog" rel="external nofollow noopener noreferrer" target="_blank">https://travis-ci.org/studioLaCosaNostra/blog</a>)</li><li>Click <code>More options</code> in the upper right corner.</li><li>Select <code>Settings</code></li><li>Scroll to &#x2018;Environment Variables`</li><li>Add a new entry <code>GH_TOKEN</code></li></ol><p>At the next build, Travis should add the variable itself to the environment.</p><p>That&#x2019;s all, I hope that you could use my article, if you have any questions, then boldly write them in a comment, and I will try to answer them.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="How-to-add-GH-TOKEN-to-Travis"><a href="#How-to-add-GH-TOKEN-to-Travis" class="headerlink" title="How to add GH_TOKEN to Travis"></a>How to add GH_TOKEN to Travis</h2><ol><li>Go to Travis website with the project (for me it is <a href="https://travis-ci.org/studioLaCosaNostra/blog" rel="external nofollow noopener noreferrer" target="_blank">https://travis-ci.org/studioLaCosaNostra/blog</a>)</li><li>Click <code>More options</code> in the upper right corner.</li><li>Select <code>Settings</code></li><li>Scroll to &#x2018;Environment Variables`</li><li>Add a new entry <code>GH_TOKEN</code></li></ol><p>At the next build, Travis should add the variable itself to the environment.</p><p>That&#x2019;s all, I hope that you could use my article, if you have any questions, then boldly write them in a comment, and I will try to answer them.</p>
 					
 					
 			    	<div class="social-share">
