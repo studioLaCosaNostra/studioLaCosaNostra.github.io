@@ -52,7 +52,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/"
 			},
 			"datePublished": "2019-07-11T00:00:00.000Z",
-			"dateModified": "2019-07-16T11:59:32.024Z",
+			"dateModified": "2019-07-16T13:02:22.664Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1872,33 +1872,37 @@ ghpages<span class="token punctuation">.</span><span class="token function">publ
     process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Thanks to this I also have no problem adding env <code>GH_TOKEN</code>, which Travis needs to send changes to github pages.</p><p>When the publication is finished, the command <code>hexo twitter-publish</code> is run. It automatically sends new Twitter entries as soon as the post appears publicly. If you want to know more about this module, I invite you to read the post in which I describe <a href="/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/" title="how to automatically publish twitter posts in hexo">how to automatically publish twitter posts in hexo</a>.</p><p>In addition, I had to create a simple script in bash that sends any changes that appeared in the files after <code>gh-pages-deploy</code></p><p><code>./.travis-commit-changes.sh</code></p><pre class="line-numbers language-bash"><code class="language-bash">#!/bin/sh
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Thanks to this I also have no problem adding env <code>GH_TOKEN</code>, which Travis needs to send changes to github pages.</p><p>When the publication is finished, the command <code>hexo twitter-publish</code> is run. It automatically sends new Twitter entries as soon as the post appears publicly. If you want to know more about this module, I invite you to read the post in which I describe <a href="/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/" title="how to automatically publish twitter posts in hexo">how to automatically publish twitter posts in hexo</a>.</p><p>In addition, I had to create a simple script in bash that sends any changes that appeared in the files after <code>gh-pages-deploy</code></p><p><code>./.travis-commit-changes.sh</code></p><pre class="line-numbers language-bash"><code class="language-bash">#!/bin/bash
 
 set -x
+# doc: https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html#The-Set-Builtin
 
-setup_git() {
+
+function setup_git() {
   git config --global user.email &quot;travis@travis-ci.org&quot;
   git config --global user.name &quot;Travis CI&quot;
 }
 
-change_to_master_branch() {
+function change_to_master_branch() {
   git stash
   git checkout master
   git pull
   git stash pop
 }
 
-commit_changes() {
+function commit_changes() {
   git add -A
   # Create a new commit with a custom message
   # with &quot;[skip ci]&quot; to avoid a build loop
   # and Travis build number for reference
-  git commit -m &quot;Travis deploy on production ($TRAVIS_BUILD_NUMBER)&quot; -m &quot;[skip ci]&quot;
+  git commit -m &quot;Travis update ($TRAVIS_BUILD_NUMBER)&quot; -m &quot;[skip ci]&quot;
+  return $?
 }
 
-push_changes() {
+function push_changes() {
   # Add new &quot;origin&quot; with access token in the git URL for authentication
   git push https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG master
+  return $?
 }
 
 setup_git
@@ -1908,13 +1912,14 @@ change_to_master_branch
 commit_changes
 
 # Attempt to commit to git only if &quot;git commit&quot; succeeded
-if [ $? -eq 0 ]; then
-  echo &quot;Push to GitHub&quot;
-  push_changes
-else
+if [ $? -ne 0 ]; then
   echo &quot;Cannot commit new version&quot;
+  exit $?
 fi
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="How-to-add-GH-TOKEN-to-Travis"><a href="#How-to-add-GH-TOKEN-to-Travis" class="headerlink" title="How to add GH_TOKEN to Travis"></a>How to add GH_TOKEN to Travis</h2><ol><li>Go to Travis website with the project (for me it is <a href="https://travis-ci.org/studioLaCosaNostra/blog" rel="external nofollow noopener noreferrer" target="_blank">https://travis-ci.org/studioLaCosaNostra/blog</a>)</li><li>Click <code>More options</code> in the upper right corner.</li><li>Select <code>Settings</code></li><li>Scroll to &#x2018;Environment Variables`</li><li>Add a new entry <code>GH_TOKEN</code></li></ol><p>At the next build, Travis should add the variable itself to the environment.</p><p>PS: Travis automatically recognizes the version of the node you need to install based on the <code>.nvmrc</code> file. Just <code>echo &quot;10.15.3&quot; &gt; .nvmrc</code> and Travis will take care of the rest.</p><p>That&#x2019;s all, I hope that you could use my article, if you have any questions, then boldly write them in a comment, and I will try to answer them.</p>
+
+echo &quot;Push to GitHub&quot;
+push_changes
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="How-to-add-GH-TOKEN-to-Travis"><a href="#How-to-add-GH-TOKEN-to-Travis" class="headerlink" title="How to add GH_TOKEN to Travis"></a>How to add GH_TOKEN to Travis</h2><ol><li>Go to Travis website with the project (for me it is <a href="https://travis-ci.org/studioLaCosaNostra/blog" rel="external nofollow noopener noreferrer" target="_blank">https://travis-ci.org/studioLaCosaNostra/blog</a>)</li><li>Click <code>More options</code> in the upper right corner.</li><li>Select <code>Settings</code></li><li>Scroll to &#x2018;Environment Variables`</li><li>Add a new entry <code>GH_TOKEN</code></li></ol><p>At the next build, Travis should add the variable itself to the environment.</p><p>PS: Travis automatically recognizes the version of the node you need to install based on the <code>.nvmrc</code> file. Just <code>echo &quot;10.15.3&quot; &gt; .nvmrc</code> and Travis will take care of the rest.</p><p>That&#x2019;s all, I hope that you could use my article, if you have any questions, then boldly write them in a comment, and I will try to answer them.</p>
 					
 					
 			    	<div class="social-share">
