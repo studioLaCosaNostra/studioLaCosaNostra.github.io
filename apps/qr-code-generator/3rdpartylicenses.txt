@@ -89,6 +89,8 @@ THE SOFTWARE.
 
 @angular/material/form-field
 
+@angular/material/icon
+
 @angular/material/progress-bar
 
 @angular/material/slider
@@ -102,6 +104,8 @@ MIT
 
 @angular/service-worker
 MIT
+
+@lacosanostra/ngx-cookie-consent
 
 combokeys
 Apache 2.0
