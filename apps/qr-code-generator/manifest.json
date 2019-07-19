@@ -5,8 +5,8 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3f51b5",
-  "scope": "/apps/qr-code-generator/",
-  "start_url": "/apps/qr-code-generator/",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
