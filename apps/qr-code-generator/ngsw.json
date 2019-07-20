@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1563547062593,
+  "timestamp": 1563620315120,
   "index": "/apps/qr-code-generator/index.html",
   "assetGroups": [
     {
@@ -8,13 +8,13 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/apps/qr-code-generator/es2015-polyfills.c5dd28b362270c767b34.js",
+        "/apps/qr-code-generator/es2015-polyfills.bda95d5896422d031328.js",
         "/apps/qr-code-generator/index.html",
-        "/apps/qr-code-generator/main.764c0cf2e91ff63b63f2.js",
+        "/apps/qr-code-generator/main.4ccba212159015628030.js",
         "/apps/qr-code-generator/manifest.json",
         "/apps/qr-code-generator/polyfills.8bbb231b43165d65d357.js",
         "/apps/qr-code-generator/runtime.4052a235b1d163319229.js",
-        "/apps/qr-code-generator/styles.7b9b3a6310ae0abc3a92.css"
+        "/apps/qr-code-generator/styles.094023119b33cb6c0ce6.css"
       ],
       "patterns": []
     },
@@ -96,9 +96,9 @@
     "/apps/qr-code-generator/assets/ms-icon-144x144.png": "0f7d26540057ca7660a255130225955390c553e3",
     "/apps/qr-code-generator/assets/og-image-2.png": "ced931133db770396b08312da4726da8fdc09f0e",
     "/apps/qr-code-generator/assets/twitter-image-2.png": "21798e63c0b21e5afec754e37bf518447173883d",
-    "/apps/qr-code-generator/es2015-polyfills.c5dd28b362270c767b34.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
-    "/apps/qr-code-generator/index.html": "c49584f27ef81ad4ab2bc51c3105fb2f2389c085",
-    "/apps/qr-code-generator/main.764c0cf2e91ff63b63f2.js": "bb8a9cff76711d7e93e83dba3b505f3953a57238",
+    "/apps/qr-code-generator/es2015-polyfills.bda95d5896422d031328.js": "1612fe8f7e8e0c856f0885ff179e93363c67834f",
+    "/apps/qr-code-generator/index.html": "c30de5552cdada6a7b64eb2fe65af6cb224735f6",
+    "/apps/qr-code-generator/main.4ccba212159015628030.js": "8ea50183ec7d0333a295f51d6ed639e31e633fd6",
     "/apps/qr-code-generator/manifest.json": "744b465ae6a02fc8acaecd5ffd589b8331c5f15f",
     "/apps/qr-code-generator/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/apps/qr-code-generator/roboto-v18-latin-regular.372d0cc3288fe8e97df4.ttf": "754d9eaa4a009c42e8d6d40c632a1dad6d44ec21",
@@ -107,7 +107,7 @@
     "/apps/qr-code-generator/roboto-v18-latin-regular.8681f434273fd6a267b1.svg": "56330e20fac53bb04fa41e87db6c1cbfcbe7a479",
     "/apps/qr-code-generator/roboto-v18-latin-regular.bafb105baeb22d965c70.woff": "934014cc9bbe5883542be756b3146c05844b254f",
     "/apps/qr-code-generator/runtime.4052a235b1d163319229.js": "f8b1a7ef33195e8f784a6af5aa69d6fc4c587c3c",
-    "/apps/qr-code-generator/styles.7b9b3a6310ae0abc3a92.css": "3e11b5729a590d30bc5846c8b76cb3d9333d2ace"
+    "/apps/qr-code-generator/styles.094023119b33cb6c0ce6.css": "dad38fc41cdde932bb4223c7cf34e8b8bf6db2a3"
   },
   "navigationUrls": [
     {
