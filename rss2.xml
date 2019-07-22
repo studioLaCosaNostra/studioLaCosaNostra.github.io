@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Sun, 21 Jul 2019 07:43:27 GMT</pubDate>
+    <pubDate>Mon, 22 Jul 2019 04:21:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Build a reusable Angular library and web component</title>
+      <link>https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/</link>
+      <guid>https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/</guid>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Below I am describing a step-by-step example of how to create libraries for reuse in Angular projects, but also
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Automate blog posts publishing on Github Pages with Travis</title>
@@ -52,26 +72,6 @@
     </item>
     
     <item>
-      <title>How to make Firebase Authentication via Google API in Angular</title>
-      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
-      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>How to debug Angular tests in VSCode</title>
       <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
       <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
@@ -89,6 +89,26 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to make Firebase Authentication via Google API in Angular</title>
+      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
+      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
+      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
     </item>
     
     <item>
