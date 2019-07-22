@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/"
 			},
-			"datePublished": "2019-04-02T00:00:00.000Z",
-			"dateModified": "2019-07-22T04:21:46.986Z",
+			"datePublished": "2019-04-01T22:00:00.000Z",
+			"dateModified": "2019-04-24T06:05:02.756Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1808,7 +1808,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-04-02" itemprop="datePublished">2019.04.02</time>
+							<time datetime="2019-04-02" itemprop="datePublished">2019.04.01</time>
 						</span>
 					</div>
 				</div>
@@ -1842,7 +1842,8 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Yesterday, creating a document scanning program I was very surprised why angular does not update the view.</p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+			  		<p>Yesterday, creating a document scanning program I was very surprised why angular does not update the view.</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Observable<span class="token punctuation">,</span> BehaviorSubject <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;rxjs&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
 
@@ -1873,7 +1874,11 @@ h6.categories {
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>devicesBehaviorSubject</code> is updated correctly but unfortunately nothing appeared on the screen. :(</p><p>After several unsuccessful attempts, it turned out that angular does not see events from node.js <code>EventEmitter</code>. The simplest solution to this problem is to add ngZone.run inside <code>on</code> handler <code>this.scanner.on(&apos;scannerDevices&apos;, (devices) =&gt; {...})</code></p><p>Working example:</p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> NgZone <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>devicesBehaviorSubject</code> is updated correctly but unfortunately nothing appeared on the screen. :(</p>
+<p>After several unsuccessful attempts, it turned out that angular does not see events from node.js <code>EventEmitter</code>. The simplest solution to this problem is to add ngZone.run inside <code>on</code> handler <code>this.scanner.on(&apos;scannerDevices&apos;, (devices) =&gt; {...})</code></p>
+<p>Working example:</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> NgZone <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Observable<span class="token punctuation">,</span> BehaviorSubject <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;rxjs&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
 
@@ -1906,7 +1911,9 @@ h6.categories {
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now angular gets information about the new <code>scannerDevices</code> event.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now angular gets information about the new <code>scannerDevices</code> event.</p>
+
 					
 					
 			    	<div class="social-share">

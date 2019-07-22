@@ -57,8 +57,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/"
 			},
-			"datePublished": "2019-02-18T15:59:24.000Z",
-			"dateModified": "2019-07-22T04:21:46.986Z",
+			"datePublished": "2019-02-18T14:59:24.000Z",
+			"dateModified": "2019-04-23T18:56:09.889Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1848,7 +1848,10 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>How to create a good decorator in angular.<br><a id="more"></a></p><p>There is a problem in Angular when we want to create decorators that want to use <a href="https://angular.io/guide/lifecycle-hooks" rel="external nofollow noopener noreferrer" target="_blank">lifecycle hooks</a>. The current view engine angular will not detect our implementation of ngOnInit or ngOnDestroy in AOT (<a href="https://github.com/angular/angular/issues/16023" rel="external nofollow noopener noreferrer" target="_blank">issue source</a>). The best solution to this is to force methods by checking the type when compiling the code. Typescript will check for us if we have everything we need in our component. Below is the code that adds the CSS class to the body of the document when the component starts.</p><p><code>body-class.decorator.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> OnDestroy<span class="token punctuation">,</span> OnInit<span class="token punctuation">,</span> Renderer2<span class="token punctuation">,</span> RendererFactory2 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+			  		<p>How to create a good decorator in angular.<br><a id="more"></a></p>
+<p>There is a problem in Angular when we want to create decorators that want to use <a href="https://angular.io/guide/lifecycle-hooks" rel="external nofollow noopener noreferrer" target="_blank">lifecycle hooks</a>. The current view engine angular will not detect our implementation of ngOnInit or ngOnDestroy in AOT (<a href="https://github.com/angular/angular/issues/16023" rel="external nofollow noopener noreferrer" target="_blank">issue source</a>). The best solution to this is to force methods by checking the type when compiling the code. Typescript will check for us if we have everything we need in our component. Below is the code that adds the CSS class to the body of the document when the component starts.</p>
+<p><code>body-class.decorator.ts</code></p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> OnDestroy<span class="token punctuation">,</span> OnInit<span class="token punctuation">,</span> Renderer2<span class="token punctuation">,</span> RendererFactory2 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">DOCUMENT</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/common&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> BodyClassModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./body-class.module&apos;</span><span class="token punctuation">;</span>
 
@@ -1892,7 +1895,9 @@ h6.categories {
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>example.component.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnDestroy<span class="token punctuation">,</span> OnInit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>example.component.ts</code></p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnDestroy<span class="token punctuation">,</span> OnInit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> BodyClass <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./body-class.decorator&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">BodyClass</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&apos;test-class&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -1909,9 +1914,14 @@ h6.categories {
 
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>If we do not create <code>ngOnInit ()</code>, <code>ngOnDestroy ()</code> in the component then we will get the following error when building the project:</p><pre class="line-numbers language-bash"><code class="language-bash">Argument of type &apos;typeof ExampleComponent&apos; is not assignable to parameter of type &apos;TFunction&apos;.
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>If we do not create <code>ngOnInit ()</code>, <code>ngOnDestroy ()</code> in the component then we will get the following error when building the project:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">Argument of type &apos;typeof ExampleComponent&apos; is not assignable to parameter of type &apos;TFunction&apos;.
   Type &apos;ExampleComponent&apos; is missing the following properties from type &apos;BodyClassRequireOnInitAndOnDestroy&apos;: ngOnInit, ngOnDestroy
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>Another problem is getting into the angular injector, unfortunately we do not have this option in the decorator as in the normal component by the constructor. For this purpose, you can create a module that will provide us with an injector as a static field.</p><p><code>body-class.module.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule<span class="token punctuation">,</span> Injector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Another problem is getting into the angular injector, unfortunately we do not have this option in the decorator as in the normal component by the constructor. For this purpose, you can create a module that will provide us with an injector as a static field.</p>
+<p><code>body-class.module.ts</code></p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule<span class="token punctuation">,</span> Injector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">BodyClassModule</span> <span class="token punctuation">{</span>
@@ -1922,6 +1932,7 @@ h6.categories {
 <span class="token punctuation">}</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 					
 					
 			    	<div class="social-share">
