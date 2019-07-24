@@ -14,10 +14,14 @@
 	
 	<meta property="og:site_name" content="Studio La cosa nostra dev blog">
 	
+		<meta property="og:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
+	
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="Studio La cosa nostra dev blog">
 	<meta name="twitter:url" content="https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/">
 	<meta name="twitter:title" content="Build a reusable Angular library and web component - Studio La cosa nostra dev blog">
+	
+		<meta name="twitter:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
 	
     
     	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/title-image.png">
@@ -47,12 +51,14 @@
 			"@type": "BlogPosting",
 			"headline": "Build a reusable Angular library and web component",
 			
+			"description": "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;",
+			
 			"mainEntityOfPage":{
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/"
 			},
 			"datePublished": "2019-07-19T00:00:00.000Z",
-			"dateModified": "2019-07-24T14:10:23.610Z",
+			"dateModified": "2019-07-24T18:22:07.916Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1842,7 +1848,7 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Below I am describing a step-by-step example of how to create libraries for reuse in Angular projects, but also thanks to Angular Elements they can be used outside of Angular. An example is my blog, where the basis is Hexo, and additional functions I write in Angular Elements and attach them to the project as ordinary HTML tags. The following steps show the creation of <code>cookie consent</code> which is visible on the blog page at the first entry and also in my app <a href="https://studiolacosanostra.github.io/apps/qr-code-generator/">qrcode generator</a></p><div class="amp-img-wrapper"><amp-img src="/2019/07/19/Build-a-reusable-Angular-library-and-web-component/cookie-consent-view.png" width="396" height="76" layout="responsive"></amp-img></div><h2 id="Create-Angular-Project"><a href="#Create-Angular-Project" class="headerlink" title="Create Angular Project"></a>Create Angular Project</h2><p>Create a new angular project in which all the codes and scripts of the project will be included.</p><pre class="line-numbers language-bash"><code class="language-bash">ng new cookie-consent
+			  		<p>Find out how to easily create libraries in Angular and transform them into web-components.<br><a id="more"></a></p><p>Below I am describing a step-by-step example of how to create libraries for reuse in Angular projects, but also thanks to Angular Elements they can be used outside of Angular. An example is my blog, where the basis is Hexo, and additional functions I write in Angular Elements and attach them to the project as ordinary HTML tags. The following steps show the creation of <code>cookie consent</code> which is visible on the blog page at the first entry and also in my app <a href="https://studiolacosanostra.github.io/apps/qr-code-generator/">qrcode generator</a></p><div class="amp-img-wrapper"><amp-img src="/2019/07/19/Build-a-reusable-Angular-library-and-web-component/cookie-consent-view.png" width="396" height="76" layout="responsive"></amp-img></div><h2 id="Create-Angular-Project"><a href="#Create-Angular-Project" class="headerlink" title="Create Angular Project"></a>Create Angular Project</h2><p>Create a new angular project in which all the codes and scripts of the project will be included.</p><pre class="line-numbers language-bash"><code class="language-bash">ng new cookie-consent
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Go inside of project.</p><pre class="line-numbers language-bash"><code class="language-bash">cd cookie-consent
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="Create-library"><a href="#Create-library" class="headerlink" title="Create library"></a>Create library</h2><p>Generate a library that you can use later in Angular projects.</p><pre class="line-numbers language-bash"><code class="language-bash">ng generate library @lacosanostra/ngx-cookie-consent
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Edit <code>package.json</code></p><pre class="line-numbers language-json"><code class="language-json">{
