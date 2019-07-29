@@ -8,8 +8,22 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Thu, 25 Jul 2019 19:54:35 GMT</pubDate>
+    <pubDate>Mon, 29 Jul 2019 06:28:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Cordova - Setup Android SDK on Ubuntu</title>
+      <link>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/</link>
+      <guid>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/</guid>
+      <pubDate>Mon, 29 Jul 2019 06:28:51 GMT</pubDate>
+      <description>
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;If you’re looking for a simple instruction on how to run Cordova project for the first time on an Android system, you’ve just found it.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Build a reusable Angular library and web component</title>
@@ -66,26 +80,6 @@
     </item>
     
     <item>
-      <title>How to debug Angular tests in VSCode</title>
-      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
-      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;VSCode has the option of debugging code inside the editor. While in typical console programs running the debug
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>How to make Firebase Authentication via Google API in Angular</title>
       <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
       <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
@@ -103,6 +97,26 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to debug Angular tests in VSCode</title>
+      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
+      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
+      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;VSCode has the option of debugging code inside the editor. While in typical console programs running the debug
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/#disqus_thread</comments>
     </item>
     
     <item>
