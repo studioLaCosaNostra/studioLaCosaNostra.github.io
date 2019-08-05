@@ -8,14 +8,14 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Mon, 29 Jul 2019 06:29:40 GMT</pubDate>
+    <pubDate>Mon, 05 Aug 2019 07:37:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>Cordova - Setup Android SDK on Ubuntu</title>
       <link>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/</link>
       <guid>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/</guid>
-      <pubDate>Mon, 29 Jul 2019 06:29:40 GMT</pubDate>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 GMT</pubDate>
       <description>
       
         &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;If you’re looking for a simple instruction on how to run Cordova project for the first time on an Android system, you’ve just found it.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
