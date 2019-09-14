@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/"
 			},
-			"datePublished": "2019-04-24T22:00:00.000Z",
-			"dateModified": "2019-07-25T13:04:54.544Z",
+			"datePublished": "2019-04-25T00:00:00.000Z",
+			"dateModified": "2019-09-14T15:18:41.908Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1808,7 +1808,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-04-25" itemprop="datePublished">2019.04.24</time>
+							<time datetime="2019-04-25" itemprop="datePublished">2019.04.25</time>
 						</span>
 					</div>
 				</div>
@@ -1842,40 +1842,7 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>In this article, I describe how easy and simple you can share your angular application on firebase hosting without having advanced knowledge about servers and sharing websites on the web.</p>
-<p>At the beginning, register on firebase console.</p>
-<p><a href="https://console.firebase.google.com" rel="external nofollow noopener noreferrer" target="_blank">https://console.firebase.google.com</a></p>
-<div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-console-login-dashboard.png" width="1284" height="636" layout="responsive"></amp-img></div>
-<p>Add new project.</p>
-<div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-console-add-new-project.png" width="549" height="676" layout="responsive"></amp-img></div>
-<p>After creating the project, you should be moved to the project view.</p>
-<div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-console-project-dashboard-after-create.png" width="1347" height="766" layout="responsive"></amp-img></div>
-<p>After creating the project, we can start creating the angular project locally.</p>
-<p>In the next step install the angular CLI and firebase tools.</p>
-<p><code>npm install -g @angular/cli</code></p>
-
-
-<p><code>npm install -g firebase-tools</code></p>
-
-
-<p>Create a new angular project using the cli command.</p>
-<p><code>ng new test-firebase</code></p>
-
-
-<p>Login to firebase CLI.</p>
-<p><code>firebase login</code></p>
-
-
-<p>When running a command, the command should open a browser window with a login view.</p>
-<div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-cli-sign-in-access.png" width="465" height="717" layout="responsive"></amp-img></div>
-<p>After correct login, this message should appear.</p>
-<div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-cli-success-sign-in.png" width="429" height="210" layout="responsive"></amp-img></div>
-<p>Init firebase configuration in project directory</p>
-<p><code>firebase init</code></p>
-
-
-<p>It should create <code>firebase.json</code> and <code>dist</code> folder:</p>
-<pre><code>master@master-Lenovo-B50-80:~/workspace/test-firebase$ tree -L 1 -a
+			  		<p>In this article, I describe how easy and simple you can share your angular application on firebase hosting without having advanced knowledge about servers and sharing websites on the web.</p><p>At the beginning, register on firebase console.</p><p><a href="https://console.firebase.google.com" rel="external nofollow noopener noreferrer" target="_blank">https://console.firebase.google.com</a></p><div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-console-login-dashboard.png" width="1284" height="636" layout="responsive"></amp-img></div><p>Add new project.</p><div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-console-add-new-project.png" width="549" height="676" layout="responsive"></amp-img></div><p>After creating the project, you should be moved to the project view.</p><div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-console-project-dashboard-after-create.png" width="1347" height="766" layout="responsive"></amp-img></div><p>After creating the project, we can start creating the angular project locally.</p><p>In the next step install the angular CLI and firebase tools.</p><p><code>npm install -g @angular/cli</code></p><p><code>npm install -g firebase-tools</code></p><p>Create a new angular project using the cli command.</p><p><code>ng new test-firebase</code></p><p>Login to firebase CLI.</p><p><code>firebase login</code></p><p>When running a command, the command should open a browser window with a login view.</p><div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-cli-sign-in-access.png" width="465" height="717" layout="responsive"></amp-img></div><p>After correct login, this message should appear.</p><div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-cli-success-sign-in.png" width="429" height="210" layout="responsive"></amp-img></div><p>Init firebase configuration in project directory</p><p><code>firebase init</code></p><p>It should create <code>firebase.json</code> and <code>dist</code> folder:</p><pre><code>master@master-Lenovo-B50-80:~/workspace/test-firebase$ tree -L 1 -a
 .
 &#x251C;&#x2500;&#x2500; angular.json
 &#x251C;&#x2500;&#x2500; dist
@@ -1892,14 +1859,10 @@ h6.categories {
 &#x251C;&#x2500;&#x2500; src
 &#x251C;&#x2500;&#x2500; tsconfig.json
 &#x2514;&#x2500;&#x2500; tslint.json
-</code></pre><p>Add the <code>.firebase</code> directory to the <code>.gitignore</code> file</p>
-<pre class="line-numbers language-gitignore"><code class="language-gitignore">...
+</code></pre><p>Add the <code>.firebase</code> directory to the <code>.gitignore</code> file</p><pre class="line-numbers language-gitignore"><code class="language-gitignore">...
 # Firebase
 /.firebase
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>If you accidentally added this directory to the git, then you can remove it from the repository using this command: <code>git rm -r --cached .firebase</code></p>
-<p>In firebase.json you should have something like this.</p>
-<pre><code>{
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>If you accidentally added this directory to the git, then you can remove it from the repository using this command: <code>git rm -r --cached .firebase</code></p><p>In firebase.json you should have something like this.</p><pre><code>{
   &quot;hosting&quot;: {
     &quot;public&quot;: &quot;dist/test-firebase&quot;,
     &quot;ignore&quot;: [
@@ -1909,19 +1872,7 @@ h6.categories {
     ]
   }
 }
-</code></pre><p>Link to the full <code>firebase.json</code> configuration<br><a href="https://firebase.google.com/docs/hosting/full-config" rel="external nofollow noopener noreferrer" target="_blank">https://firebase.google.com/docs/hosting/full-config</a><br>You can read about the full possibilities of this configuration. The basic configuration is used in this guide.</p>
-<p>Build angular app with production environment and AOT.</p>
-<p><code>ng build --prod</code></p>
-
-
-<p>Upload app to firebase hosting.</p>
-<p><code>firebase deploy</code></p>
-
-
-<p>Now we can see our application on the internet<br><a href="https://test-firebase-14dbe.firebaseapp.com/" rel="external nofollow noopener noreferrer" target="_blank">https://test-firebase-14dbe.firebaseapp.com/</a> :)</p>
-<div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/test-firebase-page-view.png" width="1297" height="740" layout="responsive"></amp-img></div>
-<p>That&#x2019;s all, if some stage is unclear then please describe why below in the comments.</p>
-
+</code></pre><p>Link to the full <code>firebase.json</code> configuration<br><a href="https://firebase.google.com/docs/hosting/full-config" rel="external nofollow noopener noreferrer" target="_blank">https://firebase.google.com/docs/hosting/full-config</a><br>You can read about the full possibilities of this configuration. The basic configuration is used in this guide.</p><p>Build angular app with production environment and AOT.</p><p><code>ng build --prod</code></p><p>Upload app to firebase hosting.</p><p><code>firebase deploy</code></p><p>Now we can see our application on the internet<br><a href="https://test-firebase-14dbe.firebaseapp.com/" rel="external nofollow noopener noreferrer" target="_blank">https://test-firebase-14dbe.firebaseapp.com/</a> :)</p><div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/test-firebase-page-view.png" width="1297" height="740" layout="responsive"></amp-img></div><p>That&#x2019;s all, if some stage is unclear then please describe why below in the comments.</p>
 					
 					
 			    	<div class="social-share">
@@ -1965,6 +1916,12 @@ h6.categories {
 					    		</li>
 							
 					    		<li class="article-tag-list-item">
+					    			<a class="article-tag-list-link" href="/tags/npm/">
+					    				npm
+					    			</a>
+					    		</li>
+							
+					    		<li class="article-tag-list-item">
 					    			<a class="article-tag-list-link" href="/tags/firebase/">
 					    				firebase
 					    			</a>
@@ -1973,12 +1930,6 @@ h6.categories {
 					    		<li class="article-tag-list-item">
 					    			<a class="article-tag-list-link" href="/tags/git/">
 					    				git
-					    			</a>
-					    		</li>
-							
-					    		<li class="article-tag-list-item">
-					    			<a class="article-tag-list-link" href="/tags/npm/">
-					    				npm
 					    			</a>
 					    		</li>
 							

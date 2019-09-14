@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/"
 			},
-			"datePublished": "2019-07-10T22:00:00.000Z",
-			"dateModified": "2019-07-25T13:04:54.516Z",
+			"datePublished": "2019-07-11T00:00:00.000Z",
+			"dateModified": "2019-09-14T15:18:41.868Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1808,7 +1808,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-07-11" itemprop="datePublished">2019.07.10</time>
+							<time datetime="2019-07-11" itemprop="datePublished">2019.07.11</time>
 						</span>
 					</div>
 				</div>
@@ -1842,18 +1842,12 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Since I automated the creation of new versions of <a href="/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/" title="the qrcode generator">the qrcode generator</a> electron application. I was overcome by the thought that I could do the same with my blog. Today I have found the time and finally I do not have to waste time on generating updates. :) Below you will find a detailed description of how I did it using Travis.</p>
-<p>First, create a configuration file for Travis.</p>
-<p><code>./.travis.yml</code></p>
-<pre class="line-numbers language-yml"><code class="language-yml">language: node_js
+			  		<p>Since I automated the creation of new versions of <a href="/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/" title="the qrcode generator">the qrcode generator</a> electron application. I was overcome by the thought that I could do the same with my blog. Today I have found the time and finally I do not have to waste time on generating updates. :) Below you will find a detailed description of how I did it using Travis.</p><p>First, create a configuration file for Travis.</p><p><code>./.travis.yml</code></p><pre class="line-numbers language-yml"><code class="language-yml">language: node_js
 script:
   - set -e
   - npm run gh-pages-deploy
   - ./.travis-commit-changes.sh
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>As you can see, it is extremely short, and this is because I have created additional scripts.</p>
-<p><code>./package.json</code></p>
-<pre class="line-numbers language-json"><code class="language-json">{
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>As you can see, it is extremely short, and this is because I have created additional scripts.</p><p><code>./package.json</code></p><pre class="line-numbers language-json"><code class="language-json">{
   &quot;scripts&quot;: {
     &quot;start&quot;: &quot;hexo server --draft -p 5000&quot;,
     &quot;clean&quot;: &quot;hexo clean&quot;,
@@ -1864,10 +1858,7 @@ script:
     &quot;test&quot;: &quot;NODE_ENV=production hexo generate --config _config.yml&quot;
   }
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>The <code>gh-pages-build</code> command generates all static files in the <code>public</code> directory.<br>Then <code>gh-pages-publish</code> sends all changes to github pages. I do not send via hexo deploy git, because the site also has additional directories that I do not want to lose.</p>
-<p><code>bin/gh-pages-publish.ts</code></p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> ghpages <span class="token keyword">from</span> <span class="token string">&apos;gh-pages&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The <code>gh-pages-build</code> command generates all static files in the <code>public</code> directory.<br>Then <code>gh-pages-publish</code> sends all changes to github pages. I do not send via hexo deploy git, because the site also has additional directories that I do not want to lose.</p><p><code>bin/gh-pages-publish.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> ghpages <span class="token keyword">from</span> <span class="token string">&apos;gh-pages&apos;</span><span class="token punctuation">;</span>
 
 ghpages<span class="token punctuation">.</span><span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">&apos;public&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   branch<span class="token punctuation">:</span> <span class="token string">&apos;master&apos;</span><span class="token punctuation">,</span>
@@ -1881,12 +1872,7 @@ ghpages<span class="token punctuation">.</span><span class="token function">publ
     process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Thanks to this I also have no problem adding env <code>GH_TOKEN</code>, which Travis needs to send changes to github pages.</p>
-<p>When the publication is finished, the command <code>hexo twitter-publish</code> is run. It automatically sends new Twitter entries as soon as the post appears publicly. If you want to know more about this module, I invite you to read the post in which I describe <a href="/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/" title="how to automatically publish twitter posts in hexo">how to automatically publish twitter posts in hexo</a>.</p>
-<p>In addition, I had to create a simple script in bash that sends any changes that appeared in the files after <code>gh-pages-deploy</code></p>
-<p><code>./.travis-commit-changes.sh</code></p>
-<pre class="line-numbers language-bash"><code class="language-bash">#!/bin/bash
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Thanks to this I also have no problem adding env <code>GH_TOKEN</code>, which Travis needs to send changes to github pages.</p><p>When the publication is finished, the command <code>hexo twitter-publish</code> is run. It automatically sends new Twitter entries as soon as the post appears publicly. If you want to know more about this module, I invite you to read the post in which I describe <a href="/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/" title="how to automatically publish twitter posts in hexo">how to automatically publish twitter posts in hexo</a>.</p><p>In addition, I had to create a simple script in bash that sends any changes that appeared in the files after <code>gh-pages-deploy</code></p><p><code>./.travis-commit-changes.sh</code></p><pre class="line-numbers language-bash"><code class="language-bash">#!/bin/bash
 
 set -x
 # doc: https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html#The-Set-Builtin
@@ -1933,19 +1919,7 @@ fi
 
 echo &quot;Push to GitHub&quot;
 push_changes
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Also do <code>chmod +x .travis-commit-changes.sh</code> to get execute permissions.</p>
-<h2 id="How-to-add-GH-TOKEN-to-Travis"><a href="#How-to-add-GH-TOKEN-to-Travis" class="headerlink" title="How to add GH_TOKEN to Travis"></a>How to add GH_TOKEN to Travis</h2><ol>
-<li>Go to Travis website with the project (for me it is <a href="https://travis-ci.org/studioLaCosaNostra/blog" rel="external nofollow noopener noreferrer" target="_blank">https://travis-ci.org/studioLaCosaNostra/blog</a>)</li>
-<li>Click <code>More options</code> in the upper right corner.</li>
-<li>Select <code>Settings</code></li>
-<li>Scroll to &#x2018;Environment Variables`</li>
-<li>Add a new entry <code>GH_TOKEN</code></li>
-</ol>
-<p>At the next build, Travis should add the variable itself to the environment.</p>
-<p>PS: Travis automatically recognizes the version of the node you need to install based on the <code>.nvmrc</code> file. Just <code>echo &quot;10.15.3&quot; &gt; .nvmrc</code> and Travis will take care of the rest.</p>
-<p>That&#x2019;s all, I hope that you could use my article, if you have any questions, then boldly write them in a comment, and I will try to answer them.</p>
-
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Also do <code>chmod +x .travis-commit-changes.sh</code> to get execute permissions.</p><h2 id="How-to-add-GH-TOKEN-to-Travis"><a href="#How-to-add-GH-TOKEN-to-Travis" class="headerlink" title="How to add GH_TOKEN to Travis"></a>How to add GH_TOKEN to Travis</h2><ol><li>Go to Travis website with the project (for me it is <a href="https://travis-ci.org/studioLaCosaNostra/blog" rel="external nofollow noopener noreferrer" target="_blank">https://travis-ci.org/studioLaCosaNostra/blog</a>)</li><li>Click <code>More options</code> in the upper right corner.</li><li>Select <code>Settings</code></li><li>Scroll to &#x2018;Environment Variables`</li><li>Add a new entry <code>GH_TOKEN</code></li></ol><p>At the next build, Travis should add the variable itself to the environment.</p><p>PS: Travis automatically recognizes the version of the node you need to install based on the <code>.nvmrc</code> file. Just <code>echo &quot;10.15.3&quot; &gt; .nvmrc</code> and Travis will take care of the rest.</p><p>That&#x2019;s all, I hope that you could use my article, if you have any questions, then boldly write them in a comment, and I will try to answer them.</p>
 					
 					
 			    	<div class="social-share">

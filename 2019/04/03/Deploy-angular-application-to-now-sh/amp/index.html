@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/"
 			},
-			"datePublished": "2019-04-02T22:00:00.000Z",
-			"dateModified": "2019-07-25T13:04:54.532Z",
+			"datePublished": "2019-04-03T00:00:00.000Z",
+			"dateModified": "2019-09-14T15:18:41.888Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1808,7 +1808,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-04-03" itemprop="datePublished">2019.04.02</time>
+							<time datetime="2019-04-03" itemprop="datePublished">2019.04.03</time>
 						</span>
 					</div>
 				</div>
@@ -1842,10 +1842,7 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Angular is a platform for building applications across all platforms; web, mobile web, native mobile, and native desktop.<br>Below I show the steps needed for your application to be on <code>now.sh</code></p>
-<p><em>For the purpose of writing this post, the configuration files were extracted from the working application <a href="https://qr-code-generator.now.sh" rel="external nofollow noopener noreferrer" target="_blank">https://qr-code-generator.now.sh</a></em></p>
-<p>Create <code>./now.json</code></p>
-<pre class="line-numbers language-json"><code class="language-json">{
+			  		<p>Angular is a platform for building applications across all platforms; web, mobile web, native mobile, and native desktop.<br>Below I show the steps needed for your application to be on <code>now.sh</code></p><p><em>For the purpose of writing this post, the configuration files were extracted from the working application <a href="https://qr-code-generator.now.sh" rel="external nofollow noopener noreferrer" target="_blank">https://qr-code-generator.now.sh</a></em></p><p>Create <code>./now.json</code></p><pre class="line-numbers language-json"><code class="language-json">{
   &quot;version&quot;: 2,
   &quot;name&quot;: &quot;qr-code-generator&quot;,
   &quot;alias&quot;: &quot;qr-code-generator&quot;,
@@ -1880,24 +1877,14 @@ h6.categories {
     }
   ]
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>version</code> means <strong>Now</strong> version, now the latest version has number 2.</p>
-<p><code>alias</code> is the production name of the project.</p>
-<p>In <code>routes</code>, you can declare how the server should respond to request. In this case, it was important for us to add an asset cache. We set the maximum possible value, i.e. only 1 year because angular generates fingerprint to each file separately and appends to the file name (each new build creates a new fingerprint).</p>
-<p>in <code>package.json</code> add two commands</p>
-<pre class="line-numbers language-json"><code class="language-json">{
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>version</code> means <strong>Now</strong> version, now the latest version has number 2.</p><p><code>alias</code> is the production name of the project.</p><p>In <code>routes</code>, you can declare how the server should respond to request. In this case, it was important for us to add an asset cache. We set the maximum possible value, i.e. only 1 year because angular generates fingerprint to each file separately and appends to the file name (each new build creates a new fingerprint).</p><p>in <code>package.json</code> add two commands</p><pre class="line-numbers language-json"><code class="language-json">{
   &quot;scripts&quot;: {
     &quot;now-build&quot;: &quot;ng build --prod&quot;,
     &quot;now-deploy&quot;: &quot;now ./dist -A ../now.json --target production&quot;
   }
 }
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<p>Additionally, I added the new configuration to angular.json and calls it via the flag <code>--configuration=now</code></p>
-<p><code>angular.json</code></p>
-<pre class="line-numbers language-json"><code class="language-json">&quot;configurations&quot;: {
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Additionally, I added the new configuration to angular.json and calls it via the flag <code>--configuration=now</code></p><p><code>angular.json</code></p><pre class="line-numbers language-json"><code class="language-json">&quot;configurations&quot;: {
   &quot;now&quot;: {
     &quot;baseHref&quot;: &quot;/&quot;,
     &quot;deployUrl&quot;: &quot;/&quot;,
@@ -1927,9 +1914,7 @@ h6.categories {
     &quot;ngswConfigPath&quot;: &quot;src/ngsw-config.json&quot;
   }  
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Just because I already have one configuration for github pages and I needed another <code>baseHref</code> and <code>deployUrl</code>.</p>
-
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Just because I already have one configuration for github pages and I needed another <code>baseHref</code> and <code>deployUrl</code>.</p>
 					
 					
 			    	<div class="social-share">
