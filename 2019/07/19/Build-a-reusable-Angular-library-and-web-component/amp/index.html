@@ -57,8 +57,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/"
 			},
-			"datePublished": "2019-07-19T00:00:00.000Z",
-			"dateModified": "2019-08-10T14:46:45.055Z",
+			"datePublished": "2019-07-18T22:00:00.000Z",
+			"dateModified": "2019-07-25T13:04:54.528Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1814,7 +1814,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-07-19" itemprop="datePublished">2019.07.19</time>
+							<time datetime="2019-07-19" itemprop="datePublished">2019.07.18</time>
 						</span>
 					</div>
 				</div>
@@ -1848,10 +1848,20 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Find out how to easily create libraries in Angular and transform them into web-components.<br><a id="more"></a></p><p>Below I am describing a step-by-step example of how to create libraries for reuse in Angular projects, but also thanks to Angular Elements they can be used outside of Angular. An example is my blog, where the basis is Hexo, and additional functions I write in Angular Elements and attach them to the project as ordinary HTML tags. The following steps show the creation of <code>cookie consent</code> which is visible on the blog page at the first entry and also in my app <a href="https://studiolacosanostra.github.io/apps/qr-code-generator/">qrcode generator</a></p><div class="amp-img-wrapper"><amp-img src="/2019/07/19/Build-a-reusable-Angular-library-and-web-component/cookie-consent-view.png" width="396" height="76" layout="responsive"></amp-img></div><h2 id="Create-Angular-Project"><a href="#Create-Angular-Project" class="headerlink" title="Create Angular Project"></a>Create Angular Project</h2><p>Create a new angular project in which all the codes and scripts of the project will be included.</p><pre class="line-numbers language-bash"><code class="language-bash">ng new cookie-consent
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Go inside of project.</p><pre class="line-numbers language-bash"><code class="language-bash">cd cookie-consent
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="Create-library"><a href="#Create-library" class="headerlink" title="Create library"></a>Create library</h2><p>Generate a library that you can use later in Angular projects.</p><pre class="line-numbers language-bash"><code class="language-bash">ng generate library @lacosanostra/ngx-cookie-consent
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Edit <code>package.json</code></p><pre class="line-numbers language-json"><code class="language-json">{
+			  		<p>Find out how to easily create libraries in Angular and transform them into web-components.<br><a id="more"></a></p>
+<p>Below I am describing a step-by-step example of how to create libraries for reuse in Angular projects, but also thanks to Angular Elements they can be used outside of Angular. An example is my blog, where the basis is Hexo, and additional functions I write in Angular Elements and attach them to the project as ordinary HTML tags. The following steps show the creation of <code>cookie consent</code> which is visible on the blog page at the first entry and also in my app <a href="https://studiolacosanostra.github.io/apps/qr-code-generator/">qrcode generator</a></p>
+<div class="amp-img-wrapper"><amp-img src="/2019/07/19/Build-a-reusable-Angular-library-and-web-component/cookie-consent-view.png" width="396" height="76" layout="responsive"></amp-img></div>
+<h2 id="Create-Angular-Project"><a href="#Create-Angular-Project" class="headerlink" title="Create Angular Project"></a>Create Angular Project</h2><p>Create a new angular project in which all the codes and scripts of the project will be included.</p>
+<pre class="line-numbers language-bash"><code class="language-bash">ng new cookie-consent
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Go inside of project.</p>
+<pre class="line-numbers language-bash"><code class="language-bash">cd cookie-consent
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Create-library"><a href="#Create-library" class="headerlink" title="Create library"></a>Create library</h2><p>Generate a library that you can use later in Angular projects.</p>
+<pre class="line-numbers language-bash"><code class="language-bash">ng generate library @lacosanostra/ngx-cookie-consent
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Edit <code>package.json</code></p>
+<pre class="line-numbers language-json"><code class="language-json">{
   &quot;scripts&quot;: {
     &quot;ng&quot;: &quot;ng&quot;,
     &quot;start&quot;: &quot;ng serve&quot;,
@@ -1863,12 +1873,22 @@ h6.categories {
     &quot;e2e&quot;: &quot;ng e2e&quot;
   }
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><code>build-web-component</code> will generate the project as a web-component, the <code>build.sh</code> script will be given below.</li><li><code>build-ngx-cookie-consent</code> will build the Angular version of the component ready for publication in <code>npm</code>. The command is also needed for the <code>build-web-component</code> because it uses this library. While working on the new module, you can run it with the <code>watch</code> option, example: <code>npm run build-ngx-cookie-consent -- --watch</code></li><li><code>test-headless</code> was created for running tests in Travis</li></ul><p>Edit <code>projects/lacosanostra/ngx-cookie-consent/package.json</code></p><pre class="line-numbers language-json"><code class="language-json">{
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>build-web-component</code> will generate the project as a web-component, the <code>build.sh</code> script will be given below.</li>
+<li><code>build-ngx-cookie-consent</code> will build the Angular version of the component ready for publication in <code>npm</code>. The command is also needed for the <code>build-web-component</code> because it uses this library. While working on the new module, you can run it with the <code>watch</code> option, example:  <code>npm run build-ngx-cookie-consent -- --watch</code></li>
+<li><code>test-headless</code> was created for running tests in Travis</li>
+</ul>
+<p>Edit <code>projects/lacosanostra/ngx-cookie-consent/package.json</code></p>
+<pre class="line-numbers language-json"><code class="language-json">{
   &quot;publishConfig&quot;: {
     &quot;access&quot;: &quot;public&quot;
   }
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Adding <code>publishConfig</code> with <code>access: public</code> allows you to share the module publicly in <code>npm</code> as @organization. By default, <code>access</code> is set to <code>private</code>.</p><p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.module.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Adding <code>publishConfig</code> with <code>access: public</code> allows you to share the module publicly in <code>npm</code> as @organization. By default, <code>access</code> is set to <code>private</code>.</p>
+<p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.module.ts</code></p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> NgxCookieConsentComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./ngx-cookie-consent.component&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserAnimationsModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/platform-browser/animations&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> MatIconModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/material/icon&apos;</span><span class="token punctuation">;</span>
@@ -1884,7 +1904,10 @@ h6.categories {
   exports<span class="token punctuation">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgxCookieConsentModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>We only add <code>MatIconModule</code>, <code>MatButtonModule</code> here. I use them on the closing button.</p><p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.component.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit<span class="token punctuation">,</span> HostBinding <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>We only add <code>MatIconModule</code>, <code>MatButtonModule</code> here. I use them on the closing button.</p>
+<p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.component.ts</code></p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit<span class="token punctuation">,</span> HostBinding <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   selector<span class="token punctuation">:</span> <span class="token string">&apos;lib-ngx-cookie-consent&apos;</span><span class="token punctuation">,</span>
@@ -1915,7 +1938,14 @@ h6.categories {
   <span class="token punctuation">}</span>
 
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The main component of the entire project.</p><ul><li><code>&lt;ng-content&gt;</code> the body content is loaded here. In this case it will be information about the use of cookie, for example: <code>This site uses cookies to analyze traffic, remember your preferences, and optimize your experience.</code></li><li><code>&lt;button&gt;</code> A simple button to close our information after reading it. Usage can be seen in the methods of <code>ngOnInit()</code> where I check if I have to make a visible component on startup and <code>close()</code> which is triggered when the button is clicked. The event hides the component and updates the logical value in localStorage.</li></ul><p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.component.scss</code></p><pre class="line-numbers language-scss"><code class="language-scss">:host {
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>The main component of the entire project.</p>
+<ul>
+<li><code>&lt;ng-content&gt;</code> the body content is loaded here. In this case it will be information about the use of cookie, for example: <code>This site uses cookies to analyze traffic, remember your preferences, and optimize your experience.</code></li>
+<li><code>&lt;button&gt;</code> A simple button to close our information after reading it. Usage can be seen in the methods of <code>ngOnInit()</code> where I check if I have to make a visible component on startup and <code>close()</code> which is triggered when the button is clicked. The event hides the component and updates the logical value in localStorage.</li>
+</ul>
+<p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.component.scss</code></p>
+<pre class="line-numbers language-scss"><code class="language-scss">:host {
   display: none;
   align-items: center;
 
@@ -1927,8 +1957,14 @@ h6.categories {
     flex-grow: 1;
   }
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Styles needed for our element to look nice.</p><p>The library ready, our <code>lib-ngx-cookie-consent</code> can already be used in angular projects, just import the module. :) Now let&#x2019;s go to convert it to a web-component.</p><h2 id="Create-web-component"><a href="#Create-web-component" class="headerlink" title="Create web-component"></a>Create web-component</h2><p>Delete the unnecessary <code>app component</code> and its test.</p><pre class="line-numbers language-bash"><code class="language-bash">rm ./src/app/app.component.ts ./src/app/app.component.spec.ts
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Edit <code>src/app/app.module.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/platform-browser&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Styles needed for our element to look nice.</p>
+<p>The library ready, our <code>lib-ngx-cookie-consent</code> can already be used in angular projects, just import the module. :) Now let&#x2019;s go to convert it to a web-component.</p>
+<h2 id="Create-web-component"><a href="#Create-web-component" class="headerlink" title="Create web-component"></a>Create web-component</h2><p>Delete the unnecessary <code>app component</code> and its test.</p>
+<pre class="line-numbers language-bash"><code class="language-bash">rm ./src/app/app.component.ts ./src/app/app.component.spec.ts
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Edit <code>src/app/app.module.ts</code></p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/platform-browser&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule<span class="token punctuation">,</span> Injector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> NgxCookieConsentModule<span class="token punctuation">,</span> NgxCookieConsentComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@lacosanostra/ngx-cookie-consent&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> createCustomElement <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/elements&apos;</span><span class="token punctuation">;</span>
@@ -1953,14 +1989,23 @@ h6.categories {
     customElements<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">&apos;cookie-consent&apos;</span><span class="token punctuation">,</span> ngElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now the only thing that the <strong>AppModule</strong> does is load the <code>NgxCookieConsentModule</code> module and register its component as <code>web-component</code>.</p><p>Edit <code>src/polyfills.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token operator">...</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now the only thing that the <strong>AppModule</strong> does is load the <code>NgxCookieConsentModule</code> module and register its component as <code>web-component</code>.</p>
+<p>Edit <code>src/polyfills.ts</code></p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token operator">...</span>
 <span class="token comment">/***************************************************************************************************
  * APPLICATION IMPORTS
  */</span>
 <span class="token keyword">import</span> <span class="token string">&apos;@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js&apos;</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>This extra import adds us an adapter for custom elements in es5. Without it, we get errors when we running our web-component in the browser.</p><p>Edit <code>src/style.scss</code></p><pre class="line-numbers language-scss"><code class="language-scss">/* You can add global styles to this file, and also import other style files */
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>This extra import adds us an adapter for custom elements in es5. Without it, we get errors when we running our web-component in the browser.</p>
+<p>Edit <code>src/style.scss</code></p>
+<pre class="line-numbers language-scss"><code class="language-scss">/* You can add global styles to this file, and also import other style files */
 @import &quot;~@angular/material/prebuilt-themes/indigo-pink.css&quot;;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>Additional import of a sample theme for <strong>Angular Material</strong> components.</p><p>Edit <code>src/index.html</code></p><pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!doctype html&gt;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Additional import of a sample theme for <strong>Angular Material</strong> components.</p>
+<p>Edit <code>src/index.html</code></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!doctype html&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
@@ -1983,15 +2028,33 @@ h6.categories {
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cookie-consent</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now we can see how our web-component presents itself in the code on an ordinary website. Additionally, for the close button it is required to import icons from Material Design.</p><h3 id="Run-project"><a href="#Run-project" class="headerlink" title="Run project"></a>Run project</h3><p>To start the project, we will need to build the library:</p><pre class="line-numbers language-bash"><code class="language-bash">npm run build-ngx-cookie-consent
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Then our web-component project has all the dependencies needed to start.</p><pre class="line-numbers language-bash"><code class="language-bash">npm start
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="Build-release-web-component"><a href="#Build-release-web-component" class="headerlink" title="Build release web-component"></a>Build release web-component</h3><p>Create <code>build.sh</code><br>Give execute permission. <code>chmod +x build.sh</code></p><pre class="line-numbers language-bash"><code class="language-bash">#!/bin/bash
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now we can see how our web-component presents itself in the code on an ordinary website.  Additionally, for the close button it is required to import icons from Material Design.</p>
+<h3 id="Run-project"><a href="#Run-project" class="headerlink" title="Run project"></a>Run project</h3><p>To start the project, we will need to build the library:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">npm run build-ngx-cookie-consent
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Then our web-component project has all the dependencies needed to start.</p>
+<pre class="line-numbers language-bash"><code class="language-bash">npm start
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Build-release-web-component"><a href="#Build-release-web-component" class="headerlink" title="Build release web-component"></a>Build release web-component</h3><p>Create <code>build.sh</code><br>Give execute permission. <code>chmod +x build.sh</code></p>
+<pre class="line-numbers language-bash"><code class="language-bash">#!/bin/bash
 set -x
 APP=cookie-consent
 ng build $APP --prod --output-hashing=none &amp;&amp; cat dist/$APP/runtime-es5.js dist/$APP/polyfills-es5.js dist/$APP/scripts.js dist/$APP/main-es5.js &gt; dist/$APP/$APP.js
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>The above script builds the project and combines all the files into one, so that later it would be easier to use our web-component. The combined file is in path <code>dist/cookie-consent/cookie-consent.js</code></p><p>The final file should be added at the bottom of the body of the page where you want to use <code>&lt;cookie-consent&gt;</code>.</p><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://cdn.jsdelivr.net/gh/studioLaCosaNostra/cookie-consent@latest/dist/cookie-consent/cookie-consent.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Add material icons to <strong>html</strong>. For the closing button to display correctly.</p><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://fonts.googleapis.com/icon?family=Material+Icons<span class="token punctuation">&quot;</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Basically, that&#x2019;s all. If you have any questions, write in a comment under the post. I will try to answer them and update the content of the article based on it.</p><p>The entire source code of the project is available on Github in the link below.</p><p><a href="https://github.com/studioLaCosaNostra/cookie-consent" rel="external nofollow noopener noreferrer" target="_blank">Cookie consent web-component repository</a></p><h2 id="Build-on-Travis"><a href="#Build-on-Travis" class="headerlink" title="Build on Travis"></a>Build on Travis</h2><p>For those who would like to not worry about upgrading their module in <code>npm registry</code> and updating <code>dist</code> later, I put a ready solution in Travis below.</p><p>Create <code>.travis.yml</code></p><pre class="line-numbers language-yml"><code class="language-yml">language: node_js
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>The above script builds the project and combines all the files into one, so that later it would be easier to use our web-component. The combined file is in path <code>dist/cookie-consent/cookie-consent.js</code></p>
+<p>The final file should be added at the bottom of the body of the page where you want to use <code>&lt;cookie-consent&gt;</code>.</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://cdn.jsdelivr.net/gh/studioLaCosaNostra/cookie-consent@latest/dist/cookie-consent/cookie-consent.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Add material icons to <strong>html</strong>. For the closing button to display correctly.</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>https://fonts.googleapis.com/icon?family=Material+Icons<span class="token punctuation">&quot;</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Basically, that&#x2019;s all. If you have any questions, write in a comment under the post. I will try to answer them and update the content of the article based on it.</p>
+<p>The entire source code of the project is available on Github in the link below.</p>
+<p><a href="https://github.com/studioLaCosaNostra/cookie-consent" rel="external nofollow noopener noreferrer" target="_blank">Cookie consent web-component repository</a></p>
+<h2 id="Build-on-Travis"><a href="#Build-on-Travis" class="headerlink" title="Build on Travis"></a>Build on Travis</h2><p>For those who would like to not worry about upgrading their module in <code>npm registry</code> and updating <code>dist</code> later, I put a ready solution in Travis below.</p>
+<p>Create <code>.travis.yml</code></p>
+<pre class="line-numbers language-yml"><code class="language-yml">language: node_js
 
 script:
   - set -e
@@ -2013,7 +2076,9 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Create <code>.travis-commit-changes.sh</code><br>Give execute permission. <code>chmod +x .travis-commit-changes.sh</code></p><pre class="line-numbers language-bash"><code class="language-bash">#!/bin/bash
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Create <code>.travis-commit-changes.sh</code><br>Give execute permission. <code>chmod +x .travis-commit-changes.sh</code></p>
+<pre class="line-numbers language-bash"><code class="language-bash">#!/bin/bash
 
 set -x
 # doc: https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html#The-Set-Builtin
@@ -2060,7 +2125,9 @@ fi
 
 echo &quot;Push to GitHub&quot;
 push_changes
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now, after each update on the master, Travis will update <code>npm</code> if we raise the version number and also update the <code>dist</code> directory</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now, after each update on the master, Travis will update <code>npm</code> if we raise the version number and also update the <code>dist</code> directory</p>
+
 					
 					
 			    	<div class="social-share">
@@ -2104,6 +2171,12 @@ push_changes
 					    		</li>
 							
 					    		<li class="article-tag-list-item">
+					    			<a class="article-tag-list-link" href="/tags/npm/">
+					    				npm
+					    			</a>
+					    		</li>
+							
+					    		<li class="article-tag-list-item">
 					    			<a class="article-tag-list-link" href="/tags/angular-elements/">
 					    				angular elements
 					    			</a>
@@ -2130,12 +2203,6 @@ push_changes
 					    		<li class="article-tag-list-item">
 					    			<a class="article-tag-list-link" href="/tags/travis/">
 					    				travis
-					    			</a>
-					    		</li>
-							
-					    		<li class="article-tag-list-item">
-					    			<a class="article-tag-list-link" href="/tags/npm/">
-					    				npm
 					    			</a>
 					    		</li>
 							

@@ -8,14 +8,34 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Sat, 10 Aug 2019 14:46:45 GMT</pubDate>
+    <pubDate>Sat, 14 Sep 2019 08:09:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Angular, Zone, WebSocket  === Change detection Nightmare</title>
+      <link>https://studiolacosanostra.github.io/2019/09/14/Angular-Zone-WebSocket-Change-detection-Nightmare/</link>
+      <guid>https://studiolacosanostra.github.io/2019/09/14/Angular-Zone-WebSocket-Change-detection-Nightmare/</guid>
+      <pubDate>Fri, 13 Sep 2019 22:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;I got a task to make a working application for android &amp;amp; ios from the web application in two weeks. I
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/09/14/Angular-Zone-WebSocket-Change-detection-Nightmare/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Cordova - Setup Android SDK on Ubuntu</title>
       <link>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/</link>
       <guid>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/</guid>
-      <pubDate>Mon, 29 Jul 2019 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 28 Jul 2019 22:00:00 GMT</pubDate>
       <description>
       
         &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;If you’re looking for a simple instruction on how to run Cordova project for the first time on an Android system, you’ve just found it.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -29,7 +49,7 @@
       <title>Build a reusable Angular library and web component</title>
       <link>https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/</link>
       <guid>https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/</guid>
-      <pubDate>Fri, 19 Jul 2019 00:00:00 GMT</pubDate>
+      <pubDate>Thu, 18 Jul 2019 22:00:00 GMT</pubDate>
       <description>
       
         &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -43,7 +63,7 @@
       <title>Automate blog posts publishing on Github Pages with Travis</title>
       <link>https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/</link>
       <guid>https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/</guid>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 10 Jul 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -63,7 +83,7 @@
       <title>How to automate iOS application submission process with puppeteer</title>
       <link>https://studiolacosanostra.github.io/2019/06/02/How-to-automate-iOS-application-submission-process-with-puppeteer/</link>
       <guid>https://studiolacosanostra.github.io/2019/06/02/How-to-automate-iOS-application-submission-process-with-puppeteer/</guid>
-      <pubDate>Sun, 02 Jun 2019 00:00:00 GMT</pubDate>
+      <pubDate>Sat, 01 Jun 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -83,7 +103,7 @@
       <title>How to make Firebase Authentication via Google API in Angular</title>
       <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
       <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 15 May 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -103,7 +123,7 @@
       <title>How to debug Angular tests in VSCode</title>
       <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
       <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 15 May 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -123,7 +143,7 @@
       <title>How to deploy a new application written in angular to firebase hosting</title>
       <link>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/</link>
       <guid>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/</guid>
-      <pubDate>Thu, 25 Apr 2019 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 24 Apr 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -143,7 +163,7 @@
       <title>Deploy angular application to now.sh</title>
       <link>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</link>
       <guid>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</guid>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 02 Apr 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -163,7 +183,7 @@
       <title>Angular async pipe does not work in the electron</title>
       <link>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</link>
       <guid>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</guid>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 01 Apr 2019 22:00:00 GMT</pubDate>
       <description>
       
         
@@ -183,7 +203,7 @@
       <title>Automate electron app release build on github with Travis CI</title>
       <link>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/</link>
       <guid>https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/</guid>
-      <pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 25 Mar 2019 23:00:00 GMT</pubDate>
       <description>
       
         &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -197,7 +217,7 @@
       <title>Working snapcraft.yaml for Electron apps (build with Github)</title>
       <link>https://studiolacosanostra.github.io/2019/03/21/Working-snapcraft-yaml-for-Electron-apps-build-with-Github/</link>
       <guid>https://studiolacosanostra.github.io/2019/03/21/Working-snapcraft-yaml-for-Electron-apps-build-with-Github/</guid>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 20 Mar 2019 23:00:00 GMT</pubDate>
       <description>
       
         
@@ -217,7 +237,7 @@
       <title>Hexo: Publish posts automatically on twitter.</title>
       <link>https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/</link>
       <guid>https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/</guid>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 12 Mar 2019 23:00:00 GMT</pubDate>
       <description>
       
         &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;You will never forget to publish post on twitter.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -231,7 +251,7 @@
       <title>VSCode: NVM /bin/bash: npm: command not found</title>
       <link>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/</link>
       <guid>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/</guid>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 10 Mar 2019 23:00:00 GMT</pubDate>
       <description>
       
         &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -245,7 +265,7 @@
       <title>Angular: Custom class decorator. Force OnInit, OnDestroy implementation.</title>
       <link>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/</link>
       <guid>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/</guid>
-      <pubDate>Mon, 18 Feb 2019 15:59:24 GMT</pubDate>
+      <pubDate>Mon, 18 Feb 2019 14:59:24 GMT</pubDate>
       <description>
       
         &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;How to create a good decorator in angular.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -259,7 +279,7 @@
       <title>How to run PIXI in Angular application</title>
       <link>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/</link>
       <guid>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/</guid>
-      <pubDate>Mon, 11 Feb 2019 17:39:00 GMT</pubDate>
+      <pubDate>Mon, 11 Feb 2019 16:39:00 GMT</pubDate>
       <description>
       
         &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Run PIXI without performance problems.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -273,7 +293,7 @@
       <title>Hexo - How to determine production mode in theme</title>
       <link>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</link>
       <guid>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</guid>
-      <pubDate>Fri, 25 Jan 2019 02:00:28 GMT</pubDate>
+      <pubDate>Fri, 25 Jan 2019 01:00:28 GMT</pubDate>
       <description>
       
         
@@ -293,7 +313,7 @@
       <title>How to simulate location in android applications</title>
       <link>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</link>
       <guid>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</guid>
-      <pubDate>Wed, 23 Jan 2019 12:58:31 GMT</pubDate>
+      <pubDate>Wed, 23 Jan 2019 11:58:31 GMT</pubDate>
       <description>
       
         
@@ -313,7 +333,7 @@
       <title>How to retrieve information from Adsense about the current account balance.</title>
       <link>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/</link>
       <guid>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/</guid>
-      <pubDate>Wed, 23 Jan 2019 12:58:31 GMT</pubDate>
+      <pubDate>Wed, 23 Jan 2019 11:58:31 GMT</pubDate>
       <description>
       
         

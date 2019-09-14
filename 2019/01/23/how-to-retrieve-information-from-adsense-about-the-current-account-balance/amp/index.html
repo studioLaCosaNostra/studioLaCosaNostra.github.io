@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/"
 			},
-			"datePublished": "2019-01-23T12:58:31.000Z",
-			"dateModified": "2019-08-10T14:46:45.131Z",
+			"datePublished": "2019-01-23T11:58:31.000Z",
+			"dateModified": "2019-07-25T13:04:54.576Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1842,7 +1842,27 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>I create this post because maybe there is someone else in the world who wants to create program to receive information about the earnings of AdSense for their own purposes but does not yet know how to begin. Below I am describing the exact process of how to obtain this data in a quick and efficient way.</p><p>Unfortunately, Adsense requires you to log via OAuth to get Adsense account informations. For this purpose, we will use the keys generated on <a href="https://developers.google.com/adsense/management/getting_started" rel="external nofollow noopener noreferrer" target="_blank">Google Adsense Management API site</a>. On this site just <strong>click</strong> that button.<br></p><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/register-your-app-button.png" width="208" height="92" layout="responsive"></amp-img></div><ul><li>Enter new project name</li></ul><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Adsense-Managment-API-Enter-new-project-name.png" width="695" height="342" layout="responsive"></amp-img></div><ul><li>Specify the project name</li></ul><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Adsense-Managment-API-Specify-the-product-name.png" width="652" height="299" layout="responsive"></amp-img></div><ul><li>Configure your OAuth client<br>Set <a href="http://localhost:3000/oauth2callback" rel="external nofollow noopener noreferrer" target="_blank">http://localhost:3000/oauth2callback</a> as a redirect URI</li></ul><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Adsense-Managment-API-Configure-your-OAuth-client.png" width="646" height="489" layout="responsive"></amp-img></div><ul><li>Click <strong>download client configuration</strong> and save as <code>google-oauth-keys.json</code></li></ul><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Adsense-Management-API-Download-client-configuration.png" width="641" height="470" layout="responsive"></amp-img></div><p>Google OAuth2 keys should look like this</p><p><code>google-oauth-keys.json</code></p><pre><code>{
+			  		<p>I create this post because maybe there is someone else in the world who wants to create program to receive information about the earnings of AdSense for their own purposes but does not yet know how to begin. Below I am describing the exact process of how to obtain this data in a quick and efficient way.</p>
+<p>Unfortunately, Adsense requires you to log via OAuth to get Adsense account informations. For this purpose, we will use the keys generated on <a href="https://developers.google.com/adsense/management/getting_started" rel="external nofollow noopener noreferrer" target="_blank">Google Adsense Management API site</a>. On this site just <strong>click</strong> that button.<br></p><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/register-your-app-button.png" width="208" height="92" layout="responsive"></amp-img></div>
+<ul>
+<li>Enter new project name</li>
+</ul>
+<div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Adsense-Managment-API-Enter-new-project-name.png" width="695" height="342" layout="responsive"></amp-img></div>
+<ul>
+<li>Specify the project name</li>
+</ul>
+<div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Adsense-Managment-API-Specify-the-product-name.png" width="652" height="299" layout="responsive"></amp-img></div>
+<ul>
+<li>Configure your OAuth client<br>Set <a href="http://localhost:3000/oauth2callback" rel="external nofollow noopener noreferrer" target="_blank">http://localhost:3000/oauth2callback</a> as a redirect URI</li>
+</ul>
+<div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Adsense-Managment-API-Configure-your-OAuth-client.png" width="646" height="489" layout="responsive"></amp-img></div>
+<ul>
+<li>Click <strong>download client configuration</strong> and save as <code>google-oauth-keys.json</code></li>
+</ul>
+<div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Adsense-Management-API-Download-client-configuration.png" width="641" height="470" layout="responsive"></amp-img></div>
+<p>Google OAuth2 keys should look like this</p>
+<p><code>google-oauth-keys.json</code></p>
+<pre><code>{
   &quot;web&quot;: {
     &quot;client_id&quot;: &quot;434543536-niwen3293vubu2643nu73.apps.googleusercontent.com&quot;,
     &quot;project_id&quot;: &quot;adsense-54357734&quot;,
@@ -1855,7 +1875,9 @@ h6.categories {
     ]
   }
 }
-</code></pre><p>Code of program to extract information about your monthly earnings from Google Adsense.</p><p><code>adsense.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> adsense_v1_4 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;googleapis&apos;</span><span class="token punctuation">;</span>
+</code></pre><p>Code of program to extract information about your monthly earnings from Google Adsense.</p>
+<p><code>adsense.ts</code></p>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> adsense_v1_4 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;googleapis&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> readFile <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;fs&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> promisify <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;util&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> OAuth2Client <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;google-auth-library&apos;</span><span class="token punctuation">;</span>
@@ -1988,8 +2010,16 @@ h6.categories {
 <span class="token punctuation">}</span>
 
 <span class="token function">initAdsense</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>to run code</p><pre class="line-numbers language-bash"><code class="language-bash">ts-node adsense.ts
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>The program will open the google page for you to authorize the adsense account.</p><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/authorization-access-grant.png" width="458" height="615" layout="responsive"></amp-img></div><p>After authorization, the program already stores an authentication token, so every next call to the <code>getAdsense</code> function will not open the browser window any more.</p><div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Auth-success-callback.png" width="952" height="83" layout="responsive"></amp-img></div><p>At the first authorization, OAuth2 sends us a credentials <strong>refresh_token</strong>.</p><pre><code>Tokens acquired. {
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>to run code</p>
+<pre class="line-numbers language-bash"><code class="language-bash">ts-node adsense.ts
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>The program will open the google page for you to authorize the adsense account.</p>
+<div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/authorization-access-grant.png" width="458" height="615" layout="responsive"></amp-img></div>
+<p>After authorization, the program already stores an authentication token, so every next call to the <code>getAdsense</code> function will not open the browser window any more.</p>
+<div class="amp-img-wrapper"><amp-img src="/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/Auth-success-callback.png" width="952" height="83" layout="responsive"></amp-img></div>
+<p>At the first authorization, OAuth2 sends us a credentials <strong>refresh_token</strong>. </p>
+<pre><code>Tokens acquired. {
   &quot;access_token&quot;: &quot;ya29.Glv9Y8SJ-4OTp5HVy8cSqCO&quot;,
   &quot;refresh_token&quot;: &quot;1/oe_PDv4g45gbAquNmCeTc99AkhDp3Aca090BE&quot;,
   &quot;scope&quot;: &quot;https://www.googleapis.com/auth/adsense.readonly&quot;,
@@ -1998,6 +2028,7 @@ h6.categories {
 }
 { thisMonthSum: 0, otherMonthsSum: 200.64, sum: 200.64 }
 </code></pre><p>Thanks to him, we no longer have to ask for access for our program. We need to store credentials (with refresh_token) in the database, in this article we used the <strong>lowdb</strong> library to hold data in <code>db.json</code></p>
+
 					
 					
 			    	<div class="social-share">
