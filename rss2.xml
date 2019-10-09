@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Wed, 09 Oct 2019 14:18:30 GMT</pubDate>
+    <pubDate>Wed, 09 Oct 2019 22:04:38 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Color cells using keyboard shortcuts in Google Sheets</title>
+      <link>https://studiolacosanostra.github.io/2019/10/09/Color-cells-using-keyboard-shortcuts-in-Google-Sheets/</link>
+      <guid>https://studiolacosanostra.github.io/2019/10/09/Color-cells-using-keyboard-shortcuts-in-Google-Sheets/</guid>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;While working on blog advertising, I created a special spreadsheet. Contains a list of all links to articles on
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/10/09/Color-cells-using-keyboard-shortcuts-in-Google-Sheets/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Angular, Zone, WebSocket  === Change detection Nightmare</title>
