@@ -58,7 +58,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/"
 			},
 			"datePublished": "2019-07-19T00:00:00.000Z",
-			"dateModified": "2019-10-22T08:02:30.756Z",
+			"dateModified": "2019-11-09T10:26:56.072Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1927,7 +1927,8 @@ h6.categories {
     flex-grow: 1;
   }
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Styles needed for our element to look nice.</p><p>The library ready, our <code>lib-ngx-cookie-consent</code> can already be used in angular projects, just import the module. :) Now let&#x2019;s go to convert it to a web-component.</p><h2 id="Create-web-component"><a href="#Create-web-component" class="headerlink" title="Create web-component"></a>Create web-component</h2><p>Delete the unnecessary <code>app component</code> and its test.</p><pre class="line-numbers language-bash"><code class="language-bash">rm ./src/app/app.component.ts ./src/app/app.component.spec.ts
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Styles needed for our element to look nice.</p><p>The library ready, our <code>lib-ngx-cookie-consent</code> can already be used in angular projects, just import the module. :) Now let&#x2019;s go to convert it to a web-component.</p><h2 id="Create-web-component"><a href="#Create-web-component" class="headerlink" title="Create web-component"></a>Create web-component</h2><p>Add angular elements to project.</p><pre class="line-numbers language-bash"><code class="language-bash">ng add @angular/elements
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Delete the unnecessary <code>app component</code> and its test.</p><pre class="line-numbers language-bash"><code class="language-bash">rm ./src/app/app.component.ts ./src/app/app.component.spec.ts
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Edit <code>src/app/app.module.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/platform-browser&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule<span class="token punctuation">,</span> Injector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> NgxCookieConsentModule<span class="token punctuation">,</span> NgxCookieConsentComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@lacosanostra/ngx-cookie-consent&apos;</span><span class="token punctuation">;</span>
