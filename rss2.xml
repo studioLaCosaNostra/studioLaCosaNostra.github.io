@@ -8,8 +8,22 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Fri, 15 Nov 2019 14:49:42 GMT</pubDate>
+    <pubDate>Mon, 18 Nov 2019 15:50:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Prerender angular application - generate static pages</title>
+      <link>https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/</link>
+      <guid>https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/</guid>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build seo friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Color cells using keyboard shortcuts in Google Sheets</title>
@@ -120,26 +134,6 @@
     </item>
     
     <item>
-      <title>How to make Firebase Authentication via Google API in Angular</title>
-      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
-      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>How to debug Angular tests in VSCode</title>
       <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
       <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
@@ -157,6 +151,26 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to make Firebase Authentication via Google API in Angular</title>
+      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
+      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
+      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
     </item>
     
     <item>
@@ -347,26 +361,6 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>How to retrieve information from Adsense about the current account balance.</title>
-      <link>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/</link>
-      <guid>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/</guid>
-      <pubDate>Wed, 23 Jan 2019 12:58:31 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;I create this post because maybe there is someone else in the world who wants to create program to receive
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/01/23/how-to-retrieve-information-from-adsense-about-the-current-account-balance/#disqus_thread</comments>
     </item>
     
   </channel>
