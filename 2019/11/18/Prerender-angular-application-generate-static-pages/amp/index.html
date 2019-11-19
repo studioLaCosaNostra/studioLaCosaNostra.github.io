@@ -14,14 +14,14 @@
 	
 	<meta property="og:site_name" content="Studio La cosa nostra dev blog">
 	
-		<meta property="og:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build seo friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
+		<meta property="og:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
 	
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="Studio La cosa nostra dev blog">
 	<meta name="twitter:url" content="https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/">
 	<meta name="twitter:title" content="Prerender angular application - generate static pages - Studio La cosa nostra dev blog">
 	
-		<meta name="twitter:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build seo friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
+		<meta name="twitter:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
 	
     
     	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/title-image.png">
@@ -51,14 +51,14 @@
 			"@type": "BlogPosting",
 			"headline": "Prerender angular application - generate static pages",
 			
-			"description": "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build seo friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;",
+			"description": "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;",
 			
 			"mainEntityOfPage":{
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/"
 			},
 			"datePublished": "2019-11-18T00:00:00.000Z",
-			"dateModified": "2019-11-18T15:50:00.745Z",
+			"dateModified": "2019-11-19T16:24:07.381Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1848,7 +1848,7 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p><strong>Build seo friendly website without server-side rendering.</strong><br><a id="more"></a></p><p>From the very beginning of Angular 2 there was a capability to generate HTML content of the application on the server side. Without this bots search engines simply are not able to see what is on the site without the interpretation of javascript very few bots will improve. But what if you don&#x2019;t have a server with node.js and you want to be visible? Prerender subpages may help in this case. In previous versions of Angular Universal there is an example of how to do this <a href="https://github.com/angular/universal-starter/blob/master/prerender.ts" rel="external nofollow noopener noreferrer" target="_blank">link to prerender.ts in unversal-starter archive</a>. Some time has passed and angular universal has officially become part of the angular ecosystem, but unfortunately there is no example of how to make prerender code anywhere.<br>Today I present an example of how I solved it in my project trying to minimize the interference in the generated nguniversal code.</p><p>First of all you need to add angular universal to your project with this command from <a href="https://angular.io/guide/universal" rel="external nofollow noopener noreferrer" target="_blank">server-side rendering guide</a></p><pre class="line-numbers language-bash"><code class="language-bash">ng add @nguniversal/express-engine --clientProject project-example
+			  		<p><strong>Build an SEO friendly website without server-side rendering.</strong><br><a id="more"></a></p><p>From the very beginning of Angular 2, there was a capability to generate HTML content of the application on the server-side. Without this, bots search engines simply are not able to see what is on the site without the interpretation of javascript very few bots will improve. But what if you don&#x2019;t have a server with node.js and you want to be visible? Prerender subpages may help in this case. In previous versions of Angular Universal, there is an example of how to do this <a href="https://github.com/angular/universal-starter/blob/master/prerender.ts" rel="external nofollow noopener noreferrer" target="_blank">link to prerender.ts in universal-starter archive</a>. Some time has passed and angular universal has officially become part of the Angular ecosystem, but unfortunately, there is no example of how to make prerender code anywhere.<br>Today I present an example of how I solved it in my project trying to minimize the interference in the generated nguniversal code.</p><p>First of all, you need to add angular universal to your project with this command from <a href="https://angular.io/guide/universal" rel="external nofollow noopener noreferrer" target="_blank">server-side rendering guide</a></p><pre class="line-numbers language-bash"><code class="language-bash">ng add @nguniversal/express-engine --clientProject project-example
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>It will generate all the scripts to run server-side rendering in our application. You need it to generate static pages.</p><p>The next step is to transfer the code fragments responsible for creating the express server from <code>server.ts</code> to a new <code>express-app.ts</code> file. Below is the code that you should paste into the new file.</p><p><code>express-app.ts</code></p><pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token string">&apos;zone.js/dist/zone-node&apos;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> express <span class="token keyword">from</span> <span class="token string">&apos;express&apos;</span><span class="token punctuation">;</span>
@@ -1892,7 +1892,7 @@ app<span class="token punctuation">.</span><span class="token keyword">get</span
 app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token constant">PORT</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Node Express server listening on http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now add main code that performs prerender of our subpages. (you also need to install additional library to create subfolders <code>npm install mkdirp @types/mkdirp</code>)</p><p><code>prerender.ts</code></p><pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> request <span class="token keyword">from</span> <span class="token string">&apos;request-promise&apos;</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now add the main code that performs prerender of our subpages. (you also need to install additional library to create subfolders <code>npm install mkdirp @types/mkdirp</code>)</p><p><code>prerender.ts</code></p><pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> request <span class="token keyword">from</span> <span class="token string">&apos;request-promise&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> mkdirp <span class="token keyword">from</span> <span class="token string">&apos;mkdirp&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> promisify <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;util&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> writeFileSync <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;fs&apos;</span><span class="token punctuation">;</span>
@@ -1928,7 +1928,7 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 
 <span class="token function">prerender</span><span class="token punctuation">(</span>app<span class="token punctuation">,</span> <span class="token constant">ROUTES</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>We also need to add new entry to the wepack so that it can generate the final file <code>prerender.js</code></p><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment">// Work around for https://github.com/angular/angular-cli/issues/7200</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now add the main code that performs prerender of our subpages. (you also need to install additional library to create subfolders <code>npm install mkdirp @types/mkdirp</code>)</p><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment">// Work around for https://github.com/angular/angular-cli/issues/7200</span>
 
 <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;path&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;webpack&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1988,8 +1988,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   ...
 }
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>And that&#x2019;s all, now you just need to build an application in ssr mode and run the command prerender.</p><pre class="line-numbers language-bash"><code class="language-bash">npm run build:ssr &amp;&amp; npm run prerender
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>In the <code>dist/browser</code> directory you will find subfolders with <code>index.html</code> files containing SEO-friendly generated HTML content of the application.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>And that&#x2019;s all, now you just need to build an application in SSR mode and run the command prerender.</p><pre class="line-numbers language-bash"><code class="language-bash">npm run build:ssr &amp;&amp; npm run prerender
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>In the <code>dist/browser</code> directory, you will find subfolders with <code>index.html</code> files containing SEO-friendly generated HTML content of the application.</p>
 					
 					
 			    	<div class="social-share">
