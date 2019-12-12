@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Mon, 09 Dec 2019 00:36:07 GMT</pubDate>
+    <pubDate>Thu, 12 Dec 2019 00:33:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Create from scratch a newsletter service with Firebase and Angular</title>
+      <link>https://studiolacosanostra.github.io/2019/12/12/Create-newsletter-with-firebase-and-angular/</link>
+      <guid>https://studiolacosanostra.github.io/2019/12/12/Create-newsletter-with-firebase-and-angular/</guid>
+      <pubDate>Thu, 12 Dec 2019 00:33:32 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Email marketing is one of the cheapest and easiest ways to get your website and online store to returning
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/12/12/Create-newsletter-with-firebase-and-angular/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Prerender angular application - generate static pages</title>
@@ -341,26 +361,6 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>How to simulate location in android applications</title>
-      <link>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</link>
-      <guid>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/</guid>
-      <pubDate>Wed, 23 Jan 2019 12:58:31 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;/2019/01/23/how-to-simulate-location-in-android-applications/map.png&quot; alt=&quot;Article map header&quot;
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/01/23/how-to-simulate-location-in-android-applications/#disqus_thread</comments>
     </item>
     
   </channel>
