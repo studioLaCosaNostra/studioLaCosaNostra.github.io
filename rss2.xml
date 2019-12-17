@@ -8,14 +8,14 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Thu, 12 Dec 2019 00:49:06 GMT</pubDate>
+    <pubDate>Tue, 17 Dec 2019 08:18:04 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>Create from scratch a newsletter service with Firebase and Angular</title>
-      <link>https://studiolacosanostra.github.io/2019/12/12/Create-newsletter-with-firebase-and-angular/</link>
-      <guid>https://studiolacosanostra.github.io/2019/12/12/Create-newsletter-with-firebase-and-angular/</guid>
-      <pubDate>Thu, 12 Dec 2019 00:49:06 GMT</pubDate>
+      <link>https://studiolacosanostra.github.io/2019/12/17/Create-newsletter-with-firebase-and-angular/</link>
+      <guid>https://studiolacosanostra.github.io/2019/12/17/Create-newsletter-with-firebase-and-angular/</guid>
+      <pubDate>Tue, 17 Dec 2019 08:18:04 GMT</pubDate>
       <description>
       
         
@@ -28,7 +28,7 @@
       
       </description>
       
-      <comments>https://studiolacosanostra.github.io/2019/12/12/Create-newsletter-with-firebase-and-angular/#disqus_thread</comments>
+      <comments>https://studiolacosanostra.github.io/2019/12/17/Create-newsletter-with-firebase-and-angular/#disqus_thread</comments>
     </item>
     
     <item>
