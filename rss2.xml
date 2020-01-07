@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Tue, 07 Jan 2020 00:27:13 GMT</pubDate>
+    <pubDate>Tue, 07 Jan 2020 21:59:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>How to publish an Android App Bundle to Google Play Console</title>
+      <link>https://studiolacosanostra.github.io/2020/01/06/How-to-publish-an-Android-App-Bundle-to-Google-Play-Console/</link>
+      <guid>https://studiolacosanostra.github.io/2020/01/06/How-to-publish-an-Android-App-Bundle-to-Google-Play-Console/</guid>
+      <pubDate>Mon, 06 Jan 2020 16:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;For those who do not want to get into the program, but only want to use it in their project.&lt;br&gt;Then I invite
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2020/01/06/How-to-publish-an-Android-App-Bundle-to-Google-Play-Console/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Create from scratch a newsletter service with Firebase and Angular</title>
@@ -154,26 +174,6 @@
     </item>
     
     <item>
-      <title>How to make Firebase Authentication via Google API in Angular</title>
-      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
-      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>How to debug Angular tests in VSCode</title>
       <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
       <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
@@ -191,6 +191,26 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to make Firebase Authentication via Google API in Angular</title>
+      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
+      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
+      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
     </item>
     
     <item>
@@ -341,26 +361,6 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Hexo - How to determine production mode in theme</title>
-      <link>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</link>
-      <guid>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/</guid>
-      <pubDate>Fri, 25 Jan 2019 02:00:28 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;To determine whether we are in production or development mode, we have an available variable in the template
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/01/25/hexo-how-to-determine-production-mode-in-theme/#disqus_thread</comments>
     </item>
     
   </channel>
