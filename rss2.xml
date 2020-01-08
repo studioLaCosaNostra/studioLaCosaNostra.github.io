@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Wed, 08 Jan 2020 19:38:45 GMT</pubDate>
+    <pubDate>Wed, 08 Jan 2020 22:24:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>How to speed up Android Gradle build in continuous integration</title>
+      <link>https://studiolacosanostra.github.io/2020/01/08/How-to-speed-up-Android-Gradle-build-in-continuous-integration/</link>
+      <guid>https://studiolacosanostra.github.io/2020/01/08/How-to-speed-up-Android-Gradle-build-in-continuous-integration/</guid>
+      <pubDate>Wed, 08 Jan 2020 16:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Below is a sample task for Concourse CI, which caches &lt;code&gt;gradle&lt;/code&gt; packages for future
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2020/01/08/How-to-speed-up-Android-Gradle-build-in-continuous-integration/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>How to speed up npm install in continuous integration</title>
@@ -353,20 +373,6 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Angular: Custom class decorator. Force OnInit, OnDestroy implementation.</title>
-      <link>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/</link>
-      <guid>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/</guid>
-      <pubDate>Mon, 18 Feb 2019 15:59:24 GMT</pubDate>
-      <description>
-      
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;How to create a good decorator in angular.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/#disqus_thread</comments>
     </item>
     
   </channel>
