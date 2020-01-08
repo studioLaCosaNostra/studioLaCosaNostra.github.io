@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Tue, 07 Jan 2020 21:59:46 GMT</pubDate>
+    <pubDate>Wed, 08 Jan 2020 01:27:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>How to speed up npm install in continuous integration</title>
+      <link>https://studiolacosanostra.github.io/2020/01/07/How-to-speed-up-npm-install-in-continuous-integration/</link>
+      <guid>https://studiolacosanostra.github.io/2020/01/07/How-to-speed-up-npm-install-in-continuous-integration/</guid>
+      <pubDate>Tue, 07 Jan 2020 16:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Generally I started playing with Concourse CI for a few days and found it to be a great server for automation
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2020/01/07/How-to-speed-up-npm-install-in-continuous-integration/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>How to publish an Android App Bundle to Google Play Console</title>
@@ -347,20 +367,6 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/02/18/Angular-Custom-class-decorator-Force-OnInit-OnDestroy-implementation/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>How to run PIXI in Angular application</title>
-      <link>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/</link>
-      <guid>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/</guid>
-      <pubDate>Mon, 11 Feb 2019 17:39:00 GMT</pubDate>
-      <description>
-      
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Run PIXI without performance problems.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/#disqus_thread</comments>
     </item>
     
   </channel>
