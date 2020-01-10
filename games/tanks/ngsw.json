@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1578621564475,
+  "timestamp": 1578623775189,
   "index": "/games/tanks/index.html",
   "assetGroups": [
     {
@@ -78,7 +78,6 @@
         "/games/tanks/assets/levels/ola.json",
         "/games/tanks/assets/levels/test.json",
         "/games/tanks/assets/maps/Teste.json",
-        "/games/tanks/assets/maps/level-1-test.json",
         "/games/tanks/assets/maps/level-1.json",
         "/games/tanks/assets/maps/level-2-test.json",
         "/games/tanks/assets/maps/level-2.json",
@@ -194,7 +193,6 @@
     "/games/tanks/assets/levels/ola.json": "be057824409bc832354b6db41fd80c2a5ecc3743",
     "/games/tanks/assets/levels/test.json": "61c3575aa23c049ef4a7bf386ff497f5ac84e171",
     "/games/tanks/assets/maps/Teste.json": "f7145a7b6d6d7291d8f5d71e3989749240a70d02",
-    "/games/tanks/assets/maps/level-1-test.json": "79db7e9dacb3e560431e0569c0ab020dc96d3865",
     "/games/tanks/assets/maps/level-1.json": "e65b1c18b5f794e0605a28d34e78ee3668bacf5b",
     "/games/tanks/assets/maps/level-2-test.json": "c38d7835f652e10c404037dd50074ba6b8ac1747",
     "/games/tanks/assets/maps/level-2.json": "0e07e5e6412fc322c7752545cf32451fb1776256",
