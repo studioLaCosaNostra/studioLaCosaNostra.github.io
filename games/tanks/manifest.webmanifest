@@ -1,11 +1,11 @@
 {
-  "name": "Tanks",
+  "name": "Retro tanks",
   "short_name": "Tanks",
-  "theme_color": "#ff0000",
-  "background_color": "#000000",
+  "theme_color": "#1976d2",
+  "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "/games/tanks/",
-  "start_url": "/games/tanks/",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
