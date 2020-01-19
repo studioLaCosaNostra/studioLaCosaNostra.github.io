@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1579452051056,
+  "timestamp": 1579461099979,
   "index": "/games/tanks/index.html",
   "assetGroups": [
     {
@@ -8,8 +8,8 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/games/tanks/1-es2015.d6d1037dc165c8514979.js",
-        "/games/tanks/1-es5.d6d1037dc165c8514979.js",
+        "/games/tanks/1-es2015.ee8b4b85ecc4d843f8b4.js",
+        "/games/tanks/1-es5.ee8b4b85ecc4d843f8b4.js",
         "/games/tanks/6-es2015.b848c5deb38a296c3b4d.js",
         "/games/tanks/6-es5.b848c5deb38a296c3b4d.js",
         "/games/tanks/7-es2015.395a0c1cb30b16306774.js",
@@ -25,8 +25,8 @@
         "/games/tanks/manifest.webmanifest",
         "/games/tanks/polyfills-es2015.be1fff7e30f491727577.js",
         "/games/tanks/polyfills-es5.b3e61a67b8852b2d5f23.js",
-        "/games/tanks/runtime-es2015.aaddaf7679c75b0f7ae0.js",
-        "/games/tanks/runtime-es5.aaddaf7679c75b0f7ae0.js",
+        "/games/tanks/runtime-es2015.a72d54f0f0efa8334c92.js",
+        "/games/tanks/runtime-es5.a72d54f0f0efa8334c92.js",
         "/games/tanks/styles.278a33ef5bb0a03d59ad.css"
       ],
       "patterns": []
@@ -146,8 +146,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/games/tanks/1-es2015.d6d1037dc165c8514979.js": "47e7cd108f3b212f23a6b4374f1e2debf5faad68",
-    "/games/tanks/1-es5.d6d1037dc165c8514979.js": "9252b539dcaac804366e868cd3c8d26ecde3d36d",
+    "/games/tanks/1-es2015.ee8b4b85ecc4d843f8b4.js": "eb91abc3ab390f878ecd978f552993bd29d1e6b5",
+    "/games/tanks/1-es5.ee8b4b85ecc4d843f8b4.js": "2577a528ae3bacd6c96d141a0f0ea5ebab089ecd",
     "/games/tanks/6-es2015.b848c5deb38a296c3b4d.js": "9d0f8140102128b1ae17191b2fc7c45f2c5a7594",
     "/games/tanks/6-es5.b848c5deb38a296c3b4d.js": "3424b0af3543e736ba1bea50a457aa1176141dd2",
     "/games/tanks/7-es2015.395a0c1cb30b16306774.js": "bef47aeb2d5090eb3215dfd6477ac26f8f1fe79c",
@@ -255,15 +255,15 @@
     "/games/tanks/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
     "/games/tanks/gear.a30611c877375e2f676a.png": "22cdb8c0ef6d1f5609a71bd1916719e8bdf09d0d",
     "/games/tanks/heart.8693ae5b957ee03faac9.png": "1926bf954761f846ec3bb407927488552b544f7c",
-    "/games/tanks/index.html": "2eede713e6c7814aa88b92d485e51152f54aa754",
+    "/games/tanks/index.html": "885156e33aa0792acc77034dcf66c17b93a413c8",
     "/games/tanks/main-es2015.052b63488ccabfc4e759.js": "d7126629eb001dd0bf670f581215ddef6de4ce7f",
     "/games/tanks/main-es5.052b63488ccabfc4e759.js": "a22c40e3fbf6cf634444149984bd3d10ceacb345",
     "/games/tanks/manifest.webmanifest": "e41190e4272fd162aca1403739f708169977b1dc",
     "/games/tanks/player-spawn.3a44343220d0c3697339.png": "789ca62e9761ec37ccce084f37c737adbaeb0a9e",
     "/games/tanks/polyfills-es2015.be1fff7e30f491727577.js": "ccdedd070cb84a02474439e999c074aac9b1d76b",
     "/games/tanks/polyfills-es5.b3e61a67b8852b2d5f23.js": "bb51eb4d6dd699a7d49ec6120d19a60a9fd855d0",
-    "/games/tanks/runtime-es2015.aaddaf7679c75b0f7ae0.js": "c4ab28e4827aadbc37c48d286ea960c09fdb91ea",
-    "/games/tanks/runtime-es5.aaddaf7679c75b0f7ae0.js": "8b2d773732f0a3315e42d4fa98052d1cacf46a1f",
+    "/games/tanks/runtime-es2015.a72d54f0f0efa8334c92.js": "385c4b8c8bdd1cbe048d0c0094bbba704014b994",
+    "/games/tanks/runtime-es5.a72d54f0f0efa8334c92.js": "3be91e834c68d407203ad2a1a81a4eb27d53b5d9",
     "/games/tanks/shot-controller.c287a59665cc4e5ef601.png": "a2d09ee281ba07a394967e54598460e6ac91ce1e",
     "/games/tanks/steel.ed1dee30189e9ac062ea.png": "cad0ebf75d371310a19170dcbe6cc23223b796e3",
     "/games/tanks/styles.278a33ef5bb0a03d59ad.css": "06e37592fff673655d860f97cd1be751f97a62cc",
