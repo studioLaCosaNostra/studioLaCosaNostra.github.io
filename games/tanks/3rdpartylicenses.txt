@@ -2387,6 +2387,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+tanks-cordova
+Apache-2.0
+
 tslib
 Apache-2.0
 Apache License
