@@ -552,14 +552,17 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
     return {
         imports: {
             env: {
-                "__cargo_web_snippet_0f503de1d61309643e0e13a7871406891e3691c9": function($0) {
-                Module.STDWEB_PRIVATE.from_js($0, (function(){return window;})());
-            },
-            "__cargo_web_snippet_14eef37aabfb619b68e1340d0dda149cf21aca47": function($0, $1) {
+                "__cargo_web_snippet_14eef37aabfb619b68e1340d0dda149cf21aca47": function($0, $1) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){var input=($1);return Object(input)===input&&typeof input.then==="function";})());
+            },
+            "__cargo_web_snippet_199d5eb25dfe761687bcd487578eb7e636bd9650": function($0) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);console.log(($0));
             },
             "__cargo_web_snippet_270008deb209bd55fc7c158d5b41b31373341fef": function($0, $1, $2) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){var callback=($1);var state={cancelled:false,callback:callback};($2).then(function(value){if(! state.cancelled){callback(value,true);}},function(value){if(! state.cancelled){callback(value,false);}});return state;})());
+            },
+            "__cargo_web_snippet_285aac3fba72d67cb459d37d4d21aa4fb62598ba": function($0) {
+                Module.STDWEB_PRIVATE.arena = $0;
             },
             "__cargo_web_snippet_2eaa20ed7f483afd388902a01e2435af2bb6c890": function($0) {
                 var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Promise);
@@ -567,11 +570,14 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__cargo_web_snippet_3459c0f8c119aa7f0a25a70979355197fc6c3cac": function($0, $1) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return Promise.resolve(($1));})());
             },
-            "__cargo_web_snippet_49856855a8c86b0b52b0f4674ae30c788b366e78": function($0, $1) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).alert(($1));
+            "__cargo_web_snippet_38dd9ad6eaa8bc2a2fcfcf2c3494c77c67169bd2": function($0, $1) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);console.log(($0),($1));
             },
-            "__cargo_web_snippet_6a8d3feb91beaca9ec2393abdde7d52eb3f81236": function($0) {
-                Module.STDWEB_PRIVATE.from_js($0, (function(){return new Promise(function(resolve,reject){window.document.fonts.load("10pt \"Amatica SC\"").then(()=>resolve("123")).catch(reject)})})());
+            "__cargo_web_snippet_4d66721dd755374fa177d86d1c818bf74cc0be84": function($0, $1) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1);})());
+            },
+            "__cargo_web_snippet_4fd31c9e56d40b8642cf9e6f96fd6b570f355cea": function($0) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);console.error(($0));
             },
             "__cargo_web_snippet_72fc447820458c720c68d0d8e078ede631edd723": function($0, $1, $2) {
                 console.error( 'Panic location:', Module.STDWEB_PRIVATE.to_js_string( $0, $1 ) + ':' + $2 );
@@ -581,6 +587,9 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             },
             "__cargo_web_snippet_97495987af1720d8a9a923fa4683a7b683e3acd6": function($0, $1) {
                 console.error( 'Panic error message:', Module.STDWEB_PRIVATE.to_js_string( $0, $1 ) );
+            },
+            "__cargo_web_snippet_a4a27d45263c9e2abeee25f3655c0bd9b812b22f": function($0, $1, $2, $3) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);Module.STDWEB_PRIVATE.from_js($0, (function(){const font=new FontFace(($1),($2),($3));document.fonts.add(font);return font.load();})());
             },
             "__cargo_web_snippet_dc2fd915bd92f9e9c6a3bd15174f1414eee3dbaf": function() {
                 console.error( 'Encountered a panic!' );
