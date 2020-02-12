@@ -564,6 +564,9 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__cargo_web_snippet_10fb0150a5b019b90a877371779cdd0ec6f3ea33": function($0, $1, $2) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){try{let array=new Uint8Array(($1));self.crypto.getRandomValues(array);HEAPU8.set(array,($2));return{success:true};}catch(err){return{success:false,error:err};}})());
             },
+            "__cargo_web_snippet_13229767a08cde3f7f073ec46777cc733a05a791": function($0) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);var state=($0);if(state.active===false){state.active=true;setTimeout(()=>{state.callback();},0);setTimeout(()=>{state.active=false;},state.wait);}
+            },
             "__cargo_web_snippet_199d5eb25dfe761687bcd487578eb7e636bd9650": function($0) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);console.log(($0));
             },
@@ -584,9 +587,6 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             },
             "__cargo_web_snippet_3709cb4f35051d155438790e2442b511cbe1f8ef": function($0) {
                 var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Error);
-            },
-            "__cargo_web_snippet_38dd9ad6eaa8bc2a2fcfcf2c3494c77c67169bd2": function($0, $1) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);console.log(($0),($1));
             },
             "__cargo_web_snippet_3c5e83d16a83fc7147ec91e2506438012952f55a": function($0) {
                 var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Element);
@@ -683,9 +683,6 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             },
             "__cargo_web_snippet_ea6ad9d8415e84119621f5aa2c86a39abc588b75": function($0, $1) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).innerWidth;})());
-            },
-            "__cargo_web_snippet_fd482fb3883a4d04aa0e06858105c037b599c173": function($0) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);var state=($0);if(state.active===false){state.active=true;setTimeout(()=>{state.callback();},0);setTimeout(()=>{state.callback();state.active=false;},state.wait);}
             },
             "__cargo_web_snippet_ff5103e6cc179d13b4c7a785bdce2708fd559fc0": function($0) {
                 Module.STDWEB_PRIVATE.tmp = Module.STDWEB_PRIVATE.to_js( $0 );
