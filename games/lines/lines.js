@@ -729,11 +729,17 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__cargo_web_snippet_dc2fd915bd92f9e9c6a3bd15174f1414eee3dbaf": function() {
                 console.error( 'Encountered a panic!' );
             },
+            "__cargo_web_snippet_e590393069479c7e36fcd47cdf6a9f05f801d58b": function($0) {
+                Module.STDWEB_PRIVATE.from_js($0, (function(){console.log("Ads show.");if(! window.admob)return;admob.interstitial.show();})());
+            },
             "__cargo_web_snippet_e9638d6405ab65f78daf4a5af9c9de14ecf1e2ec": function($0) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);Module.STDWEB_PRIVATE.unregister_raw_value(($0));
             },
             "__cargo_web_snippet_ea6ad9d8415e84119621f5aa2c86a39abc588b75": function($0, $1) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).innerWidth;})());
+            },
+            "__cargo_web_snippet_eddcef8259d5e6bb6e934adb41d9071dc5f3221c": function($0, $1) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){console.log("Ad load.");if(! window.admob)return;var android=($1);console.log(android);admob.interstitial.load({id:{android:android},});})());
             },
             "__cargo_web_snippet_f814fda503cb20016f78481f85431d48a7c4e731": function($0, $1) {
                 var object = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );Module.STDWEB_PRIVATE.serialize_object( $1, object );
