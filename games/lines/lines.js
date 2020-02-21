@@ -603,9 +603,6 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__cargo_web_snippet_3709cb4f35051d155438790e2442b511cbe1f8ef": function($0) {
                 var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Error);
             },
-            "__cargo_web_snippet_38dd9ad6eaa8bc2a2fcfcf2c3494c77c67169bd2": function($0, $1) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);console.log(($0),($1));
-            },
             "__cargo_web_snippet_3c5e83d16a83fc7147ec91e2506438012952f55a": function($0) {
                 var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Element);
             },
@@ -689,9 +686,6 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             },
             "__cargo_web_snippet_a152e8d0e8fac5476f30c1d19e4ab217dbcba73d": function($0, $1, $2) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){try{return{value:function(){return($1).querySelector(($2));}(),success:true};}catch(error){return{error:error,success:false};}})());
-            },
-            "__cargo_web_snippet_a1bde086ce8713d0a17c518ea35c6b6a7c47d99b": function($0, $1, $2, $3, $4) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);$4 = Module.STDWEB_PRIVATE.to_js($4);($0).fillText(($1),($2),($3),($4));
             },
             "__cargo_web_snippet_a43580d4464d7fa740f085251cce2bf50ef2e3db": function($0) {
                 Module.STDWEB_PRIVATE.from_js($0, (function(){try{if(typeof self==="object"&&typeof self.crypto==="object"&&typeof self.crypto.getRandomValues==="function"){return{success:true,ty:1};}if(typeof require("crypto").randomBytes==="function"){return{success:true,ty:2};}return{success:false,error:new Error("not supported")};}catch(err){return{success:false,error:err};}})());
