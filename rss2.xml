@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Sun, 23 Feb 2020 16:54:39 GMT</pubDate>
+    <pubDate>Sun, 23 Feb 2020 18:23:25 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>How to run rust wasm on cordova</title>
+      <link>https://studiolacosanostra.github.io/2020/02/23/How-to-run-rust-wasm-on-cordova/</link>
+      <guid>https://studiolacosanostra.github.io/2020/02/23/How-to-run-rust-wasm-on-cordova/</guid>
+      <pubDate>Sun, 23 Feb 2020 18:23:25 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Creating a game in rust language I came across a problem with running it in Cordova. It turned out that the
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2020/02/23/How-to-run-rust-wasm-on-cordova/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>How to speed up Android Gradle build in continuous integration</title>
@@ -359,20 +379,6 @@
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>VSCode: NVM /bin/bash: npm: command not found</title>
-      <link>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/</link>
-      <guid>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/</guid>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 GMT</pubDate>
-      <description>
-      
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/#disqus_thread</comments>
     </item>
     
   </channel>
