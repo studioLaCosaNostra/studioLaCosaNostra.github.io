@@ -8,14 +8,14 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Sun, 23 Feb 2020 18:23:25 GMT</pubDate>
+    <pubDate>Sun, 23 Feb 2020 18:24:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>How to run rust wasm on cordova</title>
       <link>https://studiolacosanostra.github.io/2020/02/23/How-to-run-rust-wasm-on-cordova/</link>
       <guid>https://studiolacosanostra.github.io/2020/02/23/How-to-run-rust-wasm-on-cordova/</guid>
-      <pubDate>Sun, 23 Feb 2020 18:23:25 GMT</pubDate>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 GMT</pubDate>
       <description>
       
         
