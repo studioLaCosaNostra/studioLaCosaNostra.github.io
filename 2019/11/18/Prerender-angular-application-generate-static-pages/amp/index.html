@@ -58,7 +58,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/"
 			},
 			"datePublished": "2019-11-18T00:00:00.000Z",
-			"dateModified": "2020-02-23T18:24:30.047Z",
+			"dateModified": "2020-03-03T08:56:20.888Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1989,7 +1989,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 }
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>And that&#x2019;s all, now you just need to build an application in SSR mode and run the command prerender.</p><pre class="line-numbers language-bash"><code class="language-bash">npm run build:ssr &amp;&amp; npm run prerender
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>In the <code>dist/browser</code> directory, you will find subfolders with <code>index.html</code> files containing SEO-friendly generated HTML content of the application.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>In the <code>dist/browser</code> directory, you will find subfolders with <code>index.html</code> files containing SEO-friendly generated HTML content of the application.</p><p>Prerender in Angular 9 has an error on the production build.</p><p><a href="https://github.com/angular/angular-cli/issues/17021" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/angular/angular-cli/issues/17021</a></p><p>When they solve the problem, I will probably update the post to keep it up to date with the latest Angular.</p>
 					
 					
 			    	<div class="social-share">
