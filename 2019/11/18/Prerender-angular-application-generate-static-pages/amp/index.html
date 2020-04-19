@@ -58,7 +58,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/"
 			},
 			"datePublished": "2019-11-18T00:00:00.000Z",
-			"dateModified": "2020-03-22T18:00:14.456Z",
+			"dateModified": "2020-04-19T18:32:37.296Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1989,7 +1989,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 }
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>And that&#x2019;s all, now you just need to build an application in SSR mode and run the command prerender.</p><pre class="line-numbers language-bash"><code class="language-bash">npm run build:ssr &amp;&amp; npm run prerender
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>In the <code>dist/browser</code> directory, you will find subfolders with <code>index.html</code> files containing SEO-friendly generated HTML content of the application.</p><p>An example of a working page on this solution is my second <a href="https://rayros.github.io/" rel="external nofollow noopener noreferrer" target="_blank">programming blog</a>.</p><p>Prerender in Angular 9 has an error on the production build.</p><p><a href="https://github.com/angular/angular-cli/issues/17021" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/angular/angular-cli/issues/17021</a></p><p>When they solve the problem, I will probably update the post to keep it up to date with the latest Angular.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>In the <code>dist/browser</code> directory, you will find subfolders with <code>index.html</code> files containing SEO-friendly generated HTML content of the application.</p><p>If you are using @angular/service-worker then you will need to reconfigure right after the <code>prerender</code> because the checksum value in the index.html file has changed after the html modification.</p><pre class="line-numbers language-bash"><code class="language-bash">ngsw-config dist/browser ngsw-config.json
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>An example of a working page on this solution is my second <a href="https://rayros.github.io/" rel="external nofollow noopener noreferrer" target="_blank">programming blog</a>.</p><p>Prerender in Angular 9 has an error on the production build.</p><p><a href="https://github.com/angular/angular-cli/issues/17021" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/angular/angular-cli/issues/17021</a></p><p>When they solve the problem, I will probably update the post to keep it up to date with the latest Angular.</p>
 					
 					
 			    	<div class="social-share">
