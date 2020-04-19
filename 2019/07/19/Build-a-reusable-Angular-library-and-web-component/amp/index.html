@@ -58,7 +58,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/"
 			},
 			"datePublished": "2019-07-19T00:00:00.000Z",
-			"dateModified": "2020-04-19T18:32:37.240Z",
+			"dateModified": "2020-04-19T18:33:35.896Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1875,41 +1875,41 @@ h6.categories {
 <span class="token keyword">import</span> <span class="token punctuation">{</span> MatButtonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/material/button&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
     BrowserAnimationsModule<span class="token punctuation">,</span>
     MatIconModule<span class="token punctuation">,</span>
     MatButtonModule
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  exports<span class="token punctuation">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span>
+  exports<span class="token operator">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgxCookieConsentModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>We only add <code>MatIconModule</code>, <code>MatButtonModule</code> here. I use them on the closing button.</p><p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.component.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit<span class="token punctuation">,</span> HostBinding <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&apos;lib-ngx-cookie-consent&apos;</span><span class="token punctuation">,</span>
-  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+  selector<span class="token operator">:</span> <span class="token string">&apos;lib-ngx-cookie-consent&apos;</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
     &lt;div class=&quot;mat-typography cookie-consent-content&quot;&gt;
       &lt;ng-content&gt;&lt;/ng-content&gt;
     &lt;/div&gt;
     &lt;button mat-icon-button aria-label=&quot;Close cookie consent&quot; (click)=&quot;close()&quot;&gt;
       &lt;mat-icon&gt;close&lt;/mat-icon&gt;
     &lt;/button&gt;
-  `</span></span><span class="token punctuation">,</span>
-  styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;./ngx-cookie-consent.component.scss&apos;</span><span class="token punctuation">]</span>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;./ngx-cookie-consent.component.scss&apos;</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgxCookieConsentComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
   @<span class="token function">HostBinding</span><span class="token punctuation">(</span><span class="token string">&apos;class.visible&apos;</span><span class="token punctuation">)</span> visible <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
   <span class="token keyword">private</span> signature <span class="token operator">=</span> <span class="token string">&apos;cookie-consent-closed&apos;</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">public</span> <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> isClosed <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>signature<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&apos;true&apos;</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isClosed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 
-  <span class="token keyword">public</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
     localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>signature<span class="token punctuation">,</span> <span class="token string">&apos;true&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
@@ -1935,21 +1935,21 @@ h6.categories {
 <span class="token keyword">import</span> <span class="token punctuation">{</span> createCustomElement <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/elements&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
     BrowserModule<span class="token punctuation">,</span>
     NgxCookieConsentModule
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  providers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  entryComponents<span class="token punctuation">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  entryComponents<span class="token operator">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  bootstrap<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span>
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> injector<span class="token punctuation">:</span> Injector</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> injector<span class="token operator">:</span> Injector</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
 
   <span class="token function">ngDoBootstrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> ngElement <span class="token operator">=</span> <span class="token function">createCustomElement</span><span class="token punctuation">(</span>NgxCookieConsentComponent<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-      injector<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>injector
+      injector<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>injector
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     customElements<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">&apos;cookie-consent&apos;</span><span class="token punctuation">,</span> ngElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
