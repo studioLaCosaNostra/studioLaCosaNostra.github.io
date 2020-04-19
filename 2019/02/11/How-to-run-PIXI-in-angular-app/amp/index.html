@@ -58,7 +58,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/"
 			},
 			"datePublished": "2019-02-11T17:39:00.000Z",
-			"dateModified": "2020-04-19T18:33:40.320Z",
+			"dateModified": "2020-04-19T19:15:40.112Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1853,15 +1853,15 @@ h6.categories {
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Application <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;pixi.js&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token operator">:</span> <span class="token string">&apos;app-pixi&apos;</span><span class="token punctuation">,</span>
-  template<span class="token operator">:</span> <span class="token string">&apos;&apos;</span>
+  selector<span class="token punctuation">:</span> <span class="token string">&apos;app-pixi&apos;</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">PIXIComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> app<span class="token operator">:</span> Application<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> app<span class="token punctuation">:</span> Application<span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token punctuation">:</span> ElementRef</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
-  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Application</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>elementRef<span class="token punctuation">.</span>nativeElement<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>view<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
@@ -1871,15 +1871,15 @@ h6.categories {
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Application <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;pixi.js&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token operator">:</span> <span class="token string">&apos;app-pixi&apos;</span><span class="token punctuation">,</span>
-  template<span class="token operator">:</span> <span class="token string">&apos;&apos;</span>
+  selector<span class="token punctuation">:</span> <span class="token string">&apos;app-pixi&apos;</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">PIXIComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> app<span class="token operator">:</span> Application<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> app<span class="token punctuation">:</span> Application<span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef<span class="token punctuation">,</span> <span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token punctuation">:</span> ElementRef<span class="token punctuation">,</span> <span class="token keyword">private</span> ngZone<span class="token punctuation">:</span> NgZone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
-  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>ngZone<span class="token punctuation">.</span><span class="token function">runOutsideAngular</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Application</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1890,19 +1890,19 @@ h6.categories {
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Application<span class="token punctuation">,</span> ApplicationOptions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;pixi.js&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token operator">:</span> <span class="token string">&apos;app-pixi&apos;</span><span class="token punctuation">,</span>
-  template<span class="token operator">:</span> <span class="token string">&apos;&apos;</span>
+  selector<span class="token punctuation">:</span> <span class="token string">&apos;app-pixi&apos;</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">PIXIComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span><span class="token punctuation">,</span> OnDestroy <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> app<span class="token operator">:</span> Application<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> app<span class="token punctuation">:</span> Application<span class="token punctuation">;</span>
 
   @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token keyword">public</span> devicePixelRatio <span class="token operator">=</span> window<span class="token punctuation">.</span>devicePixelRatio <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">;</span>
 
   @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token keyword">public</span> applicationOptions<span class="token operator">:</span> ApplicationOptions <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> applicationOptions<span class="token punctuation">:</span> ApplicationOptions <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef<span class="token punctuation">,</span> <span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token punctuation">:</span> ElementRef<span class="token punctuation">,</span> <span class="token keyword">private</span> ngZone<span class="token punctuation">:</span> NgZone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
   <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>ngZone<span class="token punctuation">.</span><span class="token function">runOutsideAngular</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
@@ -1912,7 +1912,7 @@ h6.categories {
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 
-  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 
@@ -1922,15 +1922,15 @@ h6.categories {
     <span class="token keyword">const</span> height <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>elementRef<span class="token punctuation">.</span>nativeElement<span class="token punctuation">.</span>offsetHeight<span class="token punctuation">;</span>
     <span class="token keyword">const</span> viewportScale <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token keyword">this</span><span class="token punctuation">.</span>devicePixelRatio<span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>renderer<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>width <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>devicePixelRatio<span class="token punctuation">,</span> height <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>devicePixelRatio<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>view<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">scale(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>viewportScale<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>view<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transformOrigin <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">top left</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>view<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token template-string"><span class="token string">`scale(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>viewportScale<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>view<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transformOrigin <span class="token operator">=</span> <span class="token template-string"><span class="token string">`top left`</span></span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 
   <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 
-  <span class="token function">ngOnDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token function">ngOnDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 
