@@ -52,7 +52,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/"
 			},
 			"datePublished": "2019-07-11T00:00:00.000Z",
-			"dateModified": "2020-04-19T19:15:40.044Z",
+			"dateModified": "2020-07-30T11:00:57.005Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1861,11 +1861,11 @@ script:
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The <code>gh-pages-build</code> command generates all static files in the <code>public</code> directory.<br>Then <code>gh-pages-publish</code> sends all changes to github pages. I do not send via hexo deploy git, because the site also has additional directories that I do not want to lose.</p><p><code>bin/gh-pages-publish.ts</code></p><pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> ghpages <span class="token keyword">from</span> <span class="token string">&apos;gh-pages&apos;</span><span class="token punctuation">;</span>
 
 ghpages<span class="token punctuation">.</span><span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">&apos;public&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  branch<span class="token punctuation">:</span> <span class="token string">&apos;master&apos;</span><span class="token punctuation">,</span>
-  repo<span class="token punctuation">:</span> <span class="token string">&apos;https://&apos;</span> <span class="token operator">+</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">GH_TOKEN</span> <span class="token operator">+</span> <span class="token string">&apos;@github.com/studioLaCosaNostra/studioLaCosaNostra.github.io&apos;</span><span class="token punctuation">,</span>
-  dest<span class="token punctuation">:</span> <span class="token string">&apos;.&apos;</span><span class="token punctuation">,</span>
-  add<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  dotfiles<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  branch<span class="token operator">:</span> <span class="token string">&apos;master&apos;</span><span class="token punctuation">,</span>
+  repo<span class="token operator">:</span> <span class="token string">&apos;https://&apos;</span> <span class="token operator">+</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">GH_TOKEN</span> <span class="token operator">+</span> <span class="token string">&apos;@github.com/studioLaCosaNostra/studioLaCosaNostra.github.io&apos;</span><span class="token punctuation">,</span>
+  dest<span class="token operator">:</span> <span class="token string">&apos;.&apos;</span><span class="token punctuation">,</span>
+  add<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  dotfiles<span class="token operator">:</span> <span class="token boolean">true</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>

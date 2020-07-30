@@ -52,7 +52,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/"
 			},
 			"datePublished": "2019-04-02T00:00:00.000Z",
-			"dateModified": "2020-04-19T19:15:40.036Z",
+			"dateModified": "2020-07-30T11:00:57.001Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1847,17 +1847,17 @@ h6.categories {
 <span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&apos;app-root&apos;</span><span class="token punctuation">,</span>
-  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+  selector<span class="token operator">:</span> <span class="token string">&apos;app-root&apos;</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
     &lt;ul *ngIf=&quot;devices$ | async as devices&quot;&gt;
       &lt;li *ngFor=&quot;let device of devices&quot;&gt;{{ device | json }}&lt;/li&gt;
     &lt;/ul&gt;
-  `</span></span>
+  </span><span class="token template-punctuation string">`</span></span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span>
-  devicesBehaviorSubject<span class="token punctuation">:</span> BehaviorSubject<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BehaviorSubject</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  devices$<span class="token punctuation">:</span> Observable<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
-  scanner<span class="token punctuation">:</span> DocumentScanner<span class="token punctuation">;</span>
+  devicesBehaviorSubject<span class="token operator">:</span> BehaviorSubject<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BehaviorSubject</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  devices$<span class="token operator">:</span> Observable<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  scanner<span class="token operator">:</span> DocumentScanner<span class="token punctuation">;</span>
 
   <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>devices$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>devicesBehaviorSubject<span class="token punctuation">.</span><span class="token function">asObservable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1878,19 +1878,19 @@ h6.categories {
 <span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&apos;app-root&apos;</span><span class="token punctuation">,</span>
-  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+  selector<span class="token operator">:</span> <span class="token string">&apos;app-root&apos;</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
     &lt;ul *ngIf=&quot;devices$ | async as devices&quot;&gt;
       &lt;li *ngFor=&quot;let device of devices&quot;&gt;{{ device | json }}&lt;/li&gt;
     &lt;/ul&gt;
-  `</span></span>
+  </span><span class="token template-punctuation string">`</span></span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span>
-  devicesBehaviorSubject<span class="token punctuation">:</span> BehaviorSubject<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BehaviorSubject</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  devices$<span class="token punctuation">:</span> Observable<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
-  scanner<span class="token punctuation">:</span> DocumentScanner<span class="token punctuation">;</span>
+  devicesBehaviorSubject<span class="token operator">:</span> BehaviorSubject<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BehaviorSubject</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  devices$<span class="token operator">:</span> Observable<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  scanner<span class="token operator">:</span> DocumentScanner<span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> ngZone<span class="token punctuation">:</span> NgZone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>devices$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>devicesBehaviorSubject<span class="token punctuation">.</span><span class="token function">asObservable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DocumentScanner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>scanner<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;scannerDevices&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">devices</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
