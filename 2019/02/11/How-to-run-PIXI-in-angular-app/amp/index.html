@@ -58,7 +58,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/02/11/How-to-run-PIXI-in-angular-app/"
 			},
 			"datePublished": "2019-02-11T17:39:00.000Z",
-			"dateModified": "2020-07-30T11:00:57.073Z",
+			"dateModified": "2020-08-07T22:55:11.928Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1859,7 +1859,7 @@ h6.categories {
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">PIXIComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> app<span class="token operator">:</span> Application<span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
   <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Application</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1877,7 +1877,7 @@ h6.categories {
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">PIXIComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> app<span class="token operator">:</span> Application<span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef<span class="token punctuation">,</span> <span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef<span class="token punctuation">,</span> <span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
   <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>ngZone<span class="token punctuation">.</span><span class="token function">runOutsideAngular</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
@@ -1902,7 +1902,7 @@ h6.categories {
   @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token keyword">public</span> applicationOptions<span class="token operator">:</span> ApplicationOptions <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef<span class="token punctuation">,</span> <span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> elementRef<span class="token operator">:</span> ElementRef<span class="token punctuation">,</span> <span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
   <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>ngZone<span class="token punctuation">.</span><span class="token function">runOutsideAngular</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>

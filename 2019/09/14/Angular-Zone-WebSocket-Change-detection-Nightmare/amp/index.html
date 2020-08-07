@@ -52,7 +52,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2019/09/14/Angular-Zone-WebSocket-Change-detection-Nightmare/"
 			},
 			"datePublished": "2019-09-14T00:00:00.000Z",
-			"dateModified": "2020-07-30T11:00:56.997Z",
+			"dateModified": "2020-08-07T22:55:11.848Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1846,8 +1846,8 @@ h6.categories {
 
 <span class="token comment">// disable on properties</span>
 <span class="token comment">// tslint:disable-next-line: typedef</span>
-<span class="token keyword">const</span> targets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token class-name">WebSocket</span><span class="token punctuation">.</span>prototype<span class="token punctuation">]</span><span class="token punctuation">;</span>
-targets<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> targets <span class="token operator">=</span> <span class="token punctuation">[</span>WebSocket<span class="token punctuation">.</span>prototype<span class="token punctuation">]</span><span class="token punctuation">;</span>
+targets<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   global<span class="token punctuation">[</span><span class="token string">&apos;__Zone_ignore_on_properties&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     target<span class="token punctuation">,</span>
     ignoreProperties<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;close&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;error&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;open&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;message&apos;</span><span class="token punctuation">]</span>
