@@ -52,7 +52,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2020/01/08/How-to-speed-up-Android-Gradle-build-in-continuous-integration/"
 			},
 			"datePublished": "2020-01-08T16:00:00.000Z",
-			"dateModified": "2020-08-07T22:55:13.960Z",
+			"dateModified": "2020-08-12T15:09:57.480Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1842,7 +1842,9 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Below is a sample task for Concourse CI, which caches <code>gradle</code> packages for future builds.</p><p><code>build_android.sh</code></p><pre class="line-numbers language-yml"><code class="language-yml">---
+			  		<p>Below is a sample task for Concourse CI, which caches <code>gradle</code> packages for future builds.</p>
+<p><code>build_android.sh</code></p>
+<pre class="line-numbers language-yml"><code class="language-yml">---
 platform: linux
 
 image_resource:
@@ -1859,7 +1861,9 @@ run:
 
 caches:
   - path: .gradle
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>build.sh</code></p><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/sh
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>build.sh</code></p>
+<pre class="line-numbers language-sh"><code class="language-sh">#!/bin/sh
 
 set -eux
 
@@ -1869,7 +1873,9 @@ export GRADLE_USER_HOME=&quot;${ROOT_FOLDER}/.gradle&quot;
 cd app-repo
 
 ./gradlew assembleDebug
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>At the beginning of shell script I set the path <code>GRADE_USER_HOME</code> to be relative to the currently used workspace, so that Concourse can save the files for later.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>At the beginning of shell script I set the path <code>GRADE_USER_HOME</code> to be relative to the currently used workspace, so that Concourse can save the files for later.</p>
+
 					
 					
 			    	<div class="social-share">

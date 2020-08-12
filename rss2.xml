@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Fri, 07 Aug 2020 22:55:13 GMT</pubDate>
+    <pubDate>Wed, 12 Aug 2020 15:09:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -22,7 +22,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Creating a game in rust language I came across a problem with running it in Cordova. It turned out that the
+            &lt;p&gt;Creating a game in rust language I came across a problem with running it in Cordova. It turned out that the cargo web builder uses fetch
           
         
       
@@ -42,7 +42,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Below is a sample task for Concourse CI, which caches &lt;code&gt;gradle&lt;/code&gt; packages for future
+            &lt;p&gt;Below is a sample task for Concourse CI, which caches &lt;code&gt;gradle&lt;/code&gt; packages for future
           
         
       
@@ -62,7 +62,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Generally I started playing with Concourse CI for a few days and found it to be a great server for automation
+            &lt;p&gt;Generally I started playing with Concourse CI for a few days and found it to be a great server for automation for my private projects.
           
         
       
@@ -82,7 +82,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;For those who do not want to get into the program, but only want to use it in their project.&lt;br&gt;Then I invite
+            &lt;p&gt;For those who do not want to get into the program, but only want to use it in their project.&lt;br&gt;Then I invite you to the finished
           
         
       
@@ -102,7 +102,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Email marketing is one of the cheapest and easiest ways to get your website and online store to returning
+            &lt;p&gt;Email marketing is one of the cheapest and easiest ways to get your website and online store to returning recipients. This is a form of
           
         
       
@@ -118,7 +118,7 @@
       <pubDate>Mon, 18 Nov 2019 00:00:00 GMT</pubDate>
       <description>
       
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+        &lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
       
       </description>
       
@@ -136,7 +136,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;While working on blog advertising, I created a special spreadsheet. Contains a list of all links to articles on
+            &lt;p&gt;While working on blog advertising, I created a special spreadsheet. Contains a list of all links to articles on the blog, which I shared
           
         
       
@@ -156,7 +156,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;I got a task to make a working application for android &amp;amp; ios from the web application in two weeks. I
+            &lt;p&gt;I got a task to make a working application for android &amp;amp; ios from the web application in two weeks. I agreed and the first thing I
           
         
       
@@ -172,7 +172,7 @@
       <pubDate>Mon, 29 Jul 2019 00:00:00 GMT</pubDate>
       <description>
       
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;If you’re looking for a simple instruction on how to run Cordova project for the first time on an Android system, you’ve just found it.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+        &lt;p&gt;If you’re looking for a simple instruction on how to run Cordova project for the first time on an Android system, you’ve just found it.&lt;br&gt;&lt;/p&gt;
       
       </description>
       
@@ -186,7 +186,7 @@
       <pubDate>Fri, 19 Jul 2019 00:00:00 GMT</pubDate>
       <description>
       
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+        &lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;
       
       </description>
       
@@ -204,7 +204,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Since I automated the creation of new versions of &lt;a
+            &lt;p&gt;Since I automated the creation of new versions of &lt;a href=&quot;/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/&quot;
           
         
       
@@ -224,33 +224,13 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Working on more and more programs, some activities beginning to become boring and monotonous. One of them is
+            &lt;p&gt;Working on more and more programs, some activities beginning to become boring and monotonous. One of them is reporting the application
           
         
       
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/06/02/How-to-automate-iOS-application-submission-process-with-puppeteer/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>How to debug Angular tests in VSCode</title>
-      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
-      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;VSCode has the option of debugging code inside the editor. While in typical console programs running the debug
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/#disqus_thread</comments>
     </item>
     
     <item>
@@ -264,13 +244,33 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session
+            &lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session with a firebase
           
         
       
       </description>
       
       <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to debug Angular tests in VSCode</title>
+      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
+      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
+      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;VSCode has the option of debugging code inside the editor. While in typical console programs running the debug is very easy, so on the
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/#disqus_thread</comments>
     </item>
     
     <item>
@@ -284,7 +284,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;In this article, I describe how easy and simple you can share your angular application on firebase hosting
+            &lt;p&gt;In this article, I describe how easy and simple you can share your angular application on firebase hosting without having advanced
           
         
       
@@ -304,7 +304,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Angular is a platform for building applications across all platforms; web, mobile web, native mobile, and
+            &lt;p&gt;Angular is a platform for building applications across all platforms; web, mobile web, native mobile, and native desktop.&lt;br&gt;Below I
           
         
       
@@ -324,7 +324,8 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Yesterday, creating a document scanning program I was very surprised why angular does not update the
+            &lt;p&gt;Yesterday, creating a document scanning program I was very surprised why angular does not update the view.&lt;/p&gt;
+&lt;pre class=&quot;line-numbers
           
         
       
@@ -340,7 +341,7 @@
       <pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate>
       <description>
       
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+        &lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
       
       </description>
       
@@ -358,7 +359,7 @@
         
           
           
-            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;A friend asked me for a simple application to &lt;a href=&quot;/projects/qr-code-generator&quot;&gt;generate QR Codes&lt;/a&gt;. It
+            &lt;p&gt;A friend asked me for a simple application to &lt;a href=&quot;/projects/qr-code-generator&quot;&gt;generate QR Codes&lt;/a&gt;. It took me a few moments to
           
         
       
@@ -374,7 +375,7 @@
       <pubDate>Wed, 13 Mar 2019 00:00:00 GMT</pubDate>
       <description>
       
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;You will never forget to publish post on twitter.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+        &lt;p&gt;&lt;em&gt;You will never forget to publish post on twitter.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
       
       </description>
       

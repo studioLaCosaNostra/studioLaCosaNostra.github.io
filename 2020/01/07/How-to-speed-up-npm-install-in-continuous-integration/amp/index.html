@@ -52,7 +52,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2020/01/07/How-to-speed-up-npm-install-in-continuous-integration/"
 			},
 			"datePublished": "2020-01-07T16:00:00.000Z",
-			"dateModified": "2020-08-07T22:55:13.960Z",
+			"dateModified": "2020-08-12T15:09:57.480Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1842,7 +1842,10 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Generally I started playing with Concourse CI for a few days and found it to be a great server for automation for my private projects. In this post I will describe how to speed up <code>npm install</code>.</p><p>Concourse has a built-in directory caching system from our workspace. Just add directories to the task configuration in the <code>caches:</code> field.</p><p><code>build.yml</code></p><pre class="line-numbers language-yml"><code class="language-yml">---
+			  		<p>Generally I started playing with Concourse CI for a few days and found it to be a great server for automation for my private projects. In this post I will describe how to speed up <code>npm install</code>.</p>
+<p>Concourse has a built-in directory caching system from our workspace. Just add directories to the task configuration in the <code>caches:</code> field.</p>
+<p><code>build.yml</code></p>
+<pre class="line-numbers language-yml"><code class="language-yml">---
 platform: linux
 
 image_resource:
@@ -1858,7 +1861,10 @@ run:
 caches:
   - path: .npm
   - path: game-repo/node_modules
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>In our case it will be the <code>.npm</code> and <code>node_modules</code> directory. By default, <code>npm</code> stores the cache in <code>~/.npm</code> which for Concourse means <code>/root/.npm</code>. And here a problem arises, because Concourse can only cache files and folders from a workspace that may have a different path e.g: <code>/tmp/23f2d2/build/</code>.<br>Below is an example script with a changed cache path to <code>/tmp/23f2d2/build/.npm</code>.</p><p><code>build.sh</code></p><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/sh
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>In our case it will be the <code>.npm</code> and <code>node_modules</code> directory. By default, <code>npm</code> stores the cache in <code>~/.npm</code> which for Concourse means <code>/root/.npm</code>. And here a problem arises, because Concourse can only cache files and folders from a workspace that may have a different path e.g: <code>/tmp/23f2d2/build/</code>.<br>Below is an example script with a changed cache path to <code>/tmp/23f2d2/build/.npm</code>.</p>
+<p><code>build.sh</code></p>
+<pre class="line-numbers language-sh"><code class="language-sh">#!/bin/sh
 
 set -eux
 
@@ -1870,7 +1876,9 @@ cd game-repo
 
 npm install --unsafe-perm
 npm run build
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>After such an operation, we can be sure that the next tasks will have the preserved packages from previous builds.</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>After such an operation, we can be sure that the next tasks will have the preserved packages from previous builds.</p>
+
 					
 					
 			    	<div class="social-share">
