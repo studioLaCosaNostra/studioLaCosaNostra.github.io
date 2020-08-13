@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/"
 			},
-			"datePublished": "2019-07-10T23:00:00.000Z",
-			"dateModified": "2020-08-12T14:47:07.499Z",
+			"datePublished": "2019-07-11T00:00:00.000Z",
+			"dateModified": "2020-08-13T15:18:14.461Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1808,7 +1808,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-07-11" itemprop="datePublished">2019.07.10</time>
+							<time datetime="2019-07-11" itemprop="datePublished">2019.07.11</time>
 						</span>
 					</div>
 				</div>
@@ -1869,18 +1869,18 @@ script:
 <p><code>bin/gh-pages-publish.ts</code></p>
 <pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> ghpages <span class="token keyword">from</span> <span class="token string">&apos;gh-pages&apos;</span><span class="token punctuation">;</span>
 
-ghpages<span class="token punctuation">.</span><span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">&apos;public&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+ghpages<span class="token punctuation">.</span><span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">&apos;public&apos;</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   branch<span class="token operator">:</span> <span class="token string">&apos;master&apos;</span><span class="token punctuation">,</span>
   repo<span class="token operator">:</span> <span class="token string">&apos;https://&apos;</span> <span class="token operator">+</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">GH_TOKEN</span> <span class="token operator">+</span> <span class="token string">&apos;@github.com/studioLaCosaNostra/studioLaCosaNostra.github.io&apos;</span><span class="token punctuation">,</span>
   dest<span class="token operator">:</span> <span class="token string">&apos;.&apos;</span><span class="token punctuation">,</span>
   add<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   dotfiles<span class="token operator">:</span> <span class="token boolean">true</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
     process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Thanks to this I also have no problem adding env <code>GH_TOKEN</code>, which Travis needs to send changes to github pages.</p>
 <p>When the publication is finished, the command <code>hexo twitter-publish</code> is run. It automatically sends new Twitter entries as soon as the post appears publicly. If you want to know more about this module, I invite you to read the post in which I describe <a href="/2019/03/13/Hexo-Publish-posts-automatically-on-twitter/" title="how to automatically publish twitter posts in hexo">how to automatically publish twitter posts in hexo</a>.</p>
@@ -1936,7 +1936,7 @@ push_changes
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Also do <code>chmod +x .travis-commit-changes.sh</code> to get execute permissions.</p>
 <h2 id="How-to-add-GH-TOKEN-to-Travis"><a href="#How-to-add-GH-TOKEN-to-Travis" class="headerlink" title="How to add GH_TOKEN to Travis"></a>How to add GH_TOKEN to Travis</h2><ol>
-<li>Go to Travis website with the project (for me it is <a href="https://travis-ci.org/studioLaCosaNostra/blog" rel="external nofollow noopener noreferrer" target="_blank">https://travis-ci.org/studioLaCosaNostra/blog</a>)</li>
+<li>Go to Travis website with the project (for me it is <a href="https://travis-ci.org/studioLaCosaNostra/blog">https://travis-ci.org/studioLaCosaNostra/blog</a>)</li>
 <li>Click <code>More options</code> in the upper right corner.</li>
 <li>Select <code>Settings</code></li>
 <li>Scroll to &#x2018;Environment Variables`</li>
