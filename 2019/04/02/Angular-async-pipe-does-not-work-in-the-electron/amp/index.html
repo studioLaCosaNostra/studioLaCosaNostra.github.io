@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/"
 			},
-			"datePublished": "2019-04-02T00:00:00.000Z",
-			"dateModified": "2020-08-13T15:18:14.457Z",
+			"datePublished": "2019-04-01T23:00:00.000Z",
+			"dateModified": "2020-08-12T14:47:07.491Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1808,7 +1808,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-04-02" itemprop="datePublished">2019.04.02</time>
+							<time datetime="2019-04-02" itemprop="datePublished">2019.04.01</time>
 						</span>
 					</div>
 				</div>
@@ -1843,73 +1843,73 @@ h6.categories {
                     
 			    	<!-- content -->
 			  		<p>Yesterday, creating a document scanning program I was very surprised why angular does not update the view.</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> Component <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> Observable<span class="token punctuation">,</span> BehaviorSubject <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;rxjs&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Observable<span class="token punctuation">,</span> BehaviorSubject <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;rxjs&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
 
-@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   selector<span class="token operator">:</span> <span class="token string">&apos;app-root&apos;</span><span class="token punctuation">,</span>
   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
     &lt;ul *ngIf=&quot;devices$ | async as devices&quot;&gt;
-      &lt;li *ngFor=&quot;let device of devices&quot;&gt;&amp;#123;&amp;#123; device | json &amp;#125;&amp;#125;&lt;/li&gt;
+      &lt;li *ngFor=&quot;let device of devices&quot;&gt;{{ device | json }}&lt;/li&gt;
     &lt;/ul&gt;
   </span><span class="token template-punctuation string">`</span></span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span>
   devicesBehaviorSubject<span class="token operator">:</span> BehaviorSubject<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BehaviorSubject</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   devices$<span class="token operator">:</span> Observable<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
   scanner<span class="token operator">:</span> DocumentScanner<span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>devices$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>devicesBehaviorSubject<span class="token punctuation">.</span><span class="token function">asObservable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DocumentScanner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>scanner<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;scannerDevices&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>devices<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>scanner<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;scannerDevices&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>devices<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
       <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;scannerDevices&apos;</span><span class="token punctuation">,</span> devices<span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>devicesBehaviorSubject<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span>devices<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  <span class="token function">scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token function">scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>scanner<span class="token punctuation">.</span><span class="token function">scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>devicesBehaviorSubject</code> is updated correctly but unfortunately nothing appeared on the screen. :(</p>
 <p>After several unsuccessful attempts, it turned out that angular does not see events from node.js <code>EventEmitter</code>. The simplest solution to this problem is to add ngZone.run inside <code>on</code> handler <code>this.scanner.on(&apos;scannerDevices&apos;, (devices) =&gt; {...})</code></p>
 <p>Working example:</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> Component<span class="token punctuation">,</span> NgZone <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> Observable<span class="token punctuation">,</span> BehaviorSubject <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;rxjs&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> NgZone <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Observable<span class="token punctuation">,</span> BehaviorSubject <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;rxjs&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> DocumentScanner<span class="token punctuation">,</span> IDocumentScannerDevice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;document-scanner&apos;</span><span class="token punctuation">;</span>
 
-@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   selector<span class="token operator">:</span> <span class="token string">&apos;app-root&apos;</span><span class="token punctuation">,</span>
   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
     &lt;ul *ngIf=&quot;devices$ | async as devices&quot;&gt;
-      &lt;li *ngFor=&quot;let device of devices&quot;&gt;&amp;#123;&amp;#123; device | json &amp;#125;&amp;#125;&lt;/li&gt;
+      &lt;li *ngFor=&quot;let device of devices&quot;&gt;{{ device | json }}&lt;/li&gt;
     &lt;/ul&gt;
   </span><span class="token template-punctuation string">`</span></span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span>
   devicesBehaviorSubject<span class="token operator">:</span> BehaviorSubject<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BehaviorSubject</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   devices$<span class="token operator">:</span> Observable<span class="token operator">&lt;</span>IDocumentScannerDevice<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
   scanner<span class="token operator">:</span> DocumentScanner<span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> ngZone<span class="token operator">:</span> NgZone<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>devices$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>devicesBehaviorSubject<span class="token punctuation">.</span><span class="token function">asObservable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DocumentScanner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>scanner<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;scannerDevices&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>devices<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>scanner<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;scannerDevices&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>devices<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
       <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;scannerDevices&apos;</span><span class="token punctuation">,</span> devices<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span>ngZone<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>ngZone<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>devicesBehaviorSubject<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span>devices<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-  <span class="token function">scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token function">scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>scanner<span class="token punctuation">.</span><span class="token function">scan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Now angular gets information about the new <code>scannerDevices</code> event.</p>

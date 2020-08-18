@@ -14,14 +14,14 @@
 	
 	<meta property="og:site_name" content="Studio La cosa nostra dev blog">
 	
-		<meta property="og:description" content="&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;">
+		<meta property="og:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
 	
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="Studio La cosa nostra dev blog">
 	<meta name="twitter:url" content="https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/">
 	<meta name="twitter:title" content="Prerender angular application - generate static pages - Studio La cosa nostra dev blog">
 	
-		<meta name="twitter:description" content="&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;">
+		<meta name="twitter:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
 	
     
     	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/title-image.png">
@@ -51,14 +51,14 @@
 			"@type": "BlogPosting",
 			"headline": "Prerender angular application - generate static pages",
 			
-			"description": "&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;",
+			"description": "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;",
 			
 			"mainEntityOfPage":{
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/11/18/Prerender-angular-application-generate-static-pages/"
 			},
 			"datePublished": "2019-11-18T00:00:00.000Z",
-			"dateModified": "2020-08-13T15:18:14.537Z",
+			"dateModified": "2020-08-12T14:47:07.611Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1849,8 +1849,8 @@ h6.categories {
                     
 			    	<!-- content -->
 			  		<p><strong>Build an SEO friendly website without server-side rendering.</strong><br><a id="more"></a></p>
-<p>From the very beginning of Angular 2, there was a capability to generate HTML content of the application on the server-side. Without this, bots search engines simply are not able to see what is on the site without the interpretation of javascript very few bots will improve. But what if you don&#x2019;t have a server with node.js and you want to be visible? Prerender subpages may help in this case. In previous versions of Angular Universal, there is an example of how to do this <a href="https://github.com/angular/universal-starter/blob/master/prerender.ts">link to prerender.ts in universal-starter archive</a>. Some time has passed and angular universal has officially become part of the Angular ecosystem, but unfortunately, there is no example of how to make prerender code anywhere.<br>Today I present an example of how I solved it in my project trying to minimize the interference in the generated nguniversal code.</p>
-<p>First of all, you need to add angular universal to your project with this command from <a href="https://angular.io/guide/universal">server-side rendering guide</a></p>
+<p>From the very beginning of Angular 2, there was a capability to generate HTML content of the application on the server-side. Without this, bots search engines simply are not able to see what is on the site without the interpretation of javascript very few bots will improve. But what if you don&#x2019;t have a server with node.js and you want to be visible? Prerender subpages may help in this case. In previous versions of Angular Universal, there is an example of how to do this <a href="https://github.com/angular/universal-starter/blob/master/prerender.ts" rel="external nofollow noopener noreferrer" target="_blank">link to prerender.ts in universal-starter archive</a>. Some time has passed and angular universal has officially become part of the Angular ecosystem, but unfortunately, there is no example of how to make prerender code anywhere.<br>Today I present an example of how I solved it in my project trying to minimize the interference in the generated nguniversal code.</p>
+<p>First of all, you need to add angular universal to your project with this command from <a href="https://angular.io/guide/universal" rel="external nofollow noopener noreferrer" target="_blank">server-side rendering guide</a></p>
 <pre class="line-numbers language-bash"><code class="language-bash">ng add @nguniversal/express-engine --clientProject project-example
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>It will generate all the scripts to run server-side rendering in our application. You need it to generate static pages.</p>
@@ -1859,7 +1859,7 @@ h6.categories {
 <pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token string">&apos;zone.js/dist/zone-node&apos;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> express <span class="token keyword">from</span> <span class="token string">&apos;express&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> join <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;path&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> join <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;path&apos;</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Express server</span>
 <span class="token keyword">export</span> <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1867,51 +1867,51 @@ h6.categories {
 <span class="token keyword">const</span> <span class="token constant">DIST_FOLDER</span> <span class="token operator">=</span> <span class="token function">join</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos;dist/browser&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// * NOTE :: leave this as require() since this file is built Dynamically from webpack</span>
-<span class="token keyword">const</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>AppServerModuleNgFactory<span class="token punctuation">,</span> <span class="token constant">LAZY_MODULE_MAP</span><span class="token punctuation">,</span> ngExpressEngine<span class="token punctuation">,</span> provideModuleMap<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">&apos;./dist/server/main&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>AppServerModuleNgFactory<span class="token punctuation">,</span> <span class="token constant">LAZY_MODULE_MAP</span><span class="token punctuation">,</span> ngExpressEngine<span class="token punctuation">,</span> provideModuleMap<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">&apos;./dist/server/main&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)</span>
-app<span class="token punctuation">.</span><span class="token function">engine</span><span class="token punctuation">(</span><span class="token string">&apos;html&apos;</span><span class="token punctuation">,</span> <span class="token function">ngExpressEngine</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">engine</span><span class="token punctuation">(</span><span class="token string">&apos;html&apos;</span><span class="token punctuation">,</span> <span class="token function">ngExpressEngine</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   bootstrap<span class="token operator">:</span> AppServerModuleNgFactory<span class="token punctuation">,</span>
   providers<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token function">provideModuleMap</span><span class="token punctuation">(</span><span class="token constant">LAZY_MODULE_MAP</span><span class="token punctuation">)</span>
   <span class="token punctuation">]</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 app<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">&apos;view engine&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;html&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 app<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">&apos;views&apos;</span><span class="token punctuation">,</span> <span class="token constant">DIST_FOLDER</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Example Express Rest API endpoints</span>
-<span class="token comment">// app.get(&apos;/api/**&apos;, (req, res) =&gt; &amp;#123; &amp;#125;);</span>
+<span class="token comment">// app.get(&apos;/api/**&apos;, (req, res) =&gt; { });</span>
 <span class="token comment">// Serve static files from /browser</span>
-app<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;*.*&apos;</span><span class="token punctuation">,</span> express<span class="token punctuation">.</span><span class="token keyword">static</span><span class="token punctuation">(</span><span class="token constant">DIST_FOLDER</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;*.*&apos;</span><span class="token punctuation">,</span> express<span class="token punctuation">.</span><span class="token keyword">static</span><span class="token punctuation">(</span><span class="token constant">DIST_FOLDER</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   maxAge<span class="token operator">:</span> <span class="token string">&apos;1y&apos;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// All regular routes use the Universal engine</span>
-app<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;*&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">&apos;index&apos;</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> req <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;*&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">&apos;index&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> req <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Then remove the express server code from the <code>server.ts</code> and instead import it from the <code>express-app.ts</code> leaving only the code listening to the port.</p>
 <p><code>server.ts</code></p>
-<pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> app <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;./express-app&apos;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> app <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./express-app&apos;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token constant">PORT</span> <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">4000</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Start up the Node server</span>
-app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token constant">PORT</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Node Express server listening on http://localhost:$&amp;#123;PORT&amp;#125;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token constant">PORT</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Node Express server listening on http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Now add the main code that performs prerender of our subpages. (you also need to install additional library to create subfolders <code>npm install mkdirp @types/mkdirp</code>)</p>
 <p><code>prerender.ts</code></p>
 <pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> request <span class="token keyword">from</span> <span class="token string">&apos;request-promise&apos;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> mkdirp <span class="token keyword">from</span> <span class="token string">&apos;mkdirp&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> promisify <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;util&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> writeFileSync <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;fs&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> Express <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;express&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> promisify <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;util&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> writeFileSync <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;fs&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Express <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;express&apos;</span><span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> app <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;./express-app&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> app <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./express-app&apos;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">ROUTES</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token string">&apos;/&apos;</span><span class="token punctuation">,</span>
@@ -1921,23 +1921,23 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 
 <span class="token keyword">const</span> mkdirpAsync <span class="token operator">=</span> <span class="token function">promisify</span><span class="token punctuation">(</span>mkdirp<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">function</span> <span class="token function">prerender</span><span class="token punctuation">(</span>expressApp<span class="token operator">:</span> Express<span class="token punctuation">,</span> routes<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">prerender</span><span class="token punctuation">(</span>expressApp<span class="token operator">:</span> Express<span class="token punctuation">,</span> routes<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token constant">PORT</span> <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PRERENDER_PORT</span> <span class="token operator">||</span> <span class="token number">4000</span><span class="token punctuation">;</span>
   <span class="token comment">// Start up the Node server</span>
-  <span class="token keyword">const</span> server <span class="token operator">=</span> expressApp<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token constant">PORT</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">try</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> route <span class="token keyword">of</span> routes<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> request<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://localhost:$&amp;#123;PORT&amp;#125;$&amp;#123;route&amp;#125;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">await</span> <span class="token function">mkdirpAsync</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">dist/browser$&amp;#123;route&amp;#125;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">dist/browser$&amp;#123;route&amp;#125;/index.html</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> server <span class="token operator">=</span> expressApp<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token constant">PORT</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> route <span class="token keyword">of</span> routes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> request<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>route<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">await</span> <span class="token function">mkdirpAsync</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">dist/browser</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>route<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">dist/browser</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>route<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/index.html</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
       <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Prerender complete.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       server<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       server<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token function">prerender</span><span class="token punctuation">(</span>app<span class="token punctuation">,</span> <span class="token constant">ROUTES</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -1948,53 +1948,53 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;path&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;webpack&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   mode<span class="token operator">:</span> <span class="token string">&apos;none&apos;</span><span class="token punctuation">,</span>
-  entry<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  entry<span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token comment">// This is our Express server for Dynamic universal</span>
     server<span class="token operator">:</span> <span class="token string">&apos;./server.ts&apos;</span><span class="token punctuation">,</span>
     prerender<span class="token operator">:</span> <span class="token string">&apos;./prerender.ts&apos;</span> <span class="token comment">// &lt;--------------- HERE!!!</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-  externals<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  externals<span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token string">&apos;./dist/server/main&apos;</span><span class="token operator">:</span> <span class="token string">&apos;require(&quot;./server/main&quot;)&apos;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
   target<span class="token operator">:</span> <span class="token string">&apos;node&apos;</span><span class="token punctuation">,</span>
-  resolve<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;.ts&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;.js&apos;</span><span class="token punctuation">]</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-  optimization<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  resolve<span class="token operator">:</span> <span class="token punctuation">{</span> extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;.ts&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;.js&apos;</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  optimization<span class="token operator">:</span> <span class="token punctuation">{</span>
     minimize<span class="token operator">:</span> <span class="token boolean">false</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-  output<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token comment">// Puts the output at the root of the dist folder</span>
     path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&apos;dist&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     filename<span class="token operator">:</span> <span class="token string">&apos;[name].js&apos;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-  module<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token operator">:</span> <span class="token punctuation">{</span>
     noParse<span class="token operator">:</span> <span class="token regex">/polyfills-.*\.js/</span><span class="token punctuation">,</span>
     rules<span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> test<span class="token operator">:</span> <span class="token regex">/\.ts$/</span><span class="token punctuation">,</span> loader<span class="token operator">:</span> <span class="token string">&apos;ts-loader&apos;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-      <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token punctuation">{</span> test<span class="token operator">:</span> <span class="token regex">/\.ts$/</span><span class="token punctuation">,</span> loader<span class="token operator">:</span> <span class="token string">&apos;ts-loader&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
         <span class="token comment">// Mark files inside `@angular/core` as using SystemJS style dynamic imports.</span>
         <span class="token comment">// Removing this will cause deprecation warnings to appear.</span>
         test<span class="token operator">:</span> <span class="token regex">/(\\|\/)@angular(\\|\/)core(\\|\/).+\.js$/</span><span class="token punctuation">,</span>
-        parser<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> system<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        parser<span class="token operator">:</span> <span class="token punctuation">{</span> system<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
   plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>ContextReplacementPlugin</span><span class="token punctuation">(</span>
       <span class="token comment">// fixes WARNING Critical dependency: the request of a dependency is an expression</span>
       <span class="token operator">/</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token function">angular</span><span class="token punctuation">(</span>\\<span class="token operator">|</span>\<span class="token regex">/)core(.+)?/</span><span class="token punctuation">,</span>
       path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&apos;src&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// location of your src</span>
-      <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token comment">// a map of your routes</span>
+      <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// a map of your routes</span>
     <span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>ContextReplacementPlugin</span><span class="token punctuation">(</span>
       <span class="token comment">// fixes WARNING Critical dependency: the request of a dependency is an expression</span>
       <span class="token operator">/</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token function">express</span><span class="token punctuation">(</span>\\<span class="token operator">|</span>\<span class="token regex">/)(.+)?/</span><span class="token punctuation">,</span>
       path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&apos;src&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token punctuation">)</span>
   <span class="token punctuation">]</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Add a new script to <code>package.json</code> for ease of use.</p>
@@ -2013,9 +2013,9 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>If you are using <code>@angular/service-worker</code> then you will need to reconfigure right after the <code>prerender</code> because the checksum value in the index.html file has changed after the html modification.</p>
 <pre class="line-numbers language-bash"><code class="language-bash">ngsw-config dist/browser ngsw-config.json
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>An example of a working page on this solution is my second <a href="https://rayros.github.io/">programming blog</a>.</p>
+<p>An example of a working page on this solution is my second <a href="https://rayros.github.io/" rel="external nofollow noopener noreferrer" target="_blank">programming blog</a>.</p>
 <p>Prerender in Angular 9 has an error on the production build.</p>
-<p><a href="https://github.com/angular/angular-cli/issues/17021">https://github.com/angular/angular-cli/issues/17021</a></p>
+<p><a href="https://github.com/angular/angular-cli/issues/17021" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/angular/angular-cli/issues/17021</a></p>
 <p>When they solve the problem, I will probably update the post to keep it up to date with the latest Angular.</p>
 
 					

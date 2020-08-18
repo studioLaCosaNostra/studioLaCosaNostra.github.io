@@ -52,7 +52,7 @@
 			    "@id":"https://studiolacosanostra.github.io/2020/01/06/How-to-publish-an-Android-App-Bundle-to-Google-Play-Console/"
 			},
 			"datePublished": "2020-01-06T16:00:00.000Z",
-			"dateModified": "2020-08-13T15:18:14.529Z",
+			"dateModified": "2020-08-12T14:47:07.603Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1842,43 +1842,43 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>For those who do not want to get into the program, but only want to use it in their project.<br>Then I invite you to the finished package on NPM: <a href="https://www.npmjs.com/package/publish-aab-google-play">publish-aab-google-play</a></p>
+			  		<p>For those who do not want to get into the program, but only want to use it in their project.<br>Then I invite you to the finished package on NPM: <a href="https://www.npmjs.com/package/publish-aab-google-play" rel="external nofollow noopener noreferrer" target="_blank">publish-aab-google-play</a></p>
 <p>Quite recently Google Play has introduced a new application format <code>.aab</code>. It gives a much smaller application size than the previous <code>.apk</code>. After some time, cordova also began to support this new format when building the release, but unfortunately <code>playup</code>, a program to send apk, which I used for a long time to update applications in Google Play. It doesn&#x2019;t work with the new Android App Bundle format :(. I started looking for another program that will be able to send <code>.aab</code>. With the resignation I finished searching on a few endless scripts using googleapis. I decided that no one has written such a program in node.js yet, so I decided that it&#x2019;s a good opportunity to create myself. For this purpose, I used the above mentioned <code>googleapis</code> and <code>commander</code> to handle terminal arguments.</p>
 <p><code>index.ts</code></p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> ReadStream<span class="token punctuation">,</span> createReadStream <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&quot;fs&quot;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> ReadStream<span class="token punctuation">,</span> createReadStream <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;fs&quot;</span><span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> google <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&quot;googleapis&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> google <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;googleapis&quot;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">type</span> <span class="token class-name">ThenArg<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span> <span class="token operator">=</span> <span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">PromiseLike<span class="token operator">&lt;</span>infer <span class="token constant">U</span><span class="token operator">&gt;</span></span> <span class="token operator">?</span> <span class="token constant">U</span> <span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">getClient</span> <span class="token operator">=</span> <span class="token punctuation">(</span>keyFile<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-  google<span class="token punctuation">.</span>auth<span class="token punctuation">.</span><span class="token function">getClient</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  google<span class="token punctuation">.</span>auth<span class="token punctuation">.</span><span class="token function">getClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     keyFile<span class="token punctuation">,</span>
     scopes<span class="token operator">:</span> <span class="token string">&quot;https://www.googleapis.com/auth/androidpublisher&quot;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">getAndroidPublisher</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
   client<span class="token operator">:</span> ThenArg<span class="token operator">&lt;</span>ReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> getClient<span class="token operator">&gt;&gt;</span><span class="token punctuation">,</span>
   packageName<span class="token operator">:</span> <span class="token builtin">string</span>
 <span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-  google<span class="token punctuation">.</span><span class="token function">androidpublisher</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  google<span class="token punctuation">.</span><span class="token function">androidpublisher</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     version<span class="token operator">:</span> <span class="token string">&quot;v3&quot;</span><span class="token punctuation">,</span>
     auth<span class="token operator">:</span> client<span class="token punctuation">,</span>
-    params<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    params<span class="token operator">:</span> <span class="token punctuation">{</span>
       packageName
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">startEdit</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
   androidPublisher<span class="token operator">:</span> ReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> getAndroidPublisher<span class="token operator">&gt;</span><span class="token punctuation">,</span>
   id<span class="token operator">:</span> <span class="token builtin">string</span>
 <span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-  androidPublisher<span class="token punctuation">.</span>edits<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    requestBody<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  androidPublisher<span class="token punctuation">.</span>edits<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    requestBody<span class="token operator">:</span> <span class="token punctuation">{</span>
       id<span class="token punctuation">,</span>
       expiryTimeSeconds<span class="token operator">:</span> <span class="token string">&quot;600&quot;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">upload</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
   androidPublisher<span class="token operator">:</span> ReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> getAndroidPublisher<span class="token operator">&gt;</span><span class="token punctuation">,</span>
@@ -1886,14 +1886,14 @@ h6.categories {
   packageName<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
   aab<span class="token operator">:</span> ReadStream
 <span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-  androidPublisher<span class="token punctuation">.</span>edits<span class="token punctuation">.</span>bundles<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  androidPublisher<span class="token punctuation">.</span>edits<span class="token punctuation">.</span>bundles<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     editId<span class="token punctuation">,</span>
     packageName<span class="token punctuation">,</span>
-    media<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    media<span class="token operator">:</span> <span class="token punctuation">{</span>
       mimeType<span class="token operator">:</span> <span class="token string">&quot;application/octet-stream&quot;</span><span class="token punctuation">,</span>
       body<span class="token operator">:</span> aab
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">setTrack</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
   androidPublisher<span class="token operator">:</span> ReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> getAndroidPublisher<span class="token operator">&gt;</span><span class="token punctuation">,</span>
@@ -1902,47 +1902,47 @@ h6.categories {
   track<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
   versionCode<span class="token operator">:</span> <span class="token builtin">string</span>
 <span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-  androidPublisher<span class="token punctuation">.</span>edits<span class="token punctuation">.</span>tracks<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  androidPublisher<span class="token punctuation">.</span>edits<span class="token punctuation">.</span>tracks<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     editId<span class="token punctuation">,</span>
     track<span class="token operator">:</span> track<span class="token punctuation">,</span>
     packageName<span class="token punctuation">,</span>
-    requestBody<span class="token operator">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    requestBody<span class="token operator">:</span> <span class="token punctuation">{</span>
       track<span class="token operator">:</span> track<span class="token punctuation">,</span>
       releases<span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">{</span>
           status<span class="token operator">:</span> <span class="token string">&quot;completed&quot;</span><span class="token punctuation">,</span>
           versionCodes<span class="token operator">:</span> <span class="token punctuation">[</span>versionCode<span class="token punctuation">]</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
       <span class="token punctuation">]</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">commit</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
   androidPublisher<span class="token operator">:</span> ReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> getAndroidPublisher<span class="token operator">&gt;</span><span class="token punctuation">,</span>
   editId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
   packageName<span class="token operator">:</span> <span class="token builtin">string</span>
 <span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-  androidPublisher<span class="token punctuation">.</span>edits<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  androidPublisher<span class="token punctuation">.</span>edits<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     editId<span class="token punctuation">,</span>
     packageName
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">getAABStream</span> <span class="token operator">=</span> <span class="token punctuation">(</span>filePath<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">createReadStream</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> <span class="token function-variable function">getId</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">String</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">interface</span> <span class="token class-name">SchemaPublish</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">interface</span> <span class="token class-name">SchemaPublish</span> <span class="token punctuation">{</span>
   keyFile<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
   packageName<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
   aabFile<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
   track<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">publish</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">publish</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   keyFile<span class="token punctuation">,</span>
   packageName<span class="token punctuation">,</span>
   aabFile<span class="token punctuation">,</span>
   track
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">:</span> SchemaPublish<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token operator">:</span> SchemaPublish<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getClient</span><span class="token punctuation">(</span>keyFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">const</span> stream <span class="token operator">=</span> <span class="token function">getAABStream</span><span class="token punctuation">(</span>aabFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">const</span> androidPublisher <span class="token operator">=</span> <span class="token function">getAndroidPublisher</span><span class="token punctuation">(</span>client<span class="token punctuation">,</span> packageName<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1953,9 +1953,9 @@ h6.categories {
   <span class="token keyword">if</span> <span class="token punctuation">(</span>
     bundle<span class="token punctuation">.</span>data<span class="token punctuation">.</span>versionCode <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">||</span>
     bundle<span class="token punctuation">.</span>data<span class="token punctuation">.</span>versionCode <span class="token operator">===</span> <span class="token keyword">null</span>
-  <span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;Bundle versionCode cannot be undefined or null&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
   <span class="token keyword">await</span> <span class="token function">setTrack</span><span class="token punctuation">(</span>
     androidPublisher<span class="token punctuation">,</span>
     editId<span class="token punctuation">,</span>
@@ -1964,12 +1964,12 @@ h6.categories {
     <span class="token function">String</span><span class="token punctuation">(</span>bundle<span class="token punctuation">.</span>data<span class="token punctuation">.</span>versionCode<span class="token punctuation">)</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">await</span> <span class="token function">commit</span><span class="token punctuation">(</span>androidPublisher<span class="token punctuation">,</span> editId<span class="token punctuation">,</span> packageName<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>bin.ts</code></p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> join <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&quot;path&quot;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> join <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;path&quot;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> program <span class="token keyword">from</span> <span class="token string">&quot;commander&quot;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> publish <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;./index&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> publish <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./index&apos;</span><span class="token punctuation">;</span>
 
 program
   <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">&quot;Publish Android App Bundle to Google Play&quot;</span><span class="token punctuation">)</span>
@@ -1983,36 +1983,36 @@ program
   <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">&quot;-e, --exit&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Exit on error with error code 1.&quot;</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token function">publish</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token function">publish</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   keyFile<span class="token operator">:</span> <span class="token function">join</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> program<span class="token punctuation">.</span>keyFile<span class="token punctuation">)</span><span class="token punctuation">,</span>
   packageName<span class="token operator">:</span> program<span class="token punctuation">.</span>packageName<span class="token punctuation">,</span>
   aabFile<span class="token operator">:</span> <span class="token function">join</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> program<span class="token punctuation">.</span>aabFile<span class="token punctuation">)</span><span class="token punctuation">,</span>
   track<span class="token operator">:</span> program<span class="token punctuation">.</span>track
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Publish complete.&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token operator">:</span> Error<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token operator">:</span> Error<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
   process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span>program<span class="token punctuation">.</span>exit <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>The program works like a <code>playup</code>. We provide the path to the api key from google, the name of the package (here it&#x2019;s extra, but maybe in the future I&#x2019;ll somehow pull the name out of the .aab), the path to <code>.aab</code> and of course the track our application is supposed to run on (alpha, beta, internal). Additionally, after adding the argument <code>--exit</code> after an error, the program returns 1 as an error code, useful for how to create continous integration and we want to be warned if the program ended up working correctly.</p>
 <p>If you&#x2019;re interested in integrating the library in your program, below is an example of use.</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> publish <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&quot;publish-aab-google-play&quot;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> publish <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;publish-aab-google-play&quot;</span><span class="token punctuation">;</span>
 
-<span class="token function">publish</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token function">publish</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   keyFile<span class="token operator">:</span> <span class="token string">&quot;./api-publish.json&quot;</span><span class="token punctuation">,</span>
   packageName<span class="token operator">:</span> <span class="token string">&quot;com.laCosaNostra.FiveHundredAndTwelve2&quot;</span><span class="token punctuation">,</span>
   aabFile<span class="token operator">:</span> <span class="token string">&quot;./platforms/android/app/build/outputs/bundle/release/app.aab&quot;</span><span class="token punctuation">,</span>
   track<span class="token operator">:</span> <span class="token string">&quot;beta&quot;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 					

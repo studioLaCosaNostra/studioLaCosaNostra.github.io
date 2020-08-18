@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/"
 			},
-			"datePublished": "2019-04-25T00:00:00.000Z",
-			"dateModified": "2020-08-13T15:18:14.509Z",
+			"datePublished": "2019-04-24T23:00:00.000Z",
+			"dateModified": "2020-08-12T14:47:07.571Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1808,7 +1808,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-04-25" itemprop="datePublished">2019.04.25</time>
+							<time datetime="2019-04-25" itemprop="datePublished">2019.04.24</time>
 						</span>
 					</div>
 				</div>
@@ -1844,7 +1844,7 @@ h6.categories {
 			    	<!-- content -->
 			  		<p>In this article, I describe how easy and simple you can share your angular application on firebase hosting without having advanced knowledge about servers and sharing websites on the web.</p>
 <p>At the beginning, register on firebase console.</p>
-<p><a href="https://console.firebase.google.com">https://console.firebase.google.com</a></p>
+<p><a href="https://console.firebase.google.com" rel="external nofollow noopener noreferrer" target="_blank">https://console.firebase.google.com</a></p>
 <div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-console-login-dashboard.png" width="1284" height="636" layout="responsive"></amp-img></div>
 <p>Add new project.</p>
 <div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/firebase-console-add-new-project.png" width="549" height="676" layout="responsive"></amp-img></div>
@@ -1899,17 +1899,17 @@ h6.categories {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>If you accidentally added this directory to the git, then you can remove it from the repository using this command: <code>git rm -r --cached .firebase</code></p>
 <p>In firebase.json you should have something like this.</p>
-<pre><code>&amp;#123;
-  &quot;hosting&quot;: &amp;#123;
+<pre><code>{
+  &quot;hosting&quot;: {
     &quot;public&quot;: &quot;dist/test-firebase&quot;,
     &quot;ignore&quot;: [
       &quot;firebase.json&quot;,
       &quot;**/.*&quot;,
       &quot;**/node_modules/**&quot;
     ]
-  &amp;#125;
-&amp;#125;
-</code></pre><p>Link to the full <code>firebase.json</code> configuration<br><a href="https://firebase.google.com/docs/hosting/full-config">https://firebase.google.com/docs/hosting/full-config</a><br>You can read about the full possibilities of this configuration. The basic configuration is used in this guide.</p>
+  }
+}
+</code></pre><p>Link to the full <code>firebase.json</code> configuration<br><a href="https://firebase.google.com/docs/hosting/full-config" rel="external nofollow noopener noreferrer" target="_blank">https://firebase.google.com/docs/hosting/full-config</a><br>You can read about the full possibilities of this configuration. The basic configuration is used in this guide.</p>
 <p>Build angular app with production environment and AOT.</p>
 <p><code>ng build --prod</code></p>
 
@@ -1918,7 +1918,7 @@ h6.categories {
 <p><code>firebase deploy</code></p>
 
 
-<p>Now we can see our application on the internet<br><a href="https://test-firebase-14dbe.firebaseapp.com/">https://test-firebase-14dbe.firebaseapp.com/</a> :)</p>
+<p>Now we can see our application on the internet<br><a href="https://test-firebase-14dbe.firebaseapp.com/" rel="external nofollow noopener noreferrer" target="_blank">https://test-firebase-14dbe.firebaseapp.com/</a> :)</p>
 <div class="amp-img-wrapper"><amp-img src="/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/test-firebase-page-view.png" width="1297" height="740" layout="responsive"></amp-img></div>
 <p>That&#x2019;s all, if some stage is unclear then please describe why below in the comments.</p>
 

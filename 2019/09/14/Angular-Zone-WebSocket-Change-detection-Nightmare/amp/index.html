@@ -51,8 +51,8 @@
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/09/14/Angular-Zone-WebSocket-Change-detection-Nightmare/"
 			},
-			"datePublished": "2019-09-14T00:00:00.000Z",
-			"dateModified": "2020-08-13T15:18:14.453Z",
+			"datePublished": "2019-09-13T23:00:00.000Z",
+			"dateModified": "2020-08-12T14:47:07.487Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1808,7 +1808,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-09-14" itemprop="datePublished">2019.09.14</time>
+							<time datetime="2019-09-14" itemprop="datePublished">2019.09.13</time>
 						</span>
 					</div>
 				</div>
@@ -1849,12 +1849,12 @@ h6.categories {
 <span class="token comment">// disable on properties</span>
 <span class="token comment">// tslint:disable-next-line: typedef</span>
 <span class="token keyword">const</span> targets <span class="token operator">=</span> <span class="token punctuation">[</span>WebSocket<span class="token punctuation">.</span>prototype<span class="token punctuation">]</span><span class="token punctuation">;</span>
-targets<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  global<span class="token punctuation">[</span><span class="token string">&apos;__Zone_ignore_on_properties&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+targets<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  global<span class="token punctuation">[</span><span class="token string">&apos;__Zone_ignore_on_properties&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     target<span class="token punctuation">,</span>
     ignoreProperties<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;close&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;error&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;open&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;message&apos;</span><span class="token punctuation">]</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// disable addEventListener</span>
 global<span class="token punctuation">[</span><span class="token string">&apos;__zone_symbol__BLACK_LISTED_EVENTS&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;message&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -1862,9 +1862,9 @@ global<span class="token punctuation">[</span><span class="token string">&apos;_
 <p>But after removing WebSocket from zone.js, Angular passionately triggered change detection in the application. After a long search, it turned out that the implementation of the event handler API accidentally entered the zone angular despite the fact that services were created in rxjs. Just calling <code>$.next()</code> already invited Angular to detect changes, and with an average of 50-100 events every second from  WebSocket, weak phones can&#x2019;t handle it.</p>
 <p>I give an example solution to a problem when there is no time to modify the API:</p>
 <p>1) Catch the beginning of the event stream and put <code>ngZone.runOutsideAngular()</code> on it.<br>2) Create a loop that will run an empty task in zone angular every <code>requestAnimationFrame</code>.</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token function">interval</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> animationFrameScheduler<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  ngZone<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token function">interval</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> animationFrameScheduler<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  ngZone<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>After such a change, the application works without any complaints. (CPU usage dropped to 30%). It is true that sometimes change detection is started unnecessarily, but still less times than before.</p>
 <p>Such fun would not take place if the application API was written outside of Angular in an external library.</p>
