@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>A blog about creating games using the latest web technologies. In addition, about problems with applications written in the angular framework.</description>
-    <pubDate>Fri, 04 Sep 2020 04:31:23 GMT</pubDate>
+    <pubDate>Wed, 12 Aug 2020 14:47:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -22,7 +22,7 @@
         
           
           
-            &lt;p&gt;Creating a game in rust language I came across a problem with running it in Cordova. It turned out that the cargo web builder uses fetch
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Creating a game in rust language I came across a problem with running it in Cordova. It turned out that the
           
         
       
@@ -42,7 +42,7 @@
         
           
           
-            &lt;p&gt;Below is a sample task for Concourse CI, which caches &lt;code&gt;gradle&lt;/code&gt; packages for future
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Below is a sample task for Concourse CI, which caches &lt;code&gt;gradle&lt;/code&gt; packages for future
           
         
       
@@ -62,7 +62,7 @@
         
           
           
-            &lt;p&gt;Generally I started playing with Concourse CI for a few days and found it to be a great server for automation for my private projects.
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Generally I started playing with Concourse CI for a few days and found it to be a great server for automation
           
         
       
@@ -82,7 +82,7 @@
         
           
           
-            &lt;p&gt;For those who do not want to get into the program, but only want to use it in their project.&lt;br&gt;Then I invite you to the finished
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;For those who do not want to get into the program, but only want to use it in their project.&lt;br&gt;Then I invite
           
         
       
@@ -102,7 +102,7 @@
         
           
           
-            &lt;p&gt;Email marketing is one of the cheapest and easiest ways to get your website and online store to returning recipients. This is a form of
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Email marketing is one of the cheapest and easiest ways to get your website and online store to returning
           
         
       
@@ -118,7 +118,7 @@
       <pubDate>Mon, 18 Nov 2019 00:00:00 GMT</pubDate>
       <description>
       
-        &lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;strong&gt;Build an SEO friendly website without server-side rendering.&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
       
       </description>
       
@@ -129,14 +129,14 @@
       <title>Color cells using keyboard shortcuts in Google Sheets</title>
       <link>https://studiolacosanostra.github.io/2019/10/09/Color-cells-using-keyboard-shortcuts-in-Google-Sheets/</link>
       <guid>https://studiolacosanostra.github.io/2019/10/09/Color-cells-using-keyboard-shortcuts-in-Google-Sheets/</guid>
-      <pubDate>Wed, 09 Oct 2019 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 08 Oct 2019 23:00:00 GMT</pubDate>
       <description>
       
         
         
           
           
-            &lt;p&gt;While working on blog advertising, I created a special spreadsheet. Contains a list of all links to articles on the blog, which I shared
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;While working on blog advertising, I created a special spreadsheet. Contains a list of all links to articles on
           
         
       
@@ -149,14 +149,14 @@
       <title>Angular, Zone, WebSocket  === Change detection Nightmare</title>
       <link>https://studiolacosanostra.github.io/2019/09/14/Angular-Zone-WebSocket-Change-detection-Nightmare/</link>
       <guid>https://studiolacosanostra.github.io/2019/09/14/Angular-Zone-WebSocket-Change-detection-Nightmare/</guid>
-      <pubDate>Sat, 14 Sep 2019 00:00:00 GMT</pubDate>
+      <pubDate>Fri, 13 Sep 2019 23:00:00 GMT</pubDate>
       <description>
       
         
         
           
           
-            &lt;p&gt;I got a task to make a working application for android &amp;amp; ios from the web application in two weeks. I agreed and the first thing I
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;I got a task to make a working application for android &amp;amp; ios from the web application in two weeks. I
           
         
       
@@ -169,10 +169,10 @@
       <title>Cordova - Setup Android SDK on Ubuntu</title>
       <link>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/</link>
       <guid>https://studiolacosanostra.github.io/2019/07/29/Cordova-Setup-Android-SDK-on-Ubuntu/</guid>
-      <pubDate>Mon, 29 Jul 2019 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 28 Jul 2019 23:00:00 GMT</pubDate>
       <description>
       
-        &lt;p&gt;If you’re looking for a simple instruction on how to run Cordova project for the first time on an Android system, you’ve just found it.&lt;br&gt;&lt;/p&gt;
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;If you’re looking for a simple instruction on how to run Cordova project for the first time on an Android system, you’ve just found it.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
       
       </description>
       
@@ -183,10 +183,10 @@
       <title>Build a reusable Angular library and web component</title>
       <link>https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/</link>
       <guid>https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/</guid>
-      <pubDate>Fri, 19 Jul 2019 00:00:00 GMT</pubDate>
+      <pubDate>Thu, 18 Jul 2019 23:00:00 GMT</pubDate>
       <description>
       
-        &lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
       
       </description>
       
@@ -197,14 +197,14 @@
       <title>Automate blog posts publishing on Github Pages with Travis</title>
       <link>https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/</link>
       <guid>https://studiolacosanostra.github.io/2019/07/11/Automate-blog-posts-publishing-on-Github-Pages-with-Travis/</guid>
-      <pubDate>Thu, 11 Jul 2019 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 10 Jul 2019 23:00:00 GMT</pubDate>
       <description>
       
         
         
           
           
-            &lt;p&gt;Since I automated the creation of new versions of &lt;a href=&quot;/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/&quot;
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Since I automated the creation of new versions of &lt;a
           
         
       
@@ -217,14 +217,14 @@
       <title>How to automate iOS application submission process with puppeteer</title>
       <link>https://studiolacosanostra.github.io/2019/06/02/How-to-automate-iOS-application-submission-process-with-puppeteer/</link>
       <guid>https://studiolacosanostra.github.io/2019/06/02/How-to-automate-iOS-application-submission-process-with-puppeteer/</guid>
-      <pubDate>Sun, 02 Jun 2019 00:00:00 GMT</pubDate>
+      <pubDate>Sat, 01 Jun 2019 23:00:00 GMT</pubDate>
       <description>
       
         
         
           
           
-            &lt;p&gt;Working on more and more programs, some activities beginning to become boring and monotonous. One of them is reporting the application
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Working on more and more programs, some activities beginning to become boring and monotonous. One of them is
           
         
       
@@ -234,37 +234,17 @@
     </item>
     
     <item>
-      <title>How to make Firebase Authentication via Google API in Angular</title>
-      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
-      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session with a firebase
-          
-        
-      
-      </description>
-      
-      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>How to debug Angular tests in VSCode</title>
       <link>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</link>
       <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-debug-Angular-tests-in-VSCode/</guid>
-      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 15 May 2019 23:00:00 GMT</pubDate>
       <description>
       
         
         
           
           
-            &lt;p&gt;VSCode has the option of debugging code inside the editor. While in typical console programs running the debug is very easy, so on the
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;VSCode has the option of debugging code inside the editor. While in typical console programs running the debug
           
         
       
@@ -274,17 +254,37 @@
     </item>
     
     <item>
-      <title>How to deploy a new application written in angular to firebase hosting</title>
-      <link>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/</link>
-      <guid>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/</guid>
-      <pubDate>Thu, 25 Apr 2019 00:00:00 GMT</pubDate>
+      <title>How to make Firebase Authentication via Google API in Angular</title>
+      <link>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</link>
+      <guid>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/</guid>
+      <pubDate>Wed, 15 May 2019 23:00:00 GMT</pubDate>
       <description>
       
         
         
           
           
-            &lt;p&gt;In this article, I describe how easy and simple you can share your angular application on firebase hosting without having advanced
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;This article is a simple guide on how to implement google api in angular and how to integrate a user session
+          
+        
+      
+      </description>
+      
+      <comments>https://studiolacosanostra.github.io/2019/05/16/How-to-make-Firebase-Authentication-via-Google-API-in-Angular/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to deploy a new application written in angular to firebase hosting</title>
+      <link>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/</link>
+      <guid>https://studiolacosanostra.github.io/2019/04/25/How-to-deploy-a-new-application-written-in-angular-to-firebase-hosting/</guid>
+      <pubDate>Wed, 24 Apr 2019 23:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;In this article, I describe how easy and simple you can share your angular application on firebase hosting
           
         
       
@@ -297,14 +297,14 @@
       <title>Deploy angular application to now.sh</title>
       <link>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</link>
       <guid>https://studiolacosanostra.github.io/2019/04/03/Deploy-angular-application-to-now-sh/</guid>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 02 Apr 2019 23:00:00 GMT</pubDate>
       <description>
       
         
         
           
           
-            &lt;p&gt;Angular is a platform for building applications across all platforms; web, mobile web, native mobile, and native desktop.&lt;br&gt;Below I
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Angular is a platform for building applications across all platforms; web, mobile web, native mobile, and
           
         
       
@@ -317,15 +317,14 @@
       <title>Angular async pipe does not work in the electron</title>
       <link>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</link>
       <guid>https://studiolacosanostra.github.io/2019/04/02/Angular-async-pipe-does-not-work-in-the-electron/</guid>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 01 Apr 2019 23:00:00 GMT</pubDate>
       <description>
       
         
         
           
           
-            &lt;p&gt;Yesterday, creating a document scanning program I was very surprised why angular does not update the view.&lt;/p&gt;
-&lt;pre class=&quot;line-numbers
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Yesterday, creating a document scanning program I was very surprised why angular does not update the
           
         
       
@@ -341,7 +340,7 @@
       <pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate>
       <description>
       
-        &lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
       
       </description>
       
@@ -359,7 +358,7 @@
         
           
           
-            &lt;p&gt;A friend asked me for a simple application to &lt;a href=&quot;/projects/qr-code-generator&quot;&gt;generate QR Codes&lt;/a&gt;. It took me a few moments to
+            &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;A friend asked me for a simple application to &lt;a href=&quot;/projects/qr-code-generator&quot;&gt;generate QR Codes&lt;/a&gt;. It
           
         
       
@@ -375,7 +374,7 @@
       <pubDate>Wed, 13 Mar 2019 00:00:00 GMT</pubDate>
       <description>
       
-        &lt;p&gt;&lt;em&gt;You will never forget to publish post on twitter.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;You will never forget to publish post on twitter.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
       
       </description>
       
