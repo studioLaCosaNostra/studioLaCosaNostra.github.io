@@ -14,14 +14,14 @@
 	
 	<meta property="og:site_name" content="Studio La cosa nostra dev blog">
 	
-		<meta property="og:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
+		<meta property="og:description" content="&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;">
 	
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="Studio La cosa nostra dev blog">
 	<meta name="twitter:url" content="https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/">
 	<meta name="twitter:title" content="Build a reusable Angular library and web component - Studio La cosa nostra dev blog">
 	
-		<meta name="twitter:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
+		<meta name="twitter:description" content="&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;">
 	
     
     	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/title-image.png">
@@ -51,14 +51,14 @@
 			"@type": "BlogPosting",
 			"headline": "Build a reusable Angular library and web component",
 			
-			"description": "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;",
+			"description": "&lt;p&gt;Find out how to easily create libraries in Angular and transform them into web-components.&lt;br&gt;&lt;/p&gt;",
 			
 			"mainEntityOfPage":{
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/07/19/Build-a-reusable-Angular-library-and-web-component/"
 			},
-			"datePublished": "2019-07-18T23:00:00.000Z",
-			"dateModified": "2020-08-12T14:47:07.523Z",
+			"datePublished": "2019-07-19T00:00:00.000Z",
+			"dateModified": "2020-11-25T01:20:41.561Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1814,7 +1814,7 @@ h6.categories {
 					<div class="entry-meta-header">
 						<span class="meta-elements date">
 							<span class="fa fa-fw fa-clock-o"></span>
-							<time datetime="2019-07-19" itemprop="datePublished">2019.07.18</time>
+							<time datetime="2019-07-19" itemprop="datePublished">2019.07.19</time>
 						</span>
 					</div>
 				</div>
@@ -1888,13 +1888,13 @@ h6.categories {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Adding <code>publishConfig</code> with <code>access: public</code> allows you to share the module publicly in <code>npm</code> as @organization. By default, <code>access</code> is set to <code>private</code>.</p>
 <p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.module.ts</code></p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> NgxCookieConsentComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./ngx-cookie-consent.component&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserAnimationsModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/platform-browser/animations&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> MatIconModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/material/icon&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> MatButtonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/material/button&apos;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> NgModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> NgxCookieConsentComponent <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;./ngx-cookie-consent.component&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> BrowserAnimationsModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/platform-browser/animations&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> MatIconModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/material/icon&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> MatButtonModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/material/button&apos;</span><span class="token punctuation">;</span>
 
-@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   declarations<span class="token operator">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
   imports<span class="token operator">:</span> <span class="token punctuation">[</span>
     BrowserAnimationsModule<span class="token punctuation">,</span>
@@ -1902,14 +1902,14 @@ h6.categories {
     MatButtonModule
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
   exports<span class="token operator">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgxCookieConsentModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgxCookieConsentModule</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>We only add <code>MatIconModule</code>, <code>MatButtonModule</code> here. I use them on the closing button.</p>
 <p>Edit <code>projects/lacosanostra/ngx-cookie-consent/src/lib/ngx-cookie-consent.component.ts</code></p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit<span class="token punctuation">,</span> HostBinding <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> Component<span class="token punctuation">,</span> OnInit<span class="token punctuation">,</span> HostBinding <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
 
-@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   selector<span class="token operator">:</span> <span class="token string">&apos;lib-ngx-cookie-consent&apos;</span><span class="token punctuation">,</span>
   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
     &lt;div class=&quot;mat-typography cookie-consent-content&quot;&gt;
@@ -1920,24 +1920,24 @@ h6.categories {
     &lt;/button&gt;
   </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
   styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&apos;./ngx-cookie-consent.component.scss&apos;</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgxCookieConsentComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgxCookieConsentComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   @<span class="token function">HostBinding</span><span class="token punctuation">(</span><span class="token string">&apos;class.visible&apos;</span><span class="token punctuation">)</span> visible <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
   <span class="token keyword">private</span> signature <span class="token operator">=</span> <span class="token string">&apos;cookie-consent-closed&apos;</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">public</span> <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> isClosed <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>signature<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&apos;true&apos;</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isClosed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isClosed<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">public</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
     localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>signature<span class="token punctuation">,</span> <span class="token string">&apos;true&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">}</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>The main component of the entire project.</p>
 <ul>
@@ -1967,12 +1967,12 @@ h6.categories {
 <pre class="line-numbers language-bash"><code class="language-bash">rm ./src/app/app.component.ts ./src/app/app.component.spec.ts
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>Edit <code>src/app/app.module.ts</code></p>
-<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/platform-browser&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule<span class="token punctuation">,</span> Injector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> NgxCookieConsentModule<span class="token punctuation">,</span> NgxCookieConsentComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@lacosanostra/ngx-cookie-consent&apos;</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> createCustomElement <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/elements&apos;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> BrowserModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/platform-browser&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> NgModule<span class="token punctuation">,</span> Injector <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> NgxCookieConsentModule<span class="token punctuation">,</span> NgxCookieConsentComponent <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@lacosanostra/ngx-cookie-consent&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> createCustomElement <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">&apos;@angular/elements&apos;</span><span class="token punctuation">;</span>
 
-@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
   declarations<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   imports<span class="token operator">:</span> <span class="token punctuation">[</span>
     BrowserModule<span class="token punctuation">,</span>
@@ -1981,17 +1981,17 @@ h6.categories {
   providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   entryComponents<span class="token operator">:</span> <span class="token punctuation">[</span>NgxCookieConsentComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
   bootstrap<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span>
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> injector<span class="token operator">:</span> Injector<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> injector<span class="token operator">:</span> Injector<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
-  <span class="token function">ngDoBootstrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> ngElement <span class="token operator">=</span> <span class="token function">createCustomElement</span><span class="token punctuation">(</span>NgxCookieConsentComponent<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function">ngDoBootstrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> ngElement <span class="token operator">=</span> <span class="token function">createCustomElement</span><span class="token punctuation">(</span>NgxCookieConsentComponent<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
       injector<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>injector
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     customElements<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">&apos;cookie-consent&apos;</span><span class="token punctuation">,</span> ngElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Now the only thing that the <strong>AppModule</strong> does is load the <code>NgxCookieConsentModule</code> module and register its component as <code>web-component</code>.</p>
 <p>Edit <code>src/polyfills.ts</code></p>
@@ -2019,9 +2019,9 @@ h6.categories {
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>icon<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>image/x-icon<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>favicon.ico<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://fonts.googleapis.com/icon?family=Material+Icons<span class="token punctuation">&quot;</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
-    <span class="token selector">cookie-consent</span> <span class="token punctuation">{</span>
+    cookie-consent &amp;#123<span class="token punctuation">;</span>
       <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    &amp;#125<span class="token punctuation">;</span>
   </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
@@ -2054,7 +2054,7 @@ ng build $APP --prod --output-hashing=none &amp;&amp; cat dist/$APP/runtime-es5.
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>Basically, that&#x2019;s all. If you have any questions, write in a comment under the post. I will try to answer them and update the content of the article based on it.</p>
 <p>The entire source code of the project is available on Github in the link below.</p>
-<p><a href="https://github.com/studioLaCosaNostra/cookie-consent" rel="external nofollow noopener noreferrer" target="_blank">Cookie consent web-component repository</a></p>
+<p><a href="https://github.com/studioLaCosaNostra/cookie-consent">Cookie consent web-component repository</a></p>
 <h2 id="Build-on-Travis"><a href="#Build-on-Travis" class="headerlink" title="Build on Travis"></a>Build on Travis</h2><p>For those who would like to not worry about upgrading their module in <code>npm registry</code> and updating <code>dist</code> later, I put a ready solution in Travis below.</p>
 <p>Create <code>.travis.yml</code></p>
 <pre class="line-numbers language-yml"><code class="language-yml">language: node_js

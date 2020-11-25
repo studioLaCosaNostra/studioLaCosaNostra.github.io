@@ -14,14 +14,14 @@
 	
 	<meta property="og:site_name" content="Studio La cosa nostra dev blog">
 	
-		<meta property="og:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
+		<meta property="og:description" content="&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;">
 	
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="Studio La cosa nostra dev blog">
 	<meta name="twitter:url" content="https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/">
 	<meta name="twitter:title" content="VSCode: NVM /bin/bash: npm: command not found - Studio La cosa nostra dev blog">
 	
-		<meta name="twitter:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
+		<meta name="twitter:description" content="&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;">
 	
     
     	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/title-image.png">
@@ -51,14 +51,14 @@
 			"@type": "BlogPosting",
 			"headline": "VSCode: NVM /bin/bash: npm: command not found",
 			
-			"description": "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;",
+			"description": "&lt;p&gt;&lt;em&gt;When you want to run a task but you get an adventure with &lt;code&gt;bash&lt;/code&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;",
 			
 			"mainEntityOfPage":{
 			    "@type":"WebPage",
 			    "@id":"https://studiolacosanostra.github.io/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/"
 			},
 			"datePublished": "2019-03-11T00:00:00.000Z",
-			"dateModified": "2020-08-12T14:47:07.611Z",
+			"dateModified": "2020-11-25T01:20:41.617Z",
 			
 			"image": {
 				"@type": "ImageObject",
@@ -1851,7 +1851,7 @@ h6.categories {
 			  		<p><em>When you want to run a task but you get an adventure with <code>bash</code></em><br><a id="more"></a></p>
 <p>Putting the ubuntu system back together, I met a new problem I did not know. When I wanted to run the task in VSCode, but there was such a message in the console:</p>
 <div class="amp-img-wrapper"><amp-img src="/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/screenshot-npm-command-not-found.png" width="496" height="88" layout="responsive"></amp-img></div>
-<p>This should not happen because I had the <a href="https://github.com/creationix/nvm" rel="external nofollow noopener noreferrer" target="_blank">node version manager</a> already installed and downloaded the latest <code>node</code> with <code>npm</code>.<br>At the beginning I found out that this may be some error in the task, so I tried to run the script with <code>node</code> without <code>npm</code>, but unfortunately another error appeared:</p>
+<p>This should not happen because I had the <a href="https://github.com/creationix/nvm">node version manager</a> already installed and downloaded the latest <code>node</code> with <code>npm</code>.<br>At the beginning I found out that this may be some error in the task, so I tried to run the script with <code>node</code> without <code>npm</code>, but unfortunately another error appeared:</p>
 <div class="amp-img-wrapper"><amp-img src="/2019/03/11/VSCode-NVM-bin-bash-npm-command-not-found/screenshot-node-no-such-file-or-directory.png" width="506" height="91" layout="responsive"></amp-img></div>
 <p>I started to guess that <code>bash</code> which is run on the task does not load the <code>.bashrc</code> startup file. I made a simple check by creating a task that displays the variable set in <code>.bashrc</code>. Nothing appeared so now it was sure that this is the reason why <code>node</code> and <code>npm</code> not running. When looking for a solution, I found the code in the <code>.bashrc</code>:</p>
 <pre class="line-numbers language-bash"><code class="language-bash"># If not running interactively, don&apos;t do anything
