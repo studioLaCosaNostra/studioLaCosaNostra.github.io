@@ -1842,9 +1842,7 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>Below is a sample task for Concourse CI, which caches <code>gradle</code> packages for future builds.</p>
-<p><code>build_android.sh</code></p>
-<pre class="line-numbers language-yml"><code class="language-yml">---
+			  		<p>Below is a sample task for Concourse CI, which caches <code>gradle</code> packages for future builds.</p><p><code>build_android.sh</code></p><pre class="line-numbers language-yml"><code class="language-yml">---
 platform: linux
 
 image_resource:
@@ -1861,9 +1859,7 @@ run:
 
 caches:
   - path: .gradle
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>build.sh</code></p>
-<pre class="line-numbers language-sh"><code class="language-sh">#!/bin/sh
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>build.sh</code></p><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/sh
 
 set -eux
 
@@ -1873,9 +1869,7 @@ export GRADLE_USER_HOME=&quot;${ROOT_FOLDER}/.gradle&quot;
 cd app-repo
 
 ./gradlew assembleDebug
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>At the beginning of shell script I set the path <code>GRADE_USER_HOME</code> to be relative to the currently used workspace, so that Concourse can save the files for later.</p>
-
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>At the beginning of shell script I set the path <code>GRADE_USER_HOME</code> to be relative to the currently used workspace, so that Concourse can save the files for later.</p>
 					
 					
 			    	<div class="social-share">

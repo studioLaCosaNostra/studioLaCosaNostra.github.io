@@ -14,14 +14,14 @@
 	
 	<meta property="og:site_name" content="Studio La cosa nostra dev blog">
 	
-		<meta property="og:description" content="&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;">
+		<meta property="og:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
 	
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="Studio La cosa nostra dev blog">
 	<meta name="twitter:url" content="https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/">
 	<meta name="twitter:title" content="Automate electron app release build on github with Travis CI - Studio La cosa nostra dev blog">
 	
-		<meta name="twitter:description" content="&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;">
+		<meta name="twitter:description" content="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;">
 	
     
     	<meta name="twitter:image" content="https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/title-image.png">
@@ -51,7 +51,7 @@
 			"@type": "BlogPosting",
 			"headline": "Automate electron app release build on github with Travis CI",
 			
-			"description": "&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;",
+			"description": "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;em&gt;Run a remotely build project on three systems by tagging the commit.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;",
 			
 			"mainEntityOfPage":{
 			    "@type":"WebPage",
@@ -1848,10 +1848,7 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p><em>Run a remotely build project on three systems by tagging the commit.</em><br><a id="more"></a></p>
-<p>Continuing work on the <a href="/projects/qr-code-generator">QR Code Generator project</a> I noticed that I spend a lot of time on the local building of applications on my poor laptop. In addition, I could not build a mac version without a mac (I&#x2019;m working on ubuntu). <em>Travis CI</em> solved my problem, it has a ready osx image for automatic testing and building projects. It was enough to write a configuration script for it and it was ready. Now when committing to the master, travis automatically tests the application, and if you added the commit tag with the new version number, additional steps will be made to deploy the application to the Windows, Mac, and Linux platforms and will be sent as a draft to the github release page.</p>
-<p><code>/snap/snapcraft.yaml</code></p>
-<pre class="line-numbers language-yml"><code class="language-yml">sudo: false
+			  		<p><em>Run a remotely build project on three systems by tagging the commit.</em><br><a id="more"></a></p><p>Continuing work on the <a href="/projects/qr-code-generator">QR Code Generator project</a> I noticed that I spend a lot of time on the local building of applications on my poor laptop. In addition, I could not build a mac version without a mac (I&#x2019;m working on ubuntu). <em>Travis CI</em> solved my problem, it has a ready osx image for automatic testing and building projects. It was enough to write a configuration script for it and it was ready. Now when committing to the master, travis automatically tests the application, and if you added the commit tag with the new version number, additional steps will be made to deploy the application to the Windows, Mac, and Linux platforms and will be sent as a draft to the github release page.</p><p><code>/snap/snapcraft.yaml</code></p><pre class="line-numbers language-yml"><code class="language-yml">sudo: false
 
 language: node_js
 node_js: &quot;9.11.1&quot;
@@ -1891,14 +1888,7 @@ jobs:
       dist: trusty
       script:
         - npm run release
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Travis has a built-in caching system design, specify the path to the directory that you want to keep after each stage of the job list from the configuration file.<br>The <code>npm run release</code> script is actually <code>electron-builder -p always</code>, the command automatically sends build to github release. By adding the <code>--mac</code> flag, he builds a project for OSX. The flag <code>--win</code> is building a project for Windows. Building for Windows was done on OSX because there is an automated <code>wine</code> installation needed to edit <code>.exe</code>.</p>
-<p>The necessary action that we need to do to send the project to the <em>github release page</em> is to add the <code>GH_TOKEN</code> variable to the travisa configuration.</p>
-<div class="amp-img-wrapper"><amp-img src="/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/travis-env-settings.png" width="1567" height="274" layout="responsive"></amp-img></div>
-<p>When adding a variable, be sure that you have not selected <strong>Display value in build log</strong>, travis build logs are available over the internet, so anyone can steal the key if they know where to look.</p>
-<p>Now if you have such a configuration in the travis project, it will perform the tests yourself for you, and by doing <code>git tag -a v1.0.1 -m &apos;v1.0.1&apos; &amp;&amp; git push origin --tags</code> travis will start to build an application release and send it to <code>github release page</code>.</p>
-<p>Link to <a href="https://github.com/studioLaCosaNostra/qr-code-generator-desktop">qr code generator github repository</a>.</p>
-
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Travis has a built-in caching system design, specify the path to the directory that you want to keep after each stage of the job list from the configuration file.<br>The <code>npm run release</code> script is actually <code>electron-builder -p always</code>, the command automatically sends build to github release. By adding the <code>--mac</code> flag, he builds a project for OSX. The flag <code>--win</code> is building a project for Windows. Building for Windows was done on OSX because there is an automated <code>wine</code> installation needed to edit <code>.exe</code>.</p><p>The necessary action that we need to do to send the project to the <em>github release page</em> is to add the <code>GH_TOKEN</code> variable to the travisa configuration.</p><div class="amp-img-wrapper"><amp-img src="/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/travis-env-settings.png" width="1567" height="274" layout="responsive"></amp-img></div><p>When adding a variable, be sure that you have not selected <strong>Display value in build log</strong>, travis build logs are available over the internet, so anyone can steal the key if they know where to look.</p><p>Now if you have such a configuration in the travis project, it will perform the tests yourself for you, and by doing <code>git tag -a v1.0.1 -m &apos;v1.0.1&apos; &amp;&amp; git push origin --tags</code> travis will start to build an application release and send it to <code>github release page</code>.</p><p>Link to <a href="https://github.com/studioLaCosaNostra/qr-code-generator-desktop" rel="external nofollow noopener noreferrer" target="_blank">qr code generator github repository</a>.</p>
 					
 					
 			    	<div class="social-share">
@@ -1936,12 +1926,6 @@ jobs:
 						<ul class="article-tag-list">
 							
 					    		<li class="article-tag-list-item">
-					    			<a class="article-tag-list-link" href="/tags/electron/">
-					    				electron
-					    			</a>
-					    		</li>
-							
-					    		<li class="article-tag-list-item">
 					    			<a class="article-tag-list-link" href="/tags/automation/">
 					    				automation
 					    			</a>
@@ -1956,6 +1940,12 @@ jobs:
 					    		<li class="article-tag-list-item">
 					    			<a class="article-tag-list-link" href="/tags/Travis-CI/">
 					    				Travis CI
+					    			</a>
+					    		</li>
+							
+					    		<li class="article-tag-list-item">
+					    			<a class="article-tag-list-link" href="/tags/electron/">
+					    				electron
 					    			</a>
 					    		</li>
 							

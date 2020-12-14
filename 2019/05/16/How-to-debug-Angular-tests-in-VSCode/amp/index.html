@@ -1842,16 +1842,7 @@ h6.categories {
 
                     
 			    	<!-- content -->
-			  		<p>VSCode has the option of debugging code inside the editor. While in typical console programs running the debug is very easy, so on the Angular test environment which is Karma is not so easy, because here we have a browser as a test environment.</p>
-<p>Fortunately, when looking for an answer, I discovered one source of microsoft <a href="https://github.com/microsoft/vscode-recipes/tree/master/Angular-CLI">vscode-recipes</a>. And by reading the description <a href="https://github.com/microsoft/vscode-chrome-debug">vscode-chrome-debug</a> I was able to create a launcher of my dreams.</p>
-<ul>
-<li>Install extension: Debugger for chrome</li>
-</ul>
-<div class="amp-img-wrapper"><amp-img src="/2019/05/16/How-to-debug-Angular-tests-in-VSCode/./chrome-extension.png" width="1179" height="740" layout="responsive"></amp-img></div>
-<ul>
-<li>Add the configuration to the file <code>.vscode/launch.json</code></li>
-</ul>
-<pre class="line-numbers language-json"><code class="language-json">{
+			  		<p>VSCode has the option of debugging code inside the editor. While in typical console programs running the debug is very easy, so on the Angular test environment which is Karma is not so easy, because here we have a browser as a test environment.</p><p>Fortunately, when looking for an answer, I discovered one source of microsoft <a href="https://github.com/microsoft/vscode-recipes/tree/master/Angular-CLI" rel="external nofollow noopener noreferrer" target="_blank">vscode-recipes</a>. And by reading the description <a href="https://github.com/microsoft/vscode-chrome-debug" rel="external nofollow noopener noreferrer" target="_blank">vscode-chrome-debug</a> I was able to create a launcher of my dreams.</p><ul><li>Install extension: Debugger for chrome</li></ul><div class="amp-img-wrapper"><amp-img src="/2019/05/16/How-to-debug-Angular-tests-in-VSCode/./chrome-extension.png" width="1179" height="740" layout="responsive"></amp-img></div><ul><li>Add the configuration to the file <code>.vscode/launch.json</code></li></ul><pre class="line-numbers language-json"><code class="language-json">{
   &quot;type&quot;: &quot;chrome&quot;,
   &quot;request&quot;: &quot;launch&quot;,
   &quot;name&quot;: &quot;Debug karma tests&quot;,
@@ -1870,10 +1861,7 @@ h6.categories {
   },
   &quot;port&quot;: 9223
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Now all you have to do is run <code>ng test</code> in the background. And when you need to check what is happening in a given test, all you have to do is insert a breakpoint on a given line or add <code>debugger</code>, press F5 and you have everything you need.</p>
-<p>PS: By pressing <code>CTRL + SHIFT + Y</code> you open the debug console where we can execute the code in the current breakpoint.</p>
-
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Now all you have to do is run <code>ng test</code> in the background. And when you need to check what is happening in a given test, all you have to do is insert a breakpoint on a given line or add <code>debugger</code>, press F5 and you have everything you need.</p><p>PS: By pressing <code>CTRL + SHIFT + Y</code> you open the debug console where we can execute the code in the current breakpoint.</p>
 					
 					
 			    	<div class="social-share">
